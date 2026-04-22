@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 0
+    },
+    "facing=south": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=up": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=down": {
+      "model": "architecture:block/half_quartz_pillar",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}
