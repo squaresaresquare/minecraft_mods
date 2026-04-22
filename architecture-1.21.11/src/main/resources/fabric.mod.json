@@ -22,7 +22,7 @@
 			"org.seanpaulbobadilla.ArchitectureDataGenerator"
 		],
         "client": [
-            "org.seanpaulbobadilla.mixin.ArchitectureClient"
+            "org.seanpaulbobadilla.ArchitectureClient"
         ]
 	},
 	"mixins": [
