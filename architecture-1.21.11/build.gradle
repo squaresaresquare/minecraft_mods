@@ -6,6 +6,13 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
+/*loom {
+    runs {
+        client {
+            programArgs(["--username", "seanpaul50", "--uuid", "ca07a77a-c262-4191-a7cc-9278d9efdc58"])
+        }
+    }
+}*/
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
