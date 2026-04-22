@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "architecture",
+	"version": "${version}",
+	"name": "architecture",
+	"description": "Add artchitecture elements and blocks",
+	"authors": [
+		"sean-paul-bobadilla.org"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/architecture/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.seanpaulbobadilla.Architecture"
+		],
+		"fabric-datagen": [
+			"org.seanpaulbobadilla.ArchitectureDataGenerator"
+		],
+        "client": [
+            "org.seanpaulbobadilla.mixin.ArchitectureClient"
+        ]
+	},
+	"mixins": [
+		"architecture.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
