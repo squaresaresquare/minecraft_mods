@@ -1,0 +1,18 @@
+{
+  "projectPath": ":",
+  "classpaths": {
+    "test": [
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/build/classes/java/test",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/build/resources/test",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/out/test/classes",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/out/test/resources"
+    ],
+    "main": [
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/build/classes/java/main",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/build/resources/main",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/build/devlibs/tutorialmod-1.0.0-dev.jar",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/out/production/classes",
+      "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/Fabric-Tutorial-1.21.X/out/production/resources"
+    ]
+  }
+}
