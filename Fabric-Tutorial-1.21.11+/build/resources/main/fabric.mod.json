@@ -1,35 +1,33 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorialmod",
+	"id": "architecture",
 	"version": "1.0.0",
-	"name": "Tutorial Mod",
-	"description": "Tutorial Mod by Kaupenjoe for YouTube",
+	"name": "Architecture Mod",
+	"description": "",
 	"authors": [
-		"Kaupenjoe!"
+		"Sean-Paul Humphrey"
 	],
 	"contact": {
-		"homepage": "https://kaupenjoe.net",
-		"sources": "https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.21.X"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/architecture/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.kaupenjoe.tutorialmod.TutorialMod"
+          "org.seanpaulhumphrey.architecture.Architecture"
 		],
 		"fabric-datagen": [
-			"net.kaupenjoe.tutorialmod.TutorialModDataGenerator"
+          "org.seanpaulhumphrey.architecture.ArchitectureDataGenerator"
 		],
 		"client": [
-			"net.kaupenjoe.tutorialmod.TutorialModClient"
+          "org.seanpaulhumphrey.architecture.ArchitectureModClient"
 		],
 		"rei_client": [
-			"net.kaupenjoe.tutorialmod.compat.TutorialModREIClient"
+           "org.seanpaulhumphrey.architecture.ArchitectureModClient"
 		]
 	},
 	"mixins": [
-		"tutorialmod.mixins.json"
+		"architecture.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
