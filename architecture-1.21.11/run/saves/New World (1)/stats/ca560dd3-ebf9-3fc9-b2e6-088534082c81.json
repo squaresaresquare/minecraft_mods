@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "architecture:half_quartz_pillar": 11
+    },
+    "minecraft:picked_up": {
+      "minecraft:leaf_litter": 6,
+      "architecture:half_quartz_pillar": 4
+    },
+    "minecraft:mined": {
+      "architecture:half_quartz_pillar": 11,
+      "minecraft:leaf_litter": 3
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3801,
+      "minecraft:fall_one_cm": 206,
+      "minecraft:walk_one_cm": 13914,
+      "minecraft:total_world_time": 3979,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 3801,
+      "minecraft:jump": 20,
+      "minecraft:time_since_death": 3801
+    }
+  },
+  "DataVersion": 4671
+}

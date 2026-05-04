@@ -1,14 +1,13 @@
 {
 	"required": true,
-	"package": "org.seanpaulbobadilla.mixin",
+	"package": "org.seanpaulhumphrey.architecture.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+      "ExampleMixin"
+	],
+	"client": [
 	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }

@@ -1,28 +1,26 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
-	id 'maven-publish'
+    id 'fabric-loom' version '1.13-SNAPSHOT'
+    id 'maven-publish'
 }
 
 version = project.mod_version
 group = project.maven_group
 
-/*loom {
-    runs {
-        client {
-            programArgs(["--username", "seanpaul50", "--uuid", "ca07a77a-c262-4191-a7cc-9278d9efdc58"])
-        }
-    }
-}*/
+base {
+	archivesName = project.archives_base_name
+}
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven { url "https://maven.shedaniel.me" }
 }
 
 fabricApi {
-	configureDataGeneration {
+	configureDataGeneration() {
 		client = true
 	}
 }
@@ -34,19 +32,22 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:17.0.803"
+	// modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:17.0.803"
+//
+	// modApi "dev.architectury:architectury-fabric:14.0.4"
+	// modApi "me.shedaniel.cloth:cloth-config-fabric:16.0.143"
+
 }
 
 processResources {
-    // work around IDEA-296490
-    duplicatesStrategy = DuplicatesStrategy.INCLUDE
-    inputs.property "version", project.version
-    with(copySpec {
-        from("src/main/resources/fabric.mod.json") {
-            expand "version": inputs.properties.version
-        }
-    })
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -64,10 +65,8 @@ java {
 }
 
 jar {
-	inputs.property "projectName", project.name
-
 	from("LICENSE") {
-		rename { "${it}_${project.name}"}
+		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }
 
@@ -75,6 +74,7 @@ jar {
 publishing {
 	publications {
 		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
 			from components.java
 		}
 	}

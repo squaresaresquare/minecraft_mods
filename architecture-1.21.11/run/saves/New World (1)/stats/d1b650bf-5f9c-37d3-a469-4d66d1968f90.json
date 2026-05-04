@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2443,
+      "minecraft:walk_one_cm": 6973,
+      "minecraft:total_world_time": 5040,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 43,
+      "minecraft:play_time": 2443,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 2443
+    },
+    "minecraft:used": {
+      "architecture:quartz_pillar": 3,
+      "architecture:half_quartz_pillar": 3
+    }
+  },
+  "DataVersion": 4671
+}

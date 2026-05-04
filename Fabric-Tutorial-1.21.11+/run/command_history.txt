@@ -1,3 +1,0 @@
-/give Player254 tutorialmod:quartz_pillar
-/give Player254 architecture:quartz_pillar
-/give Player865 architecture:quartz_pillar

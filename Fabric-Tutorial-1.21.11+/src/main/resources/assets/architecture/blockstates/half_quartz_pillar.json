@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=y": { "model": "architecture:block/half_quartz_pillar" },
-    "axis=z": { "model": "architecture:block/half_quartz_pillar" },
-    "axis=x": { "model": "architecture:block/half_quartz_pillar", "y": 90 }
-  }
-}
