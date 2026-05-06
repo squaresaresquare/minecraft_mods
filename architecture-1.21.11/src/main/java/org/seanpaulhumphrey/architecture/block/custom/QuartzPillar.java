@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class QuartzPillar extends BlockWithEntity implements BlockEntityProvider {
     protected static final VoxelShape SHAPE =
-            Block.createCuboidShape(0, 0, 0, 16, 15, 16);
+            Block.createCuboidShape(0, 0, 0, 16, 16, 16);
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
