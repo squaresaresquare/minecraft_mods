@@ -1,0 +1,46 @@
+{
+  "chisel_use": {
+    "subtitle": "sounds.architecture.chisel_use",
+    "sounds": [
+      "architecture:chisel_use"
+    ]
+  },
+  "magic_block_break": {
+    "subtitle": "sounds.architecture.magic_block_break",
+    "sounds": [
+      "architecture:magic_block_break"
+    ]
+  },
+  "magic_block_step": {
+    "subtitle": "sounds.architecture.magic_block_step",
+    "sounds": [
+      "architecture:magic_block_step"
+    ]
+  },
+  "magic_block_place": {
+    "subtitle": "sounds.architecture.magic_block_place",
+    "sounds": [
+      "architecture:magic_block_place"
+    ]
+  },
+  "magic_block_hit": {
+    "subtitle": "sounds.architecture.magic_block_hit",
+    "sounds": [
+      "architecture:magic_block_hit"
+    ]
+  },
+  "magic_block_fall": {
+    "subtitle": "sounds.architecture.magic_block_fall",
+    "sounds": [
+      "architecture:magic_block_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "architecture:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

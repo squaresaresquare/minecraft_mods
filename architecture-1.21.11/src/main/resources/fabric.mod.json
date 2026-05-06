@@ -2,36 +2,40 @@
 	"schemaVersion": 1,
 	"id": "architecture",
 	"version": "${version}",
-	"name": "architecture",
-	"description": "Add artchitecture elements and blocks",
+	"name": "Architecture Mod",
+	"description": "",
 	"authors": [
-		"sean-paul-bobadilla.org"
+		"Sean-Paul Humphrey"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/architecture/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.seanpaulbobadilla.Architecture"
+          "org.seanpaulhumphrey.architecture.Architecture"
 		],
 		"fabric-datagen": [
-			"org.seanpaulbobadilla.ArchitectureDataGenerator"
+          "org.seanpaulhumphrey.architecture.ArchitectureDataGenerator"
 		],
-        "client": [
-            "org.seanpaulbobadilla.ArchitectureClient"
-        ]
+		"client": [
+          "org.seanpaulhumphrey.architecture.ArchitectureModClient"
+		],
+		"rei_client": [
+           "org.seanpaulhumphrey.architecture.ArchitectureModClient"
+		]
 	},
 	"mixins": [
 		"architecture.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.19.2",
-		"minecraft": "~1.21.11",
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
 	}
 }

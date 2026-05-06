@@ -1,0 +1,134 @@
+Signature-Version: 1.0
+Created-By: 11.0.27 (Ubuntu)
+SHA-256-Digest-Manifest: 2t94tlZan2ldLiXb30GhlL9f4J8FebMag0+IJZx8KjE=
+SHA-256-Digest-Manifest-Main-Attributes: 4MpS7WkngdB9YUbroyo034SNtoIjzfq
+ KDK0Ra6HPT9o=
+
+Name: META-INF/jars/fabric-debug-api-v1-1.0.1+c792624d47.jar
+SHA-256-Digest: hkf0FBN3UJl1dWp3tNJ91ZAYQRCJrYmAJjxZsOsTwRM=
+
+Name: META-INF/jars/fabric-resource-loader-v0-3.3.16+4fc5413f47.jar
+SHA-256-Digest: YihGSgO15dQM6VTLzKLXuqLkLWq56f1mo31bjsoXaNA=
+
+Name: META-INF/jars/fabric-serialization-api-v1-2.0.3+11a26f3147.jar
+SHA-256-Digest: QS1qFV8erhkHqV4K9/ODNMKr7F7/i0mcjIyzlLryEwQ=
+
+Name: META-INF/jars/fabric-dimensions-v1-5.1.4+9cbf5da547.jar
+SHA-256-Digest: oiajjEE7RjdtybJNH008RbbtzrOHnd76VXHq5fY86D0=
+
+Name: META-INF/jars/fabric-screen-api-v1-5.0.1+d871b99e47.jar
+SHA-256-Digest: R9tFIicjwSE3BnN5bit3fn0Y9BmvIJrpC7SgRd5YgJw=
+
+Name: LICENSE-fabric-api
+SHA-256-Digest: E/xLYwTYwa/zBecKvuME1mBWlJbPUVhYN1rYfnsErSo=
+
+Name: META-INF/jars/fabric-particles-v1-5.0.14+b61fef4347.jar
+SHA-256-Digest: 6lbZVwEJ9dEnb4IAoagycH5merty09plYgQZh0L4KPk=
+
+Name: META-INF/jars/fabric-networking-api-v1-6.3.0+50a808ce47.jar
+SHA-256-Digest: W64GgHrpD0BCSJMhNAJcOa3O7L0MlSAMdkZZGEb8Rx0=
+
+Name: META-INF/jars/fabric-tag-api-v1-2.0.9+11a26f3147.jar
+SHA-256-Digest: Xf4G9IZZKUjFQ/rGo/V1ww/9qHs/L7GcN9rNx2GiFGQ=
+
+Name: META-INF/jars/fabric-key-mapping-api-v1-2.0.4+e2bdee7847.jar
+SHA-256-Digest: rVDbA81YQeaYvjB27J2rQAlZtQUnC9yb/TcwXVrzoMk=
+
+Name: META-INF/jars/fabric-menu-api-v1-2.0.12+d871b99e47.jar
+SHA-256-Digest: Fh3dpfywLx6B4rEFIaH7xrqLWpHQdQ/rbsSZ1NJTIiM=
+
+Name: META-INF/jars/fabric-block-api-v1-3.0.2+ec56b60147.jar
+SHA-256-Digest: 5JqfI91N/Brg6kwq+CA/EnswPJT92kuI47nPLZnnL0c=
+
+Name: META-INF/jars/fabric-api-base-2.0.3+ece0632347.jar
+SHA-256-Digest: HuO+WdBgGdDaF3VpBu7TqscVLxsl5sN1NiM4qwgdEoE=
+
+Name: META-INF/jars/fabric-crash-report-info-v1-1.0.3+9f78a5a847.jar
+SHA-256-Digest: 5bdFrp5gZHGOzrYNyBW/L7aVl10MD3uL6AeNPpkWax4=
+
+Name: META-INF/jars/fabric-transfer-api-v1-8.0.2+d871b99e47.jar
+SHA-256-Digest: ZbHhX/z38gwwwkB+ZG0hKiRxJJo8teCmcbnWMs+yYUY=
+
+Name: META-INF/jars/fabric-command-api-v2-3.0.5+e2bdee7847.jar
+SHA-256-Digest: wAgbj7LFw5q++nljptuPsHFeTDB9F7rqR9sp0AJG18o=
+
+Name: META-INF/jars/fabric-block-getter-api-v2-2.0.6+ec56b60147.jar
+SHA-256-Digest: 7ZilvUOIEdzsU16cONuonkqcOaTYdDMwf0gLntjZLXE=
+
+Name: META-INF/jars/fabric-game-rule-api-v1-4.0.5+d871b99e47.jar
+SHA-256-Digest: 2TZd83kucakxmwKvt4indqSlzDIKf+lqq75I72/xVqg=
+
+Name: META-INF/jars/fabric-api-lookup-api-v1-2.0.10+d5a053b647.jar
+SHA-256-Digest: InbMk3bfR9aVys7u1RfcFN58L3NSF3k88l0nMDbUoGU=
+
+Name: assets/fabric/icon.png
+SHA-256-Digest: kxRkgcnvCBMG4Voj7/Pmn00U+UWNK4XwD2Uk/xyEPJQ=
+
+Name: META-INF/jars/fabric-recipe-api-v1-9.0.13+be4b75ae47.jar
+SHA-256-Digest: ciEwkX79SonHuLLhuzf+wFO8kZvxyFL0cxcYhYi006c=
+
+Name: META-INF/jars/fabric-registry-sync-v0-7.0.12+b61fef4347.jar
+SHA-256-Digest: Zp2sJDvudQdRGO+XDVGYSk+rlfxVpvnvt2CrPmfG4NM=
+
+Name: META-INF/jars/fabric-biome-api-v1-18.0.4+35c80edc47.jar
+SHA-256-Digest: 5unvokUL3Gk6qa6Z1lzQoU3+0gyhzhG+xyUD4VfZT5A=
+
+Name: META-INF/jars/fabric-resource-conditions-api-v1-6.0.5+00a1fba647.j
+ ar
+SHA-256-Digest: T8Xkkofuw7b1O0IVb99Pm+Jd/of++0E702Sq94ehTuM=
+
+Name: META-INF/jars/fabric-data-attachment-api-v1-2.2.2+35c80edc47.jar
+SHA-256-Digest: JgEC6LEbUbJFWvmt97hEAWRIPVXfVWZBV58XE4wTraM=
+
+Name: META-INF/jars/fabric-sound-api-v1-2.0.4+11a26f3147.jar
+SHA-256-Digest: XzVwLQpNR7ZgPs8OhyXth/umKGO5FSWpolmIQ2gP1KQ=
+
+Name: META-INF/jars/fabric-loot-api-v3-3.0.11+00a1fba647.jar
+SHA-256-Digest: 5OkbyZZrC1BO6h1mIDiagPksEUmHY8+j4326W/7HBnM=
+
+Name: META-INF/jars/fabric-message-api-v1-7.0.5+dae8ce3e47.jar
+SHA-256-Digest: C6xAJSY2j9KAyDDHQuEcArET9h2r8qpp9XK9TIBRTv8=
+
+Name: META-INF/jars/fabric-data-generation-api-v1-24.0.17+35c80edc47.jar
+SHA-256-Digest: 5tOSrFKWjiYBv1zHqZhI/vSAGa/oXikBmd/tvdvedqA=
+
+Name: META-INF/jars/fabric-lifecycle-events-v1-4.0.6+a9b9c17647.jar
+SHA-256-Digest: ioSixCEKUzr/+HDcgGsAS7jsvRir2FGSfhXYW/J5v6g=
+
+Name: META-INF/jars/fabric-item-api-v1-14.1.0+9833182c47.jar
+SHA-256-Digest: wV17cUr2BZLGvGaXID7O77Xog0SmyV6in/mMV6nSjSY=
+
+Name: META-INF/jars/fabric-events-interaction-v0-5.1.10+c82f046147.jar
+SHA-256-Digest: 9usktpEqRd7f2tAt2t3N1V2VKmCcOSu4E2lySEK4wqM=
+
+Name: fabric.mod.json
+SHA-256-Digest: i/31hqwHe13hMDEAB5l4k1DEMxYxjczqHQAC8LL1bis=
+
+Name: META-INF/jars/fabric-resource-loader-v1-2.0.9+d871b99e47.jar
+SHA-256-Digest: dhlEz0sG99xugctkeKgZ+10WdfOCPy0ukcOsWCcPlRk=
+
+Name: META-INF/jars/fabric-convention-tags-v2-4.3.2+c37e6e5f47.jar
+SHA-256-Digest: bKQwvKQTPOrR1HIn9ufbuGt/zgjSnwNcRBvWHVCAIhc=
+
+Name: META-INF/jars/fabric-object-builder-api-v1-23.0.13+b61fef4347.jar
+SHA-256-Digest: 1Y0z0svN8I1HdOR3D5EyP2gm3B52ygh25NOJqchVICY=
+
+Name: META-INF/jars/fabric-content-registries-v0-11.0.12+d871b99e47.jar
+SHA-256-Digest: CiVoI0DUlM73Jzm5f6KDvnkBumI0kgwcH7N29FwXCCA=
+
+Name: META-INF/jars/fabric-entity-events-v1-5.0.2+e2bdee7847.jar
+SHA-256-Digest: cPLkEvPSgu+CfVJRL3KBN3Ntv4MF/F0BnCP7+aVOvZg=
+
+Name: META-INF/jars/fabric-transitive-access-wideners-v1-8.0.11+d871b99e
+ 47.jar
+SHA-256-Digest: zH2VxWJDtsLPS2zWZ2n26GV0lPJpOTGJl6k/7Knf8Qk=
+
+Name: META-INF/jars/fabric-rendering-fluids-v1-6.0.1+d871b99e47.jar
+SHA-256-Digest: Xcyajn+JtLW1WMXghgyfYNQpT8SQKnch7l0wxXGgAoQ=
+
+Name: META-INF/jars/fabric-rendering-v1-23.0.4+10de3da347.jar
+SHA-256-Digest: l1IZ1vVvKGBaul500Q6YtFcBKh9cmErQSeathhG11w0=
+
+Name: META-INF/jars/fabric-creative-tab-api-v1-5.0.10+d871b99e47.jar
+SHA-256-Digest: qRy8fW6MgpOVgfCQs27guADk5Iqa1Evik6KIOHYrdXw=
+

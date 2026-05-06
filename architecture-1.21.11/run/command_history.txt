@@ -1,0 +1,11 @@
+/give Player254 tutorialmod:quartz_pillar
+/give Player254 architecture:quartz_pillar
+/give Player865 architecture:quartz_pillar
+/gamemode survival
+/give Player344 minecraft:crafting_table
+/give Player734 architecture:half_quartz_pillar
+/give Player729 architecture:half_quartz_pillar 64
+/give Player171 architecture:quartz_pillar
+/time set day
+/gamemode creative
+/reload

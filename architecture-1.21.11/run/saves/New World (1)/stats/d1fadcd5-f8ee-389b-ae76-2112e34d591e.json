@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:oak_planks": 1,
+      "architecture:half_quartz_pillar": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1999,
+      "minecraft:walk_one_cm": 5032,
+      "minecraft:total_world_time": 2259,
+      "minecraft:play_time": 1999,
+      "minecraft:jump": 12,
+      "minecraft:time_since_death": 1999
+    },
+    "minecraft:picked_up": {
+      "minecraft:leaf_litter": 1
+    }
+  },
+  "DataVersion": 4671
+}
