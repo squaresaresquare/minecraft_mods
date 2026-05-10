@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [96, 80],
+	"textures": {
+		"4": "architecture:block/white_marble",
+		"particle": "polished_andesite"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 7]},
+			"faces": {
+				"north": {"uv": [1.24791, 4.81337, 3.91458, 8.01337], "texture": "#4"},
+				"east": {"uv": [6.23955, 6.15042, 8.23955, 9.35042], "texture": "#4"},
+				"south": {"uv": [6.81894, 10.48245, 9.48561, 13.68245], "texture": "#4"},
+				"west": {"uv": [6.23955, 6.15042, 8.23955, 9.35042], "texture": "#4"},
+				"up": {"uv": [12.30084, 7.43398, 14.9675, 9.83398], "texture": "#4"},
+				"down": {"uv": [12.03343, 5.0273, 14.70009, 7.4273], "texture": "#4"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "2-2",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

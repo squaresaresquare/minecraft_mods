@@ -5,65 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7d2ce21-214d-4c4e-bdbb-5cbd5d76d0a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/blockstates/thin_quartz_base.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/blockstates/thin_quartz_capital.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/blockstates/thin_quartz_column.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/items/thin_quartz_base.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/items/thin_quartz_capital.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/items/thin_quartz_column.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch21.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch22.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch23.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch24.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch25.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuadWindowTopArch26.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/ThinQuartzBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/ThinQuartzCapital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/ThinQuartzColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowCapLeft.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowLeftBottom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowMiddleBottom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowMiddleLeft.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowMiddleMiddle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowRightBottom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArch11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArch12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArch13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArch22.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArch23.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArchLeft.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopArchMiddle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopCapMiddle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TripleWindowTopCapRight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TwinColumnBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TwinColumnCapital.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/TwinColumns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/HalfQuartzPillar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/HalfQuartzPillar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/HalfQuartzPillar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/HalfQuartzPillar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/QuartzPillar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/seanpaulhumphrey/architecture/block/custom/QuartzPillar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/devlibs/architecture-1.0.0-dev.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/devlibs/architecture-1.0.0-dev.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/devlibs/architecture-1.0.0-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/export_classpath.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/architecture-1.0.0-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/architecture-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/loom-cache/argFiles/runClient" beforeDir="false" afterPath="$PROJECT_DIR$/build/loom-cache/argFiles/runClient" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/architecture/models/block/half_quartz_pillar.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/architecture/models/block/half_quartz_pillar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/architecture/models/block/quartz_pillar.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/architecture/models/block/quartz_pillar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModBlocks.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QuartzPillar.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/remapJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/remapSourcesJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/sourcesJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM-1/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/data/random_sequences.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/poi/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World (1)/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuartzPillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuartzPillar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/datagen/ModLootTableProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/datagen/ModLootTableProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/effect/ModEffects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/effect/ModEffects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/world/ModConfiguredFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/world/ModConfiguredFeatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/world/ModPlacedFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/world/ModPlacedFeatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/architecture/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/architecture/models/block/half_quartz_pillar.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/models/block/half_quartz_pillar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/architecture/models/block/quartz_pillar.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/architecture/models/block/quartz_pillar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/versions/fabric-loader-0.19.2-1.21.11/fabric-loader-0.19.2-1.21.11.json" beforeDir="false" afterPath="$PROJECT_DIR$/versions/fabric-loader-0.19.2-1.21.11/fabric-loader-0.19.2-1.21.11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/ModBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch11Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch11Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch12Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch12Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch13Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch13Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch14Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch14Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch15Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch15Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch16Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch16Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch21Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch21Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch22Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch22Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch23Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch23Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch24Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch24Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch25Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch25Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch26Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/QuadWindowTopArch26Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzBaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzCapitalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzCapitalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzColumnEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/ThinQuartzColumnEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowCapLeftEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowCapLeftEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowLeftBottomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowLeftBottomEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleBottomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleBottomEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleLeftEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleLeftEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleMiddleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowMiddleMiddleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowRightBottomEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowRightBottomEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch11Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch11Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch12Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch12Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch13Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch13Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch22Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch22Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch23Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArch23Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArchLeftEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArchLeftEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArchMiddleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopArchMiddleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopCapMiddleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopCapMiddleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopCapRightEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TripleWindowTopCapRightEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnBaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnBaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnCapitalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnCapitalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/TwinColumnsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/recipe/ModRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/recipe/ModRecipes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/recipe/QuadWindowTopArch11Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/recipe/QuadWindowTopArch11Recipe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +227,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "setup",
+    "git-widget-placeholder": "automatic__updates",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture-1.21.11/src/main/resources/assets/architecture/items"
   }
@@ -227,11 +243,11 @@
       <recent name="$PROJECT_DIR$/mods" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.seanpaulhumphrey.architecture.recipe" />
       <recent name="org.seanpaulhumphrey.architecture.datagen" />
       <recent name="org.seanpaulhumphrey.architecture.screen.custom" />
       <recent name="org.seanpaulhumphrey.architecture.block.entity.renderer" />
       <recent name="org.seanpaulhumphrey.architecture.block.entity.custom" />
-      <recent name="org.seanpaulhumphrey.architecture.block.custom" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -239,7 +255,7 @@
       <command value="gradle genSources" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.architecture-1.21.11 [jar]">
+  <component name="RunManager" selected="Gradle.architecture-1.21.11 [build]">
     <configuration name="architecture-1.21.11 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -363,11 +379,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.architecture-1.21.11 [build]" />
         <item itemvalue="Gradle.architecture-1.21.11 [jar]" />
         <item itemvalue="Gradle.architecture-1.21.11 [publish]" />
         <item itemvalue="Gradle.architecture-1.21.11 [runClient]" />
         <item itemvalue="Gradle.architecture-1.21.11 [clean]" />
-        <item itemvalue="Gradle.architecture-1.21.11 [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -388,11 +404,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/entity/custom/HalfQuartzPillarEntity.java</url>
           <line>103</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/seanpaulhumphrey/architecture/block/custom/QuartzPillar.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

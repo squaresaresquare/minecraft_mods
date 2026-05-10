@@ -19,5 +19,72 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.QUARTZ_PILLAR);
         addDrop(ModBlocks.HALF_QUARTZ_PILLAR);
+                addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_1);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_2);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_3);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_4);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_5);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_6);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_1);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_2);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_3);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_4);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_5);
+
+        addDrop(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_6);
+
+        addDrop(ModBlocks.THIN_QUARTZ_BASE);
+
+        addDrop(ModBlocks.THIN_QUARTZ_CAPITAL);
+
+        addDrop(ModBlocks.THIN_QUARTZ_COLUMN);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_CAP_LEFT);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_LEFT_BOTTOM);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_MIDDLE_BOTTOM);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_MIDDLE_LEFT);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_MIDDLE_MIDDLE);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_RIGHT_BOTTOM);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_1_1);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_1_2);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_1_3);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_2_2);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_2_3);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_LEFT);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_MIDDLE);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_CAP_MIDDLE);
+
+        addDrop(ModBlocks.TRIPLE_WINDOW_TOP_CAP_RIGHT);
+
+        addDrop(ModBlocks.TWIN_COLUMN_BASE);
+
+        addDrop(ModBlocks.TWIN_COLUMN_CAPITAL);
+
+        addDrop(ModBlocks.TWIN_COLUMNS);
+
     }
 }
+

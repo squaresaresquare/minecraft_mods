@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "architecture:block/twin_columns", "uvlock": true },
+    "facing=east":  { "model": "architecture:block/twin_columns", "y":  90, "uvlock": true },
+    "facing=south": { "model": "architecture:block/twin_columns", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "architecture:block/twin_columns", "y": 270, "uvlock": true }
+  }
+}
