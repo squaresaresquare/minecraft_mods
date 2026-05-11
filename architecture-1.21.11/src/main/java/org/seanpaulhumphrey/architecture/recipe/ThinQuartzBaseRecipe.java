@@ -78,3 +78,4 @@ public record ThinQuartzBaseRecipe(Ingredient inputItem, ItemStack output) imple
         }
     }
 }
+    

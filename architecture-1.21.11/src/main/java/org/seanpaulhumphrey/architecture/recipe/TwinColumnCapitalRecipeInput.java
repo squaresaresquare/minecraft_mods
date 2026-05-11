@@ -13,3 +13,4 @@ public record TwinColumnCapitalRecipeInput(ItemStack input) implements RecipeInp
         return 1;
     }
 }
+    

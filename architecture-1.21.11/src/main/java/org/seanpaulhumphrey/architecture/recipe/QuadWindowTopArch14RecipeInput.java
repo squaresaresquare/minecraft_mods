@@ -13,3 +13,4 @@ public record QuadWindowTopArch14RecipeInput(ItemStack input) implements RecipeI
         return 1;
     }
 }
+    

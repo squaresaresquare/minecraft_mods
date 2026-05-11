@@ -13,3 +13,4 @@ public record TripleWindowTopCapRightRecipeInput(ItemStack input) implements Rec
         return 1;
     }
 }
+    

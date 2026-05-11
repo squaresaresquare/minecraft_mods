@@ -78,3 +78,4 @@ public record ThinQuartzColumnRecipe(Ingredient inputItem, ItemStack output) imp
         }
     }
 }
+    

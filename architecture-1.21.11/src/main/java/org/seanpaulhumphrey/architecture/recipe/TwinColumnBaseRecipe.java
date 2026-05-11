@@ -78,3 +78,4 @@ public record TwinColumnBaseRecipe(Ingredient inputItem, ItemStack output) imple
         }
     }
 }
+    

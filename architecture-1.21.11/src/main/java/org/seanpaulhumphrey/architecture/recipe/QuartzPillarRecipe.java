@@ -19,6 +19,8 @@ public record QuartzPillarRecipe(Ingredient inputItem, ItemStack output) impleme
         return list;
     }
 
+    // read Recipe JSON files --> new QuartzPillarRecipe
+
     @Override
     public boolean matches(QuartzPillarRecipeInput input, World world) {
         if(world.isClient()) {
@@ -76,3 +78,4 @@ public record QuartzPillarRecipe(Ingredient inputItem, ItemStack output) impleme
         }
     }
 }
+    

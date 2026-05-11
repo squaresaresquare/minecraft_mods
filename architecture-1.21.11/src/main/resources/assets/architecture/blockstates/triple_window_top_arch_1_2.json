@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "architecture:block/triple_window_top_arch_1-2", "uvlock": true },
-    "facing=east":  { "model": "architecture:block/triple_window_top_arch_1-2", "y":  90, "uvlock": true },
-    "facing=south": { "model": "architecture:block/triple_window_top_arch_1-2", "y": 180, "uvlock": true },
-    "facing=west":  { "model": "architecture:block/triple_window_top_arch_1-2", "y": 270, "uvlock": true }
+    "facing=north": { "model": "architecture:block/triple_window_top_arch_1_2", "uvlock": true },
+    "facing=east":  { "model": "architecture:block/triple_window_top_arch_1_2", "y":  90, "uvlock": true },
+    "facing=south": { "model": "architecture:block/triple_window_top_arch_1_2", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "architecture:block/triple_window_top_arch_1_2", "y": 270, "uvlock": true }
   }
 }

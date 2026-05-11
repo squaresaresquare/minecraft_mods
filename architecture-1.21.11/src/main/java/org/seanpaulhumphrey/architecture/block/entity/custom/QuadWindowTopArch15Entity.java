@@ -5,7 +5,7 @@ import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.NotNull;
 import org.seanpaulhumphrey.architecture.block.entity.ImplementedInventory;
 import org.seanpaulhumphrey.architecture.block.entity.ModBlockEntities;
-import org.seanpaulhumphrey.architecture.screen.custom.HalfPillarScreenHandler;
+import org.seanpaulhumphrey.architecture.screen.custom.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.*;
@@ -40,7 +40,7 @@ public class QuadWindowTopArch15Entity extends BlockEntity implements Implemente
     }
 
     public QuadWindowTopArch15Entity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.HALF_PILLAR_BE, pos, state);
+        super(ModBlockEntities.QUAD_WINDOW_TOP_ARCH_1_5_BE, pos, state);
     }
 
     @Override
@@ -87,7 +87,7 @@ public class QuadWindowTopArch15Entity extends BlockEntity implements Implemente
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new HalfPillarScreenHandler(syncId, playerInventory, this.pos);
+        return new QuadWindowTopArch15ScreenHandler(syncId, playerInventory, this.pos);
     }
 
 
@@ -102,3 +102,4 @@ public class QuadWindowTopArch15Entity extends BlockEntity implements Implemente
         return createNbt(registryLookup);
     }
 }
+    

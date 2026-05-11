@@ -78,3 +78,4 @@ public record ThinQuartzCapitalRecipe(Ingredient inputItem, ItemStack output) im
         }
     }
 }
+    

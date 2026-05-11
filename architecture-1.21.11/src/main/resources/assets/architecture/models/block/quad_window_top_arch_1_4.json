@@ -3,9 +3,9 @@
 	"ambientocclusion": false,
 	"texture_size": [96, 80],
 	"textures": {
-		"3": "polished_diorite",
+		"1": "architecture:block/polished_diorite",
 		"4": "architecture:block/white_marble",
-		"particle": "polished_andesite"
+		"particle": "architecture:block/polished_diorite"
 	},
 	"elements": [
 		{
@@ -13,12 +13,12 @@
 			"to": [16, 16, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [11, 11, 0]},
 			"faces": {
-				"north": {"uv": [2.66667, 0, 0, 0.8], "texture": "#3"},
-				"east": {"uv": [0.66667, 0, 0, 0.8], "texture": "#3"},
-				"south": {"uv": [12.45833, 2.1, 11.125, 2.5], "texture": "#3"},
-				"west": {"uv": [0.66667, 0, 0, 0.8], "texture": "#3"},
-				"up": {"uv": [2.66667, 0, 0, 0.8], "texture": "#3"},
-				"down": {"uv": [2.66667, 0, 0, 0.8], "texture": "#3"}
+				"north": {"uv": [2.66667, 0, 0, 0.8], "texture": "#1"},
+				"east": {"uv": [0.66667, 0, 0, 0.8], "texture": "#1"},
+				"south": {"uv": [12.45833, 2.1, 11.125, 2.5], "texture": "#1"},
+				"west": {"uv": [0.66667, 0, 0, 0.8], "texture": "#1"},
+				"up": {"uv": [2.66667, 0, 0, 0.8], "texture": "#1"},
+				"down": {"uv": [2.66667, 0, 0, 0.8], "texture": "#1"}
 			}
 		},
 		{

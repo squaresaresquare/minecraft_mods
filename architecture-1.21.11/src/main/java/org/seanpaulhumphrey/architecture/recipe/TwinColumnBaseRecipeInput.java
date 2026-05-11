@@ -13,3 +13,4 @@ public record TwinColumnBaseRecipeInput(ItemStack input) implements RecipeInput 
         return 1;
     }
 }
+    

@@ -78,3 +78,4 @@ public record HalfQuartzPillarRecipe(Ingredient inputItem, ItemStack output) imp
         }
     }
 }
+    

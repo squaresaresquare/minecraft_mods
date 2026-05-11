@@ -13,3 +13,4 @@ public record TwinColumnsRecipeInput(ItemStack input) implements RecipeInput {
         return 1;
     }
 }
+    

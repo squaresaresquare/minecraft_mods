@@ -13,3 +13,4 @@ public record TripleWindowTopArch23RecipeInput(ItemStack input) implements Recip
         return 1;
     }
 }
+    

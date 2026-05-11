@@ -3,9 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [96, 80],
 	"textures": {
-		"3": "polished_diorite",
-		"4": "architecture:block/white_marble",
-		"particle": "polished_andesite"
+		"3": "architecture:block/polished_diorite",
+		"4": "architecture:block/white_marble"
 	},
 	"elements": [
 		{
@@ -28,7 +27,7 @@
 			"faces": {
 				"north": {"uv": [0, 0, 2.66667, 0.8], "texture": "#3"},
 				"east": {"uv": [0, 0, 0.66667, 0.8], "texture": "#3"},
-				"south": {"uv": [11.125, 2.1, 12.45833, 2.5], "texture": "#3"},
+				"south": {"uv": [6.125, 2.1, 12.45833, 4.9], "texture": "#3"},
 				"west": {"uv": [0, 0, 0.66667, 0.8], "texture": "#3"},
 				"up": {"uv": [0, 0, 2.66667, 0.8], "texture": "#3"},
 				"down": {"uv": [0, 0, 2.66667, 0.8], "texture": "#3"}

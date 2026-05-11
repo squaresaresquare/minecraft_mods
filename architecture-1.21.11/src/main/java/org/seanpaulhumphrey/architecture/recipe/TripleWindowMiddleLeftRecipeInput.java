@@ -13,3 +13,4 @@ public record TripleWindowMiddleLeftRecipeInput(ItemStack input) implements Reci
         return 1;
     }
 }
+    

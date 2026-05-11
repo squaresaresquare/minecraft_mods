@@ -78,3 +78,4 @@ public record QuadWindowTopArch26Recipe(Ingredient inputItem, ItemStack output) 
         }
     }
 }
+    

@@ -12,3 +12,4 @@ public class HalfQuartzPillarEntityRenderState extends BlockEntityRenderState {
 
     final ItemRenderState itemRenderState = new ItemRenderState();
 }
+    

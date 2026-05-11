@@ -78,3 +78,4 @@ public record TripleWindowTopArch12Recipe(Ingredient inputItem, ItemStack output
         }
     }
 }
+    

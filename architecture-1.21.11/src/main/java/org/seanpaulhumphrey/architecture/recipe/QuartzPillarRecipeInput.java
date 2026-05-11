@@ -1,5 +1,4 @@
 package org.seanpaulhumphrey.architecture.recipe;
-
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.input.RecipeInput;
 
@@ -14,3 +13,4 @@ public record QuartzPillarRecipeInput(ItemStack input) implements RecipeInput {
         return 1;
     }
 }
+    

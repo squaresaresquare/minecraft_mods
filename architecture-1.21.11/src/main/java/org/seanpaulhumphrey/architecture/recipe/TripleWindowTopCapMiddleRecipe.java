@@ -78,3 +78,4 @@ public record TripleWindowTopCapMiddleRecipe(Ingredient inputItem, ItemStack out
         }
     }
 }
+    

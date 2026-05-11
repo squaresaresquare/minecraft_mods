@@ -14,6 +14,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.level.LevelProperties.*;
@@ -73,7 +74,7 @@ public class TripleWindowMiddleLeft extends BlockWithEntity implements BlockEnti
 
         return ActionResult.SUCCESS;
     }
-    @Nullable
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(HorizontalFacingBlock.FACING, ctx.getHorizontalPlayerFacing().getOpposite());
@@ -92,6 +93,16 @@ public class TripleWindowMiddleLeft extends BlockWithEntity implements BlockEnti
             Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 16.0, 16.0);
     protected static final VoxelShape WEST_SHAPE =
             Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+
+    protected static final VoxelShape NORTH_HALFSHAPE =
+            VoxelShapes.cuboid(0.0, 0.0, 8.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape SOUTH_HALFSHAPE =
+            VoxelShapes.cuboid(0.0, 0.0, 0.0, 16.0, 16.0, 8.0);
+    protected static final VoxelShape EAST_HALFSHAPE =
+            VoxelShapes.cuboid(0.0, 0.0, 0.0, 8.0, 16.0, 16.0);
+    protected static final VoxelShape WEST_HALFSHAPE =
+            VoxelShapes.cuboid(8.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return switch (state.get(HorizontalFacingBlock.FACING)) {
@@ -101,5 +112,14 @@ public class TripleWindowMiddleLeft extends BlockWithEntity implements BlockEnti
             default -> NORTH_SHAPE;
         };
     }
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return switch (state.get(HorizontalFacingBlock.FACING)) {
+            case SOUTH -> SOUTH_HALFSHAPE;
+            case EAST -> EAST_HALFSHAPE;
+            case WEST -> WEST_HALFSHAPE;
+            default -> NORTH_HALFSHAPE;
+        };
+    }
 }
-        
+    

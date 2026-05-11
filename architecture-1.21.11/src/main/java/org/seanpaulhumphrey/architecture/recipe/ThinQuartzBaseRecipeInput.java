@@ -13,3 +13,4 @@ public record ThinQuartzBaseRecipeInput(ItemStack input) implements RecipeInput 
         return 1;
     }
 }
+    

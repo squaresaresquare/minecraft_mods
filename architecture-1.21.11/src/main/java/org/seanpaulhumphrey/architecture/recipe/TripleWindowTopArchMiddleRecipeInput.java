@@ -13,3 +13,4 @@ public record TripleWindowTopArchMiddleRecipeInput(ItemStack input) implements R
         return 1;
     }
 }
+    
