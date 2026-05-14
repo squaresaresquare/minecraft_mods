@@ -1,8 +1,7 @@
 package org.seanpaulhumphrey.architecture.block;
+
+import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import org.seanpaulhumphrey.architecture.Architecture;
-import org.seanpaulhumphrey.architecture.block.custom.*;
-import org.seanpaulhumphrey.architecture.block.custom.*;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -11,9 +10,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.state.property.Properties.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.*;
+import org.seanpaulhumphrey.architecture.Architecture;
+import org.seanpaulhumphrey.architecture.block.custom.*;
 
-import java.util.function.Function;
 
 public class ModBlocks {
     public static final Block TRIPLE_WINDOW_TOP_ARCH_1_1 = registerBlock("triple_window_top_arch_1_1",
@@ -109,7 +111,7 @@ private static Block registerBlock(String name, Function<AbstractBlock.Settings,
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.QUARTZ_PILLAR);
             entries.add(ModBlocks.HALF_QUARTZ_PILLAR);
-                entries.add(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_1_1 );
+            entries.add(ModBlocks.TRIPLE_WINDOW_TOP_ARCH_1_1 );
             entries.add(ModBlocks.TRIPLE_WINDOW_LEFT_BOTTOM );
             entries.add(ModBlocks.QUAD_WINDOW_TOP_ARCH_2_2 );
             entries.add(ModBlocks.TRIPLE_WINDOW_MIDDLE_LEFT );

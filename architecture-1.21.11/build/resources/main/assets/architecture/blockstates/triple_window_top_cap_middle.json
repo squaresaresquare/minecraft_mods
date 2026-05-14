@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "architecture:block/triple_window_top_cap_middle", "uvlock": true },
+    "facing=east":  { "model": "architecture:block/triple_window_top_cap_middle", "y":  90, "uvlock": true },
+    "facing=south": { "model": "architecture:block/triple_window_top_cap_middle", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "architecture:block/triple_window_top_cap_middle", "y": 270, "uvlock": true }
+  }
+}

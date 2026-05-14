@@ -31,3 +31,4 @@ public class Architecture implements ModInitializer {
 		ModRecipes.registerRecipes();
 	}
 }
+
