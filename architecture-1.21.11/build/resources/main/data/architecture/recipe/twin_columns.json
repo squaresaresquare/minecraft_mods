@@ -1,0 +1,8 @@
+{
+  "type": "architecture:twin_columns",
+  "ingredient": "minecraft:quartz_pillar",
+  "result": {
+    "count": 2,
+    "id": "architecture:twin_columns"
+  }
+}

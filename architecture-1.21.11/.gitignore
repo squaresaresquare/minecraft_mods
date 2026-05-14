@@ -1,6 +1,18 @@
+sean-paulbobadilla@Sean-Pauls-iMac architecture-1.21.11 % sort -u .gitignore
 .DS_Store
-Thumbs.db
-build
-.gradle
 .fabric
-logs
+.gradle
+Thumbs.db
+./build
+build.gradle
+fabric-server-launch.jar.old.jar
+./gradle
+gradle.properties
+./gradlew
+gradlew.bat
+./libraries
+./logs
+./mods
+./run
+server.jar
+./versions

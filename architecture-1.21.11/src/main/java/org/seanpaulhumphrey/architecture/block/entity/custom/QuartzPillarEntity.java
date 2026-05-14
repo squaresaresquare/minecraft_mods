@@ -5,7 +5,7 @@ import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.NotNull;
 import org.seanpaulhumphrey.architecture.block.entity.ImplementedInventory;
 import org.seanpaulhumphrey.architecture.block.entity.ModBlockEntities;
-import org.seanpaulhumphrey.architecture.screen.custom.PillarScreenHandler;
+import org.seanpaulhumphrey.architecture.screen.custom.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.*;
@@ -40,7 +40,7 @@ public class QuartzPillarEntity extends BlockEntity implements ImplementedInvent
     }
 
     public QuartzPillarEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.PILLAR_BE, pos, state);
+        super(ModBlockEntities.QUARTZ_PILLAR_BE, pos, state);
     }
 
     @Override
@@ -87,7 +87,7 @@ public class QuartzPillarEntity extends BlockEntity implements ImplementedInvent
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new PillarScreenHandler(syncId, playerInventory, this.pos);
+        return new QuartzPillarScreenHandler(syncId, playerInventory, this.pos);
     }
 
 
@@ -102,3 +102,4 @@ public class QuartzPillarEntity extends BlockEntity implements ImplementedInvent
         return createNbt(registryLookup);
     }
 }
+    

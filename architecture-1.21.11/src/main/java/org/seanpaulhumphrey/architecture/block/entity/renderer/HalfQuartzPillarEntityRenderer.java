@@ -2,7 +2,7 @@ package org.seanpaulhumphrey.architecture.block.entity.renderer;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.seanpaulhumphrey.architecture.block.entity.custom.HalfQuartzPillarEntity;
+import org.seanpaulhumphrey.architecture.block.entity.custom.*;
 import net.minecraft.client.item.ItemModelManager;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
@@ -36,3 +36,4 @@ public class HalfQuartzPillarEntityRenderer implements BlockEntityRenderer<HalfQ
         return LightmapTextureManager.pack(bLight, sLight);
     }
 }
+    

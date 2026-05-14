@@ -1,0 +1,8 @@
+{
+  "type": "architecture:thin_quartz_column",
+  "ingredient": "minecraft:quartz_pillar",
+  "result": {
+    "count": 2,
+    "id": "architecture:thin_quartz_column"
+  }
+}

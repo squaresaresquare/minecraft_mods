@@ -1,0 +1,8 @@
+{
+  "type": "architecture:triple_window_right_bottom",
+  "ingredient": "minecraft:quartz_pillar",
+  "result": {
+    "count": 2,
+    "id": "architecture:triple_window_right_bottom"
+  }
+}
