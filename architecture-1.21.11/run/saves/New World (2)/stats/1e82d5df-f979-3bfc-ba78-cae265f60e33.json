@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "architecture:twin_column_base": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 799,
+      "minecraft:walk_one_cm": 2824,
+      "minecraft:total_world_time": 830,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 799,
+      "minecraft:time_since_death": 799
+    }
+  },
+  "DataVersion": 4671
+}

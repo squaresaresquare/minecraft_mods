@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2631,
+      "minecraft:walk_one_cm": 12238,
+      "minecraft:total_world_time": 2645,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 2631,
+      "minecraft:jump": 3,
+      "minecraft:time_since_death": 2631
+    },
+    "minecraft:used": {
+      "architecture:quad_window_top_arch_1_1": 3,
+      "architecture:quad_window_top_arch_1_2": 2,
+      "architecture:quad_window_top_arch_1_3": 4,
+      "architecture:quad_window_top_arch_1_4": 3,
+      "architecture:quad_window_top_arch_1_5": 1,
+      "architecture:quad_window_top_arch_1_6": 1
+    }
+  },
+  "DataVersion": 4671
+}
