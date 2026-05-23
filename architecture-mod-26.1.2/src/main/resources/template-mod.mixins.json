@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "org.seanpaul.mixin",
+	"package": "net.minecraft.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"ExampleMixin"

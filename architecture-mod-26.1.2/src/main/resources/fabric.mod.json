@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.seanpaul.TemplateMod"
+          "net.minecraft.ArchitectureMod"
 		],
 		"fabric-datagen": [
-			"org.seanpaul.TemplateModDataGenerator"
+          "net.minecraft.ArchitectureModDataGenerator"
 		]
 	},
 	"mixins": [

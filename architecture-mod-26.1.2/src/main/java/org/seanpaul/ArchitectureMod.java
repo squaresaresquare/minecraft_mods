@@ -1,11 +1,11 @@
-package org.seanpaul;
+package net.minecraft;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TemplateMod implements ModInitializer {
+public class ArchitectureMod implements ModInitializer {
 	public static final String MOD_ID = "template-mod";
 
 	// This logger is used to write text to the console and the log file.
