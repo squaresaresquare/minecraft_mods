@@ -1,6 +1,4 @@
 .DS_Store
-Thumbs.db
-build
-.gradle
-.fabric
-logs
+.cache
+.git*
+.idea

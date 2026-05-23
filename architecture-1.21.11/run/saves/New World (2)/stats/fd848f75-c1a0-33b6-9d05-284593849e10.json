@@ -1,0 +1,25 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3611,
+      "minecraft:walk_one_cm": 8423,
+      "minecraft:total_world_time": 3670,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 9,
+      "minecraft:play_time": 3611,
+      "minecraft:jump": 1,
+      "minecraft:time_since_death": 3611
+    },
+    "minecraft:used": {
+      "architecture:thin_quartz_base": 1,
+      "architecture:quartz_pillar": 1,
+      "architecture:thin_quartz_column": 1,
+      "architecture:twin_column_base": 1,
+      "minecraft:oak_planks": 5,
+      "architecture:quad_window_top_arch_1_1": 4,
+      "architecture:thin_quartz_capital": 1,
+      "architecture:twin_column_capital": 1
+    }
+  },
+  "DataVersion": 4671
+}
