@@ -1,4 +1,4 @@
-package net.minecraft;
+package net.minecraft.architecturemod;
 
 import net.fabricmc.api.ModInitializer;
 

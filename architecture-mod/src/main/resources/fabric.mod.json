@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.minecraft.ArchitectureMod"
+          "net.minecraft.architecturemod.ArchitectureMod"
 		],
 		"fabric-datagen": [
-			"net.minecraft.ArchitectureModDataGenerator"
+          "net.minecraft.architecturemod.ArchitectureModDataGenerator"
 		]
 	},
 	"mixins": [

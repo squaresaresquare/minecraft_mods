@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.minecraft.mixin",
+	"package": "net.minecraft.architecturemod.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"ExampleMixin"

@@ -1,4 +1,4 @@
-package net.minecraft.mixin;
+package net.minecraft.architecturemod.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
