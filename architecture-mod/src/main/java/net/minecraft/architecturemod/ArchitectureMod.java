@@ -1,7 +1,14 @@
 package net.minecraft.architecturemod;
 
+//Classes from THIS project
+import net.minecraft.architecturemod.block.ModBlocks;
+
+//Fabric Classes
 import net.fabricmc.api.ModInitializer;
 
+// net.minecraft libraries
+
+//Misc Libraries
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +22,11 @@ public class ArchitectureMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+        ModBlocks.initialize();
+		LOGGER.info("Initialize the Architecture blocks mod");
 	}
+    /*@Override
+    public void onInitialize() {
+
+    }*/
 }
