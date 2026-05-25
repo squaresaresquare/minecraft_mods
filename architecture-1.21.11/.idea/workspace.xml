@@ -5,16 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7d2ce21-214d-4c4e-bdbb-5cbd5d76d0a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sparse_custom_directional_block/src/client/java/org/squaresaresquare/client/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Minecraft_Server.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradle/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradle/wrapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/ArchitectureMod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/ArchitectureModClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/ArchitectureModDataGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/block/ModBlocks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/block/custom/QuartzBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/block/custom/QuartzPillarBlock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/datagen/ModBlockLootTableProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/datagen/ModRecipeProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/item/ModItems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/mixin/ExampleMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/java/net/minecraft/architecturemod/recipe/ModRecipes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/architecture-mod.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/blockstates/quartz_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/lang/en_us.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/models/block/quartz_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/models/item/genertic_item.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/models/item/quartz_pillar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/textures/block/quartz_pillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/textures/item/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/assets/architecture-mod/textures/item/quartz_pillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/src/main/resources/fabric.mod.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../architecture-mod/tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,36 +170,36 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [compileJava].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [compileTestJava].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [genSources].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [runClient].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Fabric-Tutorial-1.21.11+ [runServer].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [buildDependents].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [configureClientLaunch].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [configureLaunch].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [downloadAssets].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [genSourcesWithVineflower].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [genSources].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [jar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [publish].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [runClient].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.architecture-1.21.11 [sourcesJar].executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.fabric-api-0.144.3+26.1.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sparse&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture-1.21.11&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Fabric-Tutorial-1.21.11+ [build].executor": "Run",
+    "Gradle.Fabric-Tutorial-1.21.11+ [compileJava].executor": "Run",
+    "Gradle.Fabric-Tutorial-1.21.11+ [compileTestJava].executor": "Run",
+    "Gradle.Fabric-Tutorial-1.21.11+ [genSources].executor": "Run",
+    "Gradle.Fabric-Tutorial-1.21.11+ [runClient].executor": "Run",
+    "Gradle.Fabric-Tutorial-1.21.11+ [runServer].executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.architecture-1.21.11 [buildDependents].executor": "Run",
+    "Gradle.architecture-1.21.11 [build].executor": "Run",
+    "Gradle.architecture-1.21.11 [clean].executor": "Run",
+    "Gradle.architecture-1.21.11 [configureClientLaunch].executor": "Run",
+    "Gradle.architecture-1.21.11 [configureLaunch].executor": "Run",
+    "Gradle.architecture-1.21.11 [downloadAssets].executor": "Run",
+    "Gradle.architecture-1.21.11 [genSourcesWithVineflower].executor": "Run",
+    "Gradle.architecture-1.21.11 [genSources].executor": "Run",
+    "Gradle.architecture-1.21.11 [jar].executor": "Run",
+    "Gradle.architecture-1.21.11 [publish].executor": "Run",
+    "Gradle.architecture-1.21.11 [runClient].executor": "Run",
+    "Gradle.architecture-1.21.11 [sourcesJar].executor": "Run",
+    "JAR Application.fabric-api-0.144.3+26.1.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "try__again",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture-1.21.11"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/assets/architecture/items" />
