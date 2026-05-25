@@ -1,5 +1,5 @@
 package net.minecraft.architecturemod.block;
-
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.architecturemod.ArchitectureMod;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -41,13 +41,15 @@ public class ModBlocks {
         return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ArchitectureMod.MOD_ID, name));
     }
 
-    public static void initialize() {}
+    public static void initialize() {
+
+    }
 
     // Register blocks
     public static final Block QUARTZ_PILLAR = register(
             "quartz_pillar",
             Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE),
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
     );
 }

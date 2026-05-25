@@ -20,7 +20,10 @@
 		],
 		"fabric-datagen": [
           "net.minecraft.architecturemod.ArchitectureModDataGenerator"
-		]
+		],
+        "client": [
+          "net.minecraft.architecturemod.ArchitectureModClient"
+        ]
 	},
 	"mixins": [
       "architecturemod.mixins.json"

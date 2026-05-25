@@ -3,7 +3,8 @@ package net.minecraft.architecturemod;
 //Classes from THIS project
 import net.minecraft.architecturemod.block.ModBlocks;
 import net.minecraft.architecturemod.creativemodetab.ModCreativeModeTabs;
-
+import net.minecraft.architecturemod.block.entity.ModBlockEntities;
+import net.minecraft.client.renderer.rendertype.RenderType;
 //Fabric Classes
 import net.fabricmc.api.ModInitializer;
 
@@ -25,10 +26,7 @@ public class ArchitectureMod implements ModInitializer {
 	public void onInitialize() {
         ModBlocks.initialize();
         ModCreativeModeTabs.registerModCreativeModeTabs();
+        ModBlockEntities.initialize();
 		LOGGER.info("Initialize the Architecture blocks mod");
 	}
-    /*@Override
-    public void onInitialize() {
-
-    }*/
 }
