@@ -1,12 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "block/cube_all",
-	"ambientocclusion": false,
+    "ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
 		"particle": "architecturemod:block/quartz_pillar",
 		"all": "architecturemod:block/quartz_pillar"
 	},
+
 	"elements": [
 		{
 			"from": [0, 0, 5],

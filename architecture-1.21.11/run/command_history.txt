@@ -9,3 +9,4 @@
 /time set day
 /gamemode creative
 /reload
+/give Player855 architecture:quartz_pillar

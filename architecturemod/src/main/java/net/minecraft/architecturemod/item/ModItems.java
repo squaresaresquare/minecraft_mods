@@ -30,12 +30,4 @@ public class ModItems {
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(ArchitectureMod.MOD_ID, "creative_tab")
     );
-    public static final CreativeModeTab CUSTOM_CREATIVE_TAB = FabricCreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.GENERIC_ITEM))
-            .title(Component.translatable("Architecture Blocks"))
-            .displayItems((params, output) -> {
-                // The tab builder also accepts Blocks
-                output.accept(ModBlocks.QUARTZ_PILLAR);
-            })
-            .build();
 }
