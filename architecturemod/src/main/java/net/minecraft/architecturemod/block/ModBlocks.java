@@ -1,20 +1,34 @@
 package net.minecraft.architecturemod.block;
-import net.minecraft.client.renderer.rendertype.RenderType;
+
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.architecturemod.ArchitectureMod;
+import net.minecraft.architecturemod.creativemodetab.ModCreativeModeTabs;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.function.Function;
 
 public class ModBlocks {
+    public static final Logger LOGGER = LoggerFactory.getLogger(ArchitectureMod.MOD_ID);
+    // Register blocks
+    public static final Block QUARTZ_PILLAR_BLOCK = register(
+            "quartz_pillar",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
         // Create a registry key for the block
+        LOGGER.info(String.format("register {}", name));
         ResourceKey<Block> blockKey = keyOfBlock(name);
         // Create the block instance
         Block block = blockFactory.apply(settings.setId(blockKey));
@@ -42,14 +56,12 @@ public class ModBlocks {
     }
 
     public static void initialize() {
-
+        setupItemGroups();
     }
 
-    // Register blocks
-    public static final Block QUARTZ_PILLAR = register(
-            "quartz_pillar",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
+    public static void setupItemGroups() {
+        CreativeModeTabEvents.modifyOutputEvent(ModCreativeModeTabs.ARCHITECTURE_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(ModBlocks.QUARTZ_PILLAR_BLOCK.asItem());
+        });
+    }
 }

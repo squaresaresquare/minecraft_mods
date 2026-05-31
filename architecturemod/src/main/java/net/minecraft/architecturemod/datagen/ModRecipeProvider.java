@@ -27,14 +27,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR, Blocks.QUARTZ_BLOCK);
-                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR, 2)
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_BLOCK, Blocks.QUARTZ_BLOCK);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_BLOCK, 2)
                         .define('#', Blocks.QUARTZ_BLOCK)
                         .pattern("#")
                         .pattern("#")
                         .unlockedBy("has_chiseled_quartz_block", this.has(Blocks.CHISELED_QUARTZ_BLOCK))
                         .unlockedBy("has_quartz_block", this.has(Blocks.QUARTZ_BLOCK))
-                        .unlockedBy("has_quartz_pillar", this.has(ModBlocks.QUARTZ_PILLAR))
+                        .unlockedBy("has_quartz_pillar", this.has(ModBlocks.QUARTZ_PILLAR_BLOCK))
                         .save(this.output);
             }
         };

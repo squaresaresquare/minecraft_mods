@@ -2,6 +2,7 @@ package net.minecraft.architecturemod;
 
 //Classes from THIS project
 import net.minecraft.architecturemod.block.ModBlocks;
+import net.minecraft.architecturemod.block.custom.QuartzPillarBlock;
 import net.minecraft.architecturemod.creativemodetab.ModCreativeModeTabs;
 import net.minecraft.architecturemod.block.entity.ModBlockEntities;
 import net.minecraft.client.renderer.rendertype.RenderType;

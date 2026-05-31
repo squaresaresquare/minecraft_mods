@@ -1,7 +1,3 @@
 {
-  "block.architecturemod.quartz_pillar": "Quartz Pillar",
-  "block.architecturemod.half_quartz_pillar": "Half Quartz Pillar",
-  "block.architecturemod.thin_quartz_base": "Thin Quartz Base",
-  "block.architecturemod.thin_quartz_capital": "Thin Quartz Capital",
-  "block.architecturemod.thin_quartz_column": "Thin Quartz Column"
+  "block.architecturemod.quartz_pillar_block": "Quartz Pillar"
 }

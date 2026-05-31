@@ -15,10 +15,10 @@ import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBlockEntity
 
 public class ModBlockEntities {
     public static final BlockEntityType<QuartzPillarBlockEntity> QUARTZ_PILLAR_BLOCK_ENTITY =
-            register("quartz_pillar", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR);
+            register("quartz_pillar", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR_BLOCK);
 
     public static final BlockEntityType<QuartzPillarBlockEntity> COUNTER_BLOCK_ENTITY =
-            register("counter", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR);
+            register("counter", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR_BLOCK);
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
