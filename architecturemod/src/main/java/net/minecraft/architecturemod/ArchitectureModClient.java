@@ -58,6 +58,6 @@ public class ArchitectureModClient implements ClientModInitializer {
             public int color(BlockState state) {
                 return 0xFFFFDAB9; // Color code in hex format
             }
-        }), ModBlocks.QUARTZ_PILLAR_BLOCK);
+        }), ModBlocks.QUARTZ_PILLAR);
     }
 }

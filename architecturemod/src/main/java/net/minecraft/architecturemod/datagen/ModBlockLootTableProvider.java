@@ -13,6 +13,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     }
     @Override
     public void generate() {
-        dropSelf(ModBlocks.QUARTZ_PILLAR_BLOCK);
+        dropSelf(ModBlocks.QUARTZ_PILLAR);
     }
 }
