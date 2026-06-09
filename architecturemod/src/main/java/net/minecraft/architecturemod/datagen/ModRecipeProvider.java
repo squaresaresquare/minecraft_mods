@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlazedTerracottaBlock;
 
 //import java.util.function.Consumer;
 
@@ -30,11 +31,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR, Blocks.QUARTZ_BLOCK);
                 this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR, 2)
                         .define('#', Blocks.QUARTZ_BLOCK)
-                        .pattern("#")
-                        .pattern("#")
+                        .pattern(" # ")
+                        .pattern(" # ")
                         .unlockedBy("has_chiseled_quartz_block", this.has(Blocks.CHISELED_QUARTZ_BLOCK))
                         .unlockedBy("has_quartz_block", this.has(Blocks.QUARTZ_BLOCK))
                         .unlockedBy("has_quartz_pillar", this.has(ModBlocks.QUARTZ_PILLAR))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_CAP, 2)
+                        .define('#', Blocks.CUT_SANDSTONE)
+                        .define('%', Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA)
+                        .pattern(" # ")
+                        .pattern(" % ")
+                        .unlockedBy("has_cut_sandstone_block", this.has(Blocks.CUT_SANDSTONE))
+                        .unlockedBy("has_light_blue_glazed_terracotta_block", this.has(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_BASE, 2)
+                        .define('#', Blocks.QUARTZ_PILLAR)
+                        .define('%', Blocks.POLISHED_GRANITE)
+                        .pattern(" # ")
+                        .pattern(" % ")
+                        .unlockedBy("has_quartz_pillar_block", this.has(Blocks.QUARTZ_PILLAR))
+                        .unlockedBy("has_polished_granite_block", this.has(Blocks.POLISHED_GRANITE))
                         .save(this.output);
             }
         };

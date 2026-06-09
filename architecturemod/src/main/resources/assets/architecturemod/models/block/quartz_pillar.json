@@ -4,8 +4,8 @@
 	"ambientocclusion": false,
 	"texture_size": [128, 128],
 	"textures": {
-		"particle": "architecture:block/quartz_pillar",
-		"all": "architecture:block/quartz_pillar"
+		"particle": "architecturemod:block/quartz_pillar",
+		"all": "architecturemod:block/quartz_pillar"
 	},
 	"elements": [
 		{

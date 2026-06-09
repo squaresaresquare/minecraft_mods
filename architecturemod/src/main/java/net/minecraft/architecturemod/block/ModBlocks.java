@@ -51,4 +51,16 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
     );
+    public static final Block QUARTZ_PILLAR_CAP = register(
+            "quartz_pillar_cap",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+    public static final Block QUARTZ_PILLAR_BASE = register(
+            "quartz_pillar_base",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
 }
