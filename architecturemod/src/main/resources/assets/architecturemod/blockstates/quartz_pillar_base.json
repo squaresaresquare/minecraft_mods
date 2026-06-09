@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "architecturemod:block/quartz_pillar_base"
+    }
+  }
+}
