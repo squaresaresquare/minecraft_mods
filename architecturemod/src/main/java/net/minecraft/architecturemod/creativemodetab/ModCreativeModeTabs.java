@@ -19,6 +19,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.architecturemod.quartz_pillar"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.QUARTZ_PILLAR);
+                        output.accept(ModBlocks.QUARTZ_PILLAR_CAP);
+                        output.accept(ModBlocks.QUARTZ_PILLAR_BASE);
                     }).build());
 
     public static void registerModCreativeModeTabs() {

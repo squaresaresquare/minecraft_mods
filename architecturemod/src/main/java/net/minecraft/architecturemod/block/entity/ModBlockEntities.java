@@ -1,6 +1,8 @@
 package net.minecraft.architecturemod.block.entity;
 
 import net.minecraft.architecturemod.ArchitectureMod;
+import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBaseBlockEntity;
+import net.minecraft.architecturemod.block.entity.custom.QuartzPillarCapBlockEntity;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -17,8 +19,12 @@ public class ModBlockEntities {
     public static final BlockEntityType<QuartzPillarBlockEntity> QUARTZ_PILLAR_BLOCK_ENTITY =
             register("quartz_pillar", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR);
 
-    public static final BlockEntityType<QuartzPillarBlockEntity> COUNTER_BLOCK_ENTITY =
-            register("counter", QuartzPillarBlockEntity::new, ModBlocks.QUARTZ_PILLAR);
+    public static final BlockEntityType<QuartzPillarCapBlockEntity> QUARTZ_PILLAR_CAP_BLOCK_ENTITY =
+            register("quartz_pillar_cap", QuartzPillarCapBlockEntity::new, ModBlocks.QUARTZ_PILLAR_CAP);
+
+    public static final BlockEntityType<QuartzPillarBaseBlockEntity> QUARTZ_PILLAR_BASE_BLOCK_ENTITY =
+            register("quartz_pillar_base", QuartzPillarBaseBlockEntity::new, ModBlocks.QUARTZ_PILLAR_BASE);
+
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
