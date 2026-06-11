@@ -3,6 +3,7 @@ package net.minecraft.architecturemod.block.entity;
 import net.minecraft.architecturemod.ArchitectureMod;
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBaseBlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarCapBlockEntity;
+//::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
