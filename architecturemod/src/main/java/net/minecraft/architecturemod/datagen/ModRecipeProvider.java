@@ -54,6 +54,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_polished_granite_block", this.has(Blocks.POLISHED_GRANITE))
                         .save(this.output);
             }
+            //::new block here
         };
     }
     @Override

@@ -63,4 +63,5 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
     );
+    //::new block here
 }

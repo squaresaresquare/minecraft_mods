@@ -93,5 +93,6 @@ public class ArchitectureModClient implements ClientModInitializer {
                 return 0xFFFFDAB9; // Color code in hex format
             }
         }), ModBlocks.QUARTZ_PILLAR_CAP);
+        //::new block here
     }
 }

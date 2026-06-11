@@ -28,6 +28,7 @@ public class ModItems {
     public static final Item QUARTZ_PILLAR = registerItem("quartz_pillar", Item::new);
     public static final Item QUARTZ_PILLAR_CAP = registerItem("quartz_pillar_cap", Item::new);
     public static final Item QUARTZ_PILLAR_BASE = registerItem("quartz_pillar_base", Item::new);
+    //::new block here
     //A tab in creative mode to put all the custom blocks under
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(ArchitectureMod.MOD_ID, "creative_tab")

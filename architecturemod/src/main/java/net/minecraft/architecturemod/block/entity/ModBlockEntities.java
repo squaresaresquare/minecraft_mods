@@ -24,7 +24,7 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<QuartzPillarBaseBlockEntity> QUARTZ_PILLAR_BASE_BLOCK_ENTITY =
             register("quartz_pillar_base", QuartzPillarBaseBlockEntity::new, ModBlocks.QUARTZ_PILLAR_BASE);
-
+    //::new block here
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
