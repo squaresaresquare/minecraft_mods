@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.QUARTZ_PILLAR);
                         output.accept(ModBlocks.QUARTZ_PILLAR_CAP);
                         output.accept(ModBlocks.QUARTZ_PILLAR_BASE);
+                        output.accept(ModBlocks.QUAD_WINDOW_TOP_ARCH_1_1);
+                        //::new block here
                     }).build());
 
     public static void registerModCreativeModeTabs() {

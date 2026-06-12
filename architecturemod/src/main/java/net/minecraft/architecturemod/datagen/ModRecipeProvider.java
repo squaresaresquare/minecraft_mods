@@ -39,11 +39,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(this.output);
                 this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_CAP, 2)
                         .define('#', Blocks.CUT_SANDSTONE)
-                        .define('%', Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA)
+                        .define('%', Blocks.GLAZED_TERRACOTTA.lightBlue())
                         .pattern(" # ")
                         .pattern(" % ")
                         .unlockedBy("has_cut_sandstone_block", this.has(Blocks.CUT_SANDSTONE))
-                        .unlockedBy("has_light_blue_glazed_terracotta_block", this.has(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA))
+                        .unlockedBy("has_light_blue_glazed_terracotta_block", this.has(Blocks.GLAZED_TERRACOTTA.lightBlue()))
                         .save(this.output);
                 this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_PILLAR_BASE, 2)
                         .define('#', Blocks.QUARTZ_PILLAR)
@@ -53,6 +53,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_quartz_pillar_block", this.has(Blocks.QUARTZ_PILLAR))
                         .unlockedBy("has_polished_granite_block", this.has(Blocks.POLISHED_GRANITE))
                         .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_TOP_ARCH_1_1, 2)
+                        .define('#', Blocks.QUARTZ_BLOCK)
+                        .define('%', Blocks.POLISHED_DIORITE_STAIRS)
+                        .pattern("#  ")
+                        .pattern("#% ")
+                        .pattern("#% ")
+                        .unlockedBy("has_quartz_block", this.has(Blocks.QUARTZ_BLOCK))
+                        .unlockedBy("has_polished_diorite_stairs", this.has(Blocks.POLISHED_DIORITE_STAIRS))
+                        .save(this.output);
+
+                //::new block here
             }
         };
     }

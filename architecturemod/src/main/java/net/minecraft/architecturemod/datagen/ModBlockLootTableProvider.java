@@ -16,5 +16,6 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.QUARTZ_PILLAR);
         dropSelf(ModBlocks.QUARTZ_PILLAR_CAP);
         dropSelf(ModBlocks.QUARTZ_PILLAR_BASE);
+        //::new block here
     }
 }
