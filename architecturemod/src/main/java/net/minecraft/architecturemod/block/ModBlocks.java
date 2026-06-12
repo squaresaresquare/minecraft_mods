@@ -63,5 +63,13 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
     );
+ 
+    public static final Block QUAD_WINDOW_TOP_ARCH_1_1 = register(
+            "quad_window_top_arch_1_1",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+
     //::new block here
 }

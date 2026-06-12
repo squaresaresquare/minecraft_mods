@@ -3,6 +3,8 @@ package net.minecraft.architecturemod.block.entity;
 import net.minecraft.architecturemod.ArchitectureMod;
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBaseBlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarCapBlockEntity;
+import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
+import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
 //::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -25,6 +27,10 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<QuartzPillarBaseBlockEntity> QUARTZ_PILLAR_BASE_BLOCK_ENTITY =
             register("quartz_pillar_base", QuartzPillarBaseBlockEntity::new, ModBlocks.QUARTZ_PILLAR_BASE);
+
+    public static final BlockEntityType<QuadWindowTopArch11BlockEntity> QUAD_WINDOW_TOP_ARCH_1_1_BLOCK_ENTITY =
+        register("quad_window_top_arch_1_1", QuadWindowTopArch11BlockEntity::new, ModBlocks.QUAD_WINDOW_TOP_ARCH_1_1);
+        
     //::new block here
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
