@@ -1,6 +1,8 @@
-package net.minecraft.architecturemod.block;
+package org.squaresaresquare.client.block;
+
 import net.minecraft.client.renderer.rendertype.RenderType;
-import net.minecraft.architecturemod.ArchitectureMod;
+import org.jetbrains.annotations.NotNull;
+import org.squaresaresquare.Architecture_blocks;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -15,7 +17,7 @@ import java.util.function.Function;
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
         // Create a registry key for the block
-        ResourceKey<Block> blockKey = keyOfBlock(name);
+        ResourceKey<@NotNull Block> blockKey = keyOfBlock(name);
         // Create the block instance
         Block block = blockFactory.apply(settings.setId(blockKey));
 
@@ -24,7 +26,7 @@ public class ModBlocks {
         if (shouldRegisterItem) {
             // Items need to be registered with a different type of registry key, but the ID
             // can be the same.
-            ResourceKey<Item> itemKey = keyOfItem(name);
+            ResourceKey<@NotNull Item> itemKey = keyOfItem(name);
 
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
@@ -32,52 +34,22 @@ public class ModBlocks {
 
         return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
     }
-
-    private static ResourceKey<Block> keyOfBlock(String name) {
-        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ArchitectureMod.MOD_ID, name));
+    private static ResourceKey<@NotNull Block> keyOfBlock(String name) {
+        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, name));
     }
-    private static ResourceKey<Item> keyOfItem(String name) {
-        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ArchitectureMod.MOD_ID, name));
+    private static ResourceKey<@NotNull Item> keyOfItem(String name) {
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, name));
     }
 
     public static void initialize() {
 
     }
-
-    // Register blocks
-    public static final Block QUARTZ_PILLAR = register(
-            "quartz_pillar",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
-    public static final Block QUARTZ_PILLAR_CAP = register(
-            "quartz_pillar_cap",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
-    public static final Block QUARTZ_PILLAR_BASE = register(
-            "quartz_pillar_base",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
- 
-    public static final Block QUAD_WINDOW_TOP_ARCH_1_1 = register(
-            "quad_window_top_arch_1_1",
+    public static final Block MARBLE_PLINTH_BLOCK = register(
+            "marble_plinth_block",
             Block::new,
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
     );
 
- 
-        public static final Block QUAD_WINDOW_TOP_ARCH_1_2 = register(
-            "quad_window_top_arch_1_2",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
-        
     //::new block here
 }

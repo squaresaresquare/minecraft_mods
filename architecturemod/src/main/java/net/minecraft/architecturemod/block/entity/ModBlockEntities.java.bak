@@ -5,7 +5,6 @@ import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBaseBlockEn
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarCapBlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
-import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch12BlockEntity;
 //::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

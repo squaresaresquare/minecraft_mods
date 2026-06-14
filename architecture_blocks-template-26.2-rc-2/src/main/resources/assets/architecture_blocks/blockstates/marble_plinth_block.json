@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "architecture_blocks:block/marble_plinth_block"
+    }
+  }
+}

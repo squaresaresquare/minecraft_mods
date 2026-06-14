@@ -71,13 +71,5 @@ public class ModBlocks {
             true
     );
 
- 
-        public static final Block QUAD_WINDOW_TOP_ARCH_1_2 = register(
-            "quad_window_top_arch_1_2",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
-    );
-        
     //::new block here
 }
