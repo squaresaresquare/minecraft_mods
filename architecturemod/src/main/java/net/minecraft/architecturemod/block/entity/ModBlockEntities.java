@@ -5,6 +5,7 @@ import net.minecraft.architecturemod.block.entity.custom.QuartzPillarBaseBlockEn
 import net.minecraft.architecturemod.block.entity.custom.QuartzPillarCapBlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
 import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch11BlockEntity;
+import net.minecraft.architecturemod.block.entity.custom.QuadWindowTopArch12BlockEntity;
 //::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -30,6 +31,10 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<QuadWindowTopArch11BlockEntity> QUAD_WINDOW_TOP_ARCH_1_1_BLOCK_ENTITY =
         register("quad_window_top_arch_1_1", QuadWindowTopArch11BlockEntity::new, ModBlocks.QUAD_WINDOW_TOP_ARCH_1_1);
+        
+
+    public static final BlockEntityType<QuadWindowTopArch12BlockEntity> QUAD_WINDOW_TOP_ARCH_1_2_BLOCK_ENTITY =
+        register("quad_window_top_arch_1_2", QuadWindowTopArch12BlockEntity::new, ModBlocks.QUAD_WINDOW_TOP_ARCH_1_2);
         
     //::new block here
 

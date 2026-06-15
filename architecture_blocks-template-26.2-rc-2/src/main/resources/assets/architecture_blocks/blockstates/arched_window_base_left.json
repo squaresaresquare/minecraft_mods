@@ -1,0 +1,21 @@
+
+{
+  "variants": {
+    "facing=north": {
+      "model": "architecture_blocks:block/arched_window_base_left",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "architecture_blocks:block/arched_window_base_left",
+      "y": -90
+    },
+    "facing=south": {
+      "model": "architecture_blocks:block/arched_window_base_left"
+    },
+    "facing=west": {
+      "model": "architecture_blocks:block/arched_window_base_left",
+      "y": 90
+    }
+  }
+}
+        
