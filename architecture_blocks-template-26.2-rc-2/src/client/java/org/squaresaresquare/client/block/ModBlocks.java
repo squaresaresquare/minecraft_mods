@@ -21,6 +21,7 @@ import org.squaresaresquare.client.block.custom.QuadWindow13Block;
 import org.squaresaresquare.client.block.custom.QuadWindow14Block;
 import org.squaresaresquare.client.block.custom.QuadWindow15Block;
 import org.squaresaresquare.client.block.custom.QuadWindow16Block;
+import org.squaresaresquare.client.block.custom.ArchedWindowBaseLeftBlock;
 //::new import here
 
 public class ModBlocks {
@@ -104,6 +105,13 @@ public class ModBlocks {
             QuadWindow16Block::new,
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
             true
+    );
+
+    public static final Block ARCHED_WINDOW_BASE_LEFT = register(
+        "arched_window_base_left",
+        ArchedWindowBaseLeftBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+        true
     );
 
     //::new block here

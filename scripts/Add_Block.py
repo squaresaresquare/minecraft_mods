@@ -22,6 +22,7 @@ class addBlock:
         self.uppercaseName = str()
         self.recipe = str()
         self.debug  = debug
+        self.custom_blocks = ["WHITE_MARBLE_BLOCK", "QUARTZ_PILLAR", "QUARTZ_PILLAR_BASE"]
 
         self.logger = logging.getLogger(__name__)
         if Path(self.mod_path).is_dir():
@@ -159,16 +160,20 @@ class addBlock:
         self.recipe_block = f"                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.{self.uppercaseName}, {recipe_result_block_count})\n"
         for index in range(len(recipe["ingredients"])):
             ing = recipe['ingredients'][index]
-            if ing == "WHITE_MARBLE_BLOCK":
+            if ing in self.custom_blocks:
                 self.recipe_block += f"                        .define('{index}', ModBlocks.{ing})\n"
             else:
                 self.recipe_block += f"                        .define('{index}', Blocks.{ing})\n"
+        print(recipe["patterns"])
         for pattern in recipe["patterns"]:
+            print(f"pattern: {pattern}")
+            pattern.replace("'", " ")
             self.recipe_block += f"                        .pattern(\"{pattern}\")\n"
+        junk = input("check output and hit enter")
         for ingredient in recipe['ingredients']:
             lowercase_ingredient = ingredient.lower()
             uppercase_ingredient = ingredient.upper()
-            if uppercase_ingredient == "WHITE_MARBLE_BLOCK":
+            if uppercase_ingredient in self.custom_blocks:
                 self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(ModBlocks.{uppercase_ingredient}))\n"
             else:
                 self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(Blocks.{uppercase_ingredient}))\n"
@@ -299,11 +304,21 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
             update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});")
                 
     def update_ModBlocks(self):
+        new_block = self.CapitalizedName
+        try:
+            if self.CapitalizedName.rindex("Block") == len(self.CapitalizedName) - 5:
+                if self.verbose or self.debug:
+                    sys.stdout.write("no changes to block name\n")
+        except ValueError as e:
+            sys.stdout.write("Block suffix not found, append it\n")
+            new_block = f"{self.CapitalizedName}Block"
+            pass
+    
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
         update_string=f""" 
     public static final Block {self.uppercaseName} = register(
         "{self.block_name}",
-        {self.CapitalizedName}::new,
+        {new_block}::new,
         BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
         true
     );
@@ -353,9 +368,9 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
             update_string=f"import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;")
 
     def update_en_us(self):
+        description = str(str(str(self.block_name).capitalize).replace('_', ' '))
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/lang/en_us.json",
             pattern="stub",
-            description = str(str(str(self.block_name).capitalize).replace('_', ' '))
             update_string=f'''"  block.architecture_blocks.{self.block_name}": "{description}",''')
     
     def create_custom_block_file(self):
@@ -446,10 +461,23 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
 
     def create_blockstate_json(self):
         self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/blockstates/{self.block_name}.json",
-            contents=f'''{{
+            contents=f'''
+{{
   "variants": {{
-    "": {{
+    "facing=north": {{
+      "model": "architecture_blocks:block/{self.block_name}",
+      "y": 180
+    }},
+    "facing=east": {{
+      "model": "architecture_blocks:block/{self.block_name}",
+      "y": -90
+    }},
+    "facing=south": {{
       "model": "architecture_blocks:block/{self.block_name}"
+    }},
+    "facing=west": {{
+      "model": "architecture_blocks:block/{self.block_name}",
+      "y": 90
     }}
   }}
 }}
@@ -462,7 +490,6 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
     "type": "minecraft:model",
     "model": "architecture_blocks:block/{self.block_name}"
   }}
-
 }}
             ''')
 
@@ -509,7 +536,7 @@ def main():
     args = parser.parse_args()
     #instantiate object
     ingredients = re.split(r"[,]", args.ingredients) 
-    crafting_table_patterns = re.split(r"[,; ]", args.recipe) 
+    crafting_table_patterns = re.split(r"[,]", args.recipe) 
     block_name = args.block_name
     
     recipe = dict(ingredients=ingredients, patterns=crafting_table_patterns)

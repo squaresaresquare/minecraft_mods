@@ -1,0 +1,8 @@
+
+{
+  "parent": "architecture_blocks:block/{self.block_name}",
+  "textures": {
+    "layer0": "item/{self.block_name}"
+  },
+}
+        

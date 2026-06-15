@@ -2,6 +2,7 @@ package org.squaresaresquare.client.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import org.squaresaresquare.Architecture_blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 //import org.squaresaresquare.client.item.ModItems;
 import net.minecraft.core.HolderLookup;
@@ -91,6 +92,19 @@ public class ModRecipeProvider {
                         .unlockedBy("has_white_marble_block", this.has(ModBlocks.WHITE_MARBLE_BLOCK))
                         .save(this.output);
 
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_BASE_LEFT, 3)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', Blocks.POLISHED_ANDESITE_SLAB)
+                        .define('2', ModBlocks.QUARTZ_PILLAR_BASE)
+                        .define('3', ModBlocks.QUARTZ_PILLAR)
+                        .pattern("'03 '")
+                        .pattern("'02 '")
+                        .pattern("'111'")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_polished_andesite_slab", this.has(Blocks.POLISHED_ANDESITE_SLAB))
+                        .unlockedBy("has_quartz_pillar_base", this.has(ModBlocks.QUARTZ_PILLAR_BASE))
+                        .unlockedBy("has_quartz_pillar", this.has(ModBlocks.QUARTZ_PILLAR))
+                        .save(this.output);
                 //::new block here
             }
         };

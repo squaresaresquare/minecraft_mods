@@ -14,5 +14,14 @@
   "block.architecture_blocks.quad_window_1_4": "Arched window with 4 windows row 1 column 4",
   "block.architecture_blocks.quad_window_1_5": "Arched window with 4 windows row 1 column 5",
   "block.architecture_blocks.quad_window_1_6": "Arched window with 4 windows row 1 column 6",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x103dabd00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x103e31d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x109153d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x10c8b9d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x100d2ed00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x1048a5d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x10f049d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x10f3a7d00>",
+"  block.architecture_blocks.arched_window_base_left": "<built-in method capitalize of str object at 0x10eb1dd00>",
   "stub": "stub"
 }

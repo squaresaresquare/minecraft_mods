@@ -10,7 +10,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-//import org.objectweb.asm.tree.analysis.Value;
 
 public class ModCreativeModeTabs {
     public static final CreativeModeTab ARCHITECTURE_BLOCK_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
@@ -26,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.QUAD_WINDOW_1_4);
                         output.accept(ModBlocks.QUAD_WINDOW_1_5);
                         output.accept(ModBlocks.QUAD_WINDOW_1_6);
+                        output.accept(ModBlocks.ARCHED_WINDOW_BASE_LEFT);
                         //::new block here
                     }).build());
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
