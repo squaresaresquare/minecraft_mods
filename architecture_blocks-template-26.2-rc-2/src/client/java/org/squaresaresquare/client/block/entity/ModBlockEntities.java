@@ -9,6 +9,7 @@ import org.squaresaresquare.client.block.entity.custom.QuadWindow12BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow13BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow14BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow15BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.QuadWindow16BlockEntity;
 //::new import here
 
 import net.minecraft.core.Registry;
@@ -46,6 +47,10 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<QuadWindow15BlockEntity> QUAD_WINDOW_1_5_BLOCK_ENTITY =
         register("quad_window_1_5", QuadWindow15BlockEntity::new, ModBlocks.QUAD_WINDOW_1_5);
+        
+
+    public static final BlockEntityType<QuadWindow16BlockEntity> QUAD_WINDOW_1_6_BLOCK_ENTITY =
+        register("quad_window_1_6", QuadWindow16BlockEntity::new, ModBlocks.QUAD_WINDOW_1_6);
         
     //::new block here
     private static <T extends BlockEntity> BlockEntityType<T> register(

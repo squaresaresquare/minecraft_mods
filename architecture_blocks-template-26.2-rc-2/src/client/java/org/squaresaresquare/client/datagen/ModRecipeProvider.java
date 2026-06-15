@@ -81,6 +81,16 @@ public class ModRecipeProvider {
                         .unlockedBy("has_white_marble_block", this.has(ModBlocks.WHITE_MARBLE_BLOCK))
                         .save(this.output);
 
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_1_6, 3)
+                        .define('0', Blocks.POLISHED_DIORITE)
+                        .define('1', ModBlocks.WHITE_MARBLE_BLOCK)
+                        .pattern("'111'")
+                        .pattern("'111'")
+                        .pattern("'110'")
+                        .unlockedBy("has_polished_diorite", this.has(Blocks.POLISHED_DIORITE))
+                        .unlockedBy("has_white_marble_block", this.has(ModBlocks.WHITE_MARBLE_BLOCK))
+                        .save(this.output);
+
                 //::new block here
             }
         };

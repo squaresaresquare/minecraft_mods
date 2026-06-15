@@ -4,7 +4,8 @@
 	"texture_size": [96, 80],
 	"textures": {
 		"3": "architecture_blocks:block/quad_window_1_1/polished_diorite",
-		"4": "architecture_blocks:block/quad_window_1_1/white_marble"
+		"4": "architecture_blocks:block/quad_window_1_1/white_marble",
+        "particle": "architecture_blocks:block/quad_window_1_2/white_marble"
 	},
 	"elements": [
 		{

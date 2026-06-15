@@ -301,19 +301,26 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
     def update_ModBlocks(self):
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
         update_string=f""" 
-        public static final Block {self.uppercaseName} = register(
-            "{self.block_name}",
-            Block::new,
-            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
-            true
+    public static final Block {self.uppercaseName} = register(
+        "{self.block_name}",
+        {self.CapitalizedName}::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+        true
     );
         """)
+        # second update
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
+            pattern='::new import here',
+            update_string=f"import org.squaresaresquare.client.block.custom.{self.CapitalizedName}Block;")
 
     def create_item_model(self):
         self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
         contents='''
 {
-  "parent": "architecture_blocks:block/{self.block_name}"
+  "parent": "architecture_blocks:block/{self.block_name}",
+  "textures": {
+    "layer0": "item/{self.block_name}"
+  },
 }
         ''')
 
@@ -348,7 +355,8 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
     def update_en_us(self):
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/lang/en_us.json",
             pattern="stub",
-            update_string=f'''"block.architecture_blocks.{self.block_name}": "{str(str(self.block_name).capitalize).replace('_', ' ')}",''')
+            description = str(str(str(self.block_name).capitalize).replace('_', ' '))
+            update_string=f'''"  block.architecture_blocks.{self.block_name}": "{description}",''')
     
     def create_custom_block_file(self):
         shapedir = "/src/main/resources/assets/architecture_blocks/shapes/"
@@ -365,21 +373,48 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import java.util.List;
 import javax.swing.text.html.BlockView;
-import org.jetbrains.annotations.Nullable;
-import org.squaresaresquare.client.block.ModBlocks;
-import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.client.renderer.rendertype.RenderType;
+import org.jetbrains.annotations.Nullable;
+import org.squaresaresquare.Architecture_blocks;
+import org.squaresaresquare.client.block.ModBlocks;
+import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;
 
 public class {self.CapitalizedName}Block extends BaseEntityBlock {{
+        public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+
+    public {self.CapitalizedName}Block(BlockBehaviour.Properties properties) {{
+        super(properties);
+        // stateDefinition.any() returns a random BlockState from an internal set,
+        // we don't care because we're setting all values ourselves anyway
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(FACING, Direction.NORTH)
+        );
+    }}
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {{
+        builder.add(FACING);
+    }}
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {{
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }}
 
 {Shape_function}
 
@@ -391,9 +426,6 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
         return this.makeShape();
     }}
 
-    public {self.CapitalizedName}Block(Properties settings) {{
-        super(settings);
-    }}
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {{
@@ -424,9 +456,13 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
         ''')
 
     def create_item_json(self):
-        self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
+        self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/items/{self.block_name}.json",
             contents=f'''{{
-  "parent": "architecture_blocks:block/{self.block_name}"
+  "model": {{
+    "type": "minecraft:model",
+    "model": "architecture_blocks:block/{self.block_name}"
+  }}
+
 }}
             ''')
 

@@ -8,10 +8,11 @@
   "block.architecture_blocks.marble_plinth_block": "Marble Plinth",
   "block.architecture_blocks.thin_quartz_column": "Thin Quartz Column",
   "block.architecture_blocks.white_marble_block": "White Marble Block",
-"block.architecture_blocks.quad_window_1_1": "<built-in method capitalize of str object at 0x101e472b0>",
-"block.architecture_blocks.quad_window_1_2": "<built-in method capitalize of str object at 0x1051292b0>",
-"block.architecture_blocks.quad_window_1_3": "<built-in method capitalize of str object at 0x10af5c2b0>",
-"block.architecture_blocks.quad_window_1_4": "<built-in method capitalize of str object at 0x10f0b32b0>",
-"block.architecture_blocks.quad_window_1_5": "<built-in method capitalize of str object at 0x1010b62b0>",
+  "block.architecture_blocks.quad_window_1_1": "Arched window with 4 windows row 1 column 1",
+  "block.architecture_blocks.quad_window_1_2": "Arched window with 4 windows row 1 column 2",
+  "block.architecture_blocks.quad_window_1_3": "Arched window with 4 windows row 1 column 3",
+  "block.architecture_blocks.quad_window_1_4": "Arched window with 4 windows row 1 column 4",
+  "block.architecture_blocks.quad_window_1_5": "Arched window with 4 windows row 1 column 5",
+  "block.architecture_blocks.quad_window_1_6": "Arched window with 4 windows row 1 column 6",
   "stub": "stub"
 }
