@@ -168,7 +168,7 @@ class addBlock:
         for ingredient in recipe['ingredients']:
             lowercase_ingredient = ingredient.lower()
             uppercase_ingredient = ingredient.upper()
-            if self.uppercase_ingredient == "WHITE_MARBLE_BLOCK":
+            if uppercase_ingredient == "WHITE_MARBLE_BLOCK":
                 self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(ModBlocks.{uppercase_ingredient}))\n"
             else:
                 self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(Blocks.{uppercase_ingredient}))\n"
