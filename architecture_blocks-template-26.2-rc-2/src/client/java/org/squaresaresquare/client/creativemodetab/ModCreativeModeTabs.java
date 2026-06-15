@@ -19,6 +19,12 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.architecture_blocks.marble_plinth_block"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.MARBLE_PLINTH_BLOCK);
+                        output.accept(ModBlocks.WHITE_MARBLE_BLOCK);
+                        output.accept(ModBlocks.QUAD_WINDOW_1_1);
+                        output.accept(ModBlocks.QUAD_WINDOW_1_2);
+                        output.accept(ModBlocks.QUAD_WINDOW_1_3);
+                        output.accept(ModBlocks.QUAD_WINDOW_1_4);
+                        output.accept(ModBlocks.QUAD_WINDOW_1_5);
                         //::new block here
                     }).build());
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(

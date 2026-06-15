@@ -13,6 +13,12 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     }
     @Override
     public void generate() {
+    dropSelf(ModBlocks.WHITE_MARBLE_BLOCK);
+    dropSelf(ModBlocks.QUAD_WINDOW_1_1);
+    dropSelf(ModBlocks.QUAD_WINDOW_1_2);
+    dropSelf(ModBlocks.QUAD_WINDOW_1_3);
+    dropSelf(ModBlocks.QUAD_WINDOW_1_4);
+    dropSelf(ModBlocks.QUAD_WINDOW_1_5);
         //::new block here
     }
 }

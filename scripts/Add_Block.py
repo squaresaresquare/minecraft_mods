@@ -12,7 +12,7 @@ from pprint import pprint
 from pathlib import Path
 
 class addBlock:
-    def __init__(self,mod_path: str = "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod", overwrite_files: bool = True, verbose: bool = False):
+    def __init__(self,mod_path: str = "{self.mod_path}", overwrite_files: bool = True, verbose: bool = False, debug: bool = False):
         self.mod_path = mod_path
         self.verbose = verbose
         self.overwrite_files = overwrite_files
@@ -21,12 +21,13 @@ class addBlock:
         self.CapitalizedName = str()
         self.uppercaseName = str()
         self.recipe = str()
+        self.debug  = debug
 
         self.logger = logging.getLogger(__name__)
         if Path(self.mod_path).is_dir():
-            self.logger.info(f"Mod Path {mod_path} exists")
+            self.logger.info(f"Mod Path {self.mod_path} exists")
         else:
-            self.logger.error(f"Mod Path {mod_path} does not exist. Fail now")
+            self.logger.error(f"Mod Path {self.mod_path} does not exist. Fail now")
             raise FileNotFoundError(errno.ENOENT, os.stderror(f"{errno.ENOENT}: This requires a valid path to a minecraft mod project folder"), mod_path)
 
     #Some built in functions you can implement
@@ -56,10 +57,14 @@ class addBlock:
                 Path(file_path).rename(backupfile)
             except Exception as e:
                 sys.stderr.write(str(e.args[0]) + '\n')
+        if self.verbose:
+            sys.stdout.write(f"create file {file_path}\n")
+        if self.debug:
+            sys.stdout.write(f"create file: {file_path}:\nwith contents:\n{contents}\n")
         try:
             with open(file_path, "w", encoding="utf-8") as file:
                 try:
-                    file.write(contents)
+                    file.write(contents + "\n")
                 except Exception as q:
                     sys.stderr.write(str(q.args[0]) + '\n')
         except Exception as e:
@@ -73,6 +78,10 @@ class addBlock:
                 shutil.copy2(file_path, backupfile)
             except Exception as e:
                 sys.stderr.write(str(e.args[0]) + '\n')
+        if self.verbose:
+            sys.stdout.write(f"update file {file_path}\n")
+        if self.debug:
+            sys.stdout.write(f"update file: {file_path}:\nafter \"{pattern}\" insert block:\n{update_string}\n")
         try:
             with open(file_path, "r") as file:
                 try:
@@ -98,22 +107,29 @@ class addBlock:
 
     def check_files(self):
         #verify the minimum necessary files are in place.
-        if Path(f"{mod_path}/src/main/resources/assets/architecturemod/models/block/{self.block_name}.json").is_file:
-            msg=f"{mod_path}/src/main/resources/assets/architecturemod/models/block/{self.block_name}.json exists"
-            sys.stdout.write(msg)
-            logger.info(msg)
+
+        if Path(f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json").is_file:
+            msg=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json exists\n"
+            if self.verbose:
+                sys.stdout.write(msg)
+            self.logger.info(msg)
         else:
-            err_msg=f"{mod_path}/src/main/resources/assets/architecturemod/models/block/{self.block_name}.json doesn't exist"
+            err_msg=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json doesn't exist\n"
             sys.stderr.write(err_msg)
+            self.logger.error(msg)
+            raise FileNotFoundError
         
-        if Path(f"{mod_path}/src/main/resources/assets/architecturemod/shapes/{self.block_name}.txt").is_file:
-            msg=f"{mod_path}/src/main/resources/assets/architecturemod/shapes/{self.block_name}.txt exists"
-            sys.stdout.write(msg)
-            logger.info(msg)
+        if Path(f"{self.mod_path}/src/main/resources/assets/architecture_blocks/shapes/{self.block_name}.txt").is_file:
+            msg=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/shapes/{self.block_name}.txt exists\n"
+            if self.verbose:
+                sys.stdout.write(msg)
+            self.logger.info(msg)
         else:
-            err_msg=f"{mod_path}/src/main/resources/assets/architecturemod/shapes/{self.block_name}.txt doesn't exist"
-            err_msg=f"{err_msg}\nIn Blockbench open the blockbench file\nExport the shape\n\tFile->Export->Export Voxel Shape\n\tChoose Mojang Mappings\n\tsave the file to: {mod_path}/src/main/resources/assets/architecturemod/shapes/{self.block_name}.txt"
+            err_msg=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/shapes/{self.block_name}.txt doesn't exist\n"
+            err_msg=f"{err_msg}\nIn Blockbench open the blockbench file\nExport the shape\n\tFile->Export->Export Voxel Shape\n\tChoose Mojang Mappings\n\tsave the file to: {self.mod_path}/src/main/resources/assets/architecture_blocks/shapes/{self.block_name}.txt\n"
             sys.stderr.write(err_msg)
+            self.logger.error(msg)
+            raise FileNotFoundError
 
     #Add block
     def add_block(self, recipe: dict, block_name: str, recipe_result_block_count: int = 1) -> bool:
@@ -122,32 +138,46 @@ class addBlock:
             self.block_name = block_name
 
         if not block_name or ' ' in block_name:
-            msg = f"[{self.block_name}] is not a valid block name"
+            msg = f"[{self.block_name}] is not a valid block name\n"
             sys.stderr.write(msg)
-            logger.error(msg)
+            self.logger.error(msg)
             raise ValueError(msg)
         self.block_name = block_name
-        self.recipe_block = f"                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.{self.uppercaseName}, {recipe_result_block_count})"
-        for index in range(len(recipe["ingredients"])):
-            ing = recipe['ingredients'][index]
-            self.recipe_block += f"                        .define('{index}', Blocks.{ing})"
-        for pattern in recipe["patterns"]:
-            self.recipe_block += f"                        .pattern(\"{pattern}\")"
-        for ingredient in recipe['ingredients']:
-            lowercase_ingredient = ingredient.lower()
-            uppercase_ingredient = ingredient.upper()
-            self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(Blocks.{uppercase_ingredient}))"
-        self.recipe_block += f"                        .save(this.output);"
+       
 
         NameParts = re.split(r"[-_]", block_name)
         newList = [x.capitalize() for x in NameParts]
         CapitalizedName = ''.join(newList)
         newList = [x.upper() for x in NameParts]
         uppercaseName = '_'.join(newList)
-
         self.CapitalizedName = CapitalizedName
         self.uppercaseName = uppercaseName
-        
+
+        if self.verbose:
+            sys.stdout.write(self.__str__())
+
+        self.recipe_block = f"                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.{self.uppercaseName}, {recipe_result_block_count})\n"
+        for index in range(len(recipe["ingredients"])):
+            ing = recipe['ingredients'][index]
+            if ing == "WHITE_MARBLE_BLOCK":
+                self.recipe_block += f"                        .define('{index}', ModBlocks.{ing})\n"
+            else:
+                self.recipe_block += f"                        .define('{index}', Blocks.{ing})\n"
+        for pattern in recipe["patterns"]:
+            self.recipe_block += f"                        .pattern(\"{pattern}\")\n"
+        for ingredient in recipe['ingredients']:
+            lowercase_ingredient = ingredient.lower()
+            uppercase_ingredient = ingredient.upper()
+            if self.uppercase_ingredient == "WHITE_MARBLE_BLOCK":
+                self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(ModBlocks.{uppercase_ingredient}))\n"
+            else:
+                self.recipe_block += f"                        .unlockedBy(\"has_{lowercase_ingredient}\", this.has(Blocks.{uppercase_ingredient}))\n"
+        self.recipe_block += f"                        .save(this.output);\n"
+
+        if self.debug or self.verbose:
+            sys.stdout.write(f"recipe block:\n{self.recipe_block}\n")
+
+        self.check_files()        
         self.create_custom_block_file()
         self.create_custom_block_entity_file()
         self.update_ModBlocks()
@@ -158,22 +188,24 @@ class addBlock:
         self.update_ModItems()
         self.create_blockentity_renderer()
         self.create_blockentity_rendererstate()
-        self.update_ArchitectureModClient()
+        self.update_Architecture_blocksClient()
         self.create_item_model()
         self.create_item_json()
         self.update_en_us()
         self.create_blockstate_json()
+        if self.verbose:
+            sys.stdout.write("remove backup files\n")
         for backupfile in self.backup_files:
             if Path(backupfile).is_file():
                 os.remove(backupfile)
                 
     def create_blockentity_renderer(self):
-        self.create_file(file_path=f"{self.mod_path}/src/main/java/net/minecraft/architecturemod/rendering/blockentity/{self.CapitalizedName}BlockEntityRenderer.java",contents=f"""
-package net.minecraft.architecturemod.rendering.blockentity;
+        self.create_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/rendering/blockentity/{self.CapitalizedName}BlockEntityRenderer.java",contents=f"""
+package org.squaresaresquare.client.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.minecraft.architecturemod.block.entity.custom.{self.CapitalizedName}BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -214,9 +246,9 @@ public class {self.CapitalizedName}BlockEntityRenderer implements BlockEntityRen
         """)
 
     def create_blockentity_rendererstate(self):
-        self.create_file(file_path=f"{self.mod_path}/src/main/java/net/minecraft/architecturemod/rendering/blockentity/{self.CapitalizedName}BlockEntityRenderState.java", 
+        self.create_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/rendering/blockentity/{self.CapitalizedName}BlockEntityRenderState.java", 
             contents=f"""
-package net.minecraft.architecturemod.rendering.blockentity;
+package org.squaresaresquare.client.rendering.blockentity;
 
 import net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState;
 import net.minecraft.core.BlockPos;
@@ -231,8 +263,8 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 }}
         """)
 
-    def update_ArchitectureModClient(self):
-        self.update_file(file_path=f"{self.mod_path}/src/main/java/net/minecraft/architecturemod/ArchitectureModClient.java", update_string=f"""
+    def update_Architecture_blocksClient(self):
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/Architecture_blocksClient.java", update_string=f"""
         BlockColorRegistry.register(List.of(new BlockTintSource() {{
             @Override
             public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {{
@@ -251,23 +283,23 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 
 
     def update_ModItems(self):
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/item/ModItems.java",
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/item/ModItems.java",
             update_string=f"    public static final Item {self.uppercaseName} = registerItem(\"{self.block_name}\", Item::new);")
         
     def update_ModRecipeProvider(self):
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/datagen/ModRecipeProvider.java",
-            update_string=self.recipe)
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/datagen/ModRecipeProvider.java",
+            update_string=self.recipe_block)
 
     def update_ModBlockLootTableProvider(self):
-        self.update_file(file_path,"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/datagen/ModBlockLootTableProvider.java",
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/datagen/ModBlockLootTableProvider.java",
             update_string=f"    dropSelf(ModBlocks.{self.uppercaseName});")
 
     def update_ModCreativeModeTabs(self):
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/creativemodetab/ModCreativeModeTabs.java",
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
             update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});")
                 
     def update_ModBlocks(self):
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/block/ModBlocks.java",
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
         update_string=f""" 
         public static final Block {self.uppercaseName} = register(
             "{self.block_name}",
@@ -278,19 +310,19 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         """)
 
     def create_item_model(self):
-        self.create_file(file_path=f"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/resources/assets/architecturemod/models/item/{self.block_name}.json",
+        self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
         contents='''
 {
-  "parent": "architecturemod:block/{self.block_name}"
+  "parent": "architecture_blocks:block/{self.block_name}"
 }
         ''')
 
     def create_custom_block_entity_file(self):
-        self.create_file(file_path=f"{self.mod_path}/src/main/java/net/minecraft/architecturemod/block/entity/custom/{self.CapitalizedName}BlockEntity.java",
+        self.create_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/entity/custom/{self.CapitalizedName}BlockEntity.java",
         contents=f"""
-package net.minecraft.architecturemod.block.entity.custom;
+package org.squaresaresquare.client.block.entity.custom;
 
-import net.minecraft.architecturemod.block.entity.ModBlockEntities;
+import org.squaresaresquare.client.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -303,23 +335,23 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
         """)
 
     def update_ModBlockEntities(self):
-        self.update_file(file_path = "/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/block/entity/ModBlockEntities.java",
+        self.update_file(file_path = f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/entity/ModBlockEntities.java",
         update_string = f"""
     public static final BlockEntityType<{self.CapitalizedName}BlockEntity> {self.uppercaseName}_BLOCK_ENTITY =
         register("{self.block_name}", {self.CapitalizedName}BlockEntity::new, ModBlocks.{self.uppercaseName});
         """)
         # second update
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/java/net/minecraft/architecturemod/block/entity/ModBlockEntities.java",
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/entity/ModBlockEntities.java",
             pattern='::new import here',
-            update_string=f"import net.minecraft.architecturemod.block.entity.custom.{self.CapitalizedName}BlockEntity;")
+            update_string=f"import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;")
 
     def update_en_us(self):
-        self.update_file(file_path="/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/resources/assets/architecturemod/lang/en_us.json",
+        self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/lang/en_us.json",
             pattern="stub",
-            update_string=f'''"block.architecturemod.{self.block_name}": "{str(str(self.block_name).capitalize).replace('_', ' ')}",''')
+            update_string=f'''"block.architecture_blocks.{self.block_name}": "{str(str(self.block_name).capitalize).replace('_', ' ')}",''')
     
     def create_custom_block_file(self):
-        shapedir = "/src/main/resources/assets/architecturemod/shapes/"
+        shapedir = "/src/main/resources/assets/architecture_blocks/shapes/"
         Shape_function = str()
 
         with open(f"{self.mod_path}{shapedir}{self.block_name}.txt", "r", encoding="utf-8") as file:
@@ -328,15 +360,15 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
         for line in lines:
             Shape_function += re.sub(r'^', '    ', line)
         
-        self.create_file(file_path=f"{self.mod_path}/src/main/java/net/minecraft/architecturemod/block/custom/{self.CapitalizedName}Block.java",
+        self.create_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/custom/{self.CapitalizedName}Block.java",
         contents=f"""
-package net.minecraft.architecturemod.block.custom;
+package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import javax.swing.text.html.BlockView;
 import org.jetbrains.annotations.Nullable;
-import net.minecraft.architecturemod.block.ModBlocks;
-import net.minecraft.architecturemod.block.entity.custom.{self.CapitalizedName}BlockEntity;
+import org.squaresaresquare.client.block.ModBlocks;
+import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -381,20 +413,20 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
         """)
 
     def create_blockstate_json(self):
-        self.create_file(file_path=f"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/resources/assets/architecturemod/blockstates/{self.block_name}.json",
+        self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/blockstates/{self.block_name}.json",
             contents=f'''{{
   "variants": {{
     "": {{
-      "model": "architecturemod:block/{self.block_name}"
+      "model": "architecture_blocks:block/{self.block_name}"
     }}
   }}
 }}
         ''')
 
     def create_item_json(self):
-        self.create_file(file_path=f"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecturemod/src/main/resources/assets/architecturemod/models/item/{self.block_name}.json",
+        self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
             contents=f'''{{
-  "parent": "architecturemod:block/{self.block_name}"
+  "parent": "architecture_blocks:block/{self.block_name}"
 }}
             ''')
 
@@ -414,14 +446,14 @@ def clean_up_on_success(self):
         os.remove(backupfile)
 
 def signal_handler(sig: int, frame, obj: object):
-    sys.stderr.write("Aborting block add. Rolling back")
-    logger.warn("Aborting block add. Rolling back")
+    sys.stderr.write("Aborting block add. Rolling back\n")
+    self.logger.warn("Aborting block add. Rolling back")
     if obj.roll_back():
-        logger.warn("Block add rolled back successfuly")
+        self.logger.warn("Block add rolled back successfuly")
         sys.exit(0)
     else:
-        sys.stderr.write("Block add roll back failed, manual cleanup is necessisary")
-        logger.error("Block add roll back failed, manual cleanup is necessisary")
+        sys.stderr.write("Block add roll back failed, manual cleanup is necessisary\n")
+        self.logger.error("Block add roll back failed, manual cleanup is necessisary")
         raise RuntimeError("Block add roll back failed, manual cleanup is necessisary")
         sys.exit(255)
 
@@ -435,7 +467,9 @@ def main():
     parser.add_argument("-b", "--block_name", type=str, help="Block name, must match the model file name without extention")
     parser.add_argument("-i", "--ingredients", type=str, help="Comma separated list of minecraft ingredients in upercase. For exampe \"STICK,COBBLESTONE\"")
     parser.add_argument("-r", "--recipe", type=str, help="A comma separated list of up to 3 rows of ingredients as they would be used with a crafting table. For example, if ingredients are \"STICK,COBBLESTONE\" a pickaxe recipe would be: \"'111',' 0 ',' 0 '")
+    parser.add_argument("-c", "--recipe_result_count", type=int, default=1, help="A comma separated list of up to 3 rows of ingredients as they would be used with a crafting table. For example, if ingredients are \"STICK,COBBLESTONE\" a pickaxe recipe would be: \"'111',' 0 ',' 0 '")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+    parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
     args = parser.parse_args()
     #instantiate object
     ingredients = re.split(r"[,]", args.ingredients) 
@@ -443,7 +477,7 @@ def main():
     block_name = args.block_name
     
     recipe = dict(ingredients=ingredients, patterns=crafting_table_patterns)
-    ab = addBlock(mod_path=args.mod_path,verbose=args.verbose)
-    ab.add_block(recipe, block_name)
+    ab = addBlock(mod_path=args.mod_path,verbose=args.verbose,debug=args.debug)
+    ab.add_block(recipe, block_name, int(args.recipe_result_count))
 if __name__ == "__main__":
         main()

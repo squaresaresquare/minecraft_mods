@@ -37,6 +37,102 @@ public class Architecture_blocksClient implements ClientModInitializer {
                 return 0xFFFFDAB9; // Color code in hex format
             }
         }), Blocks.QUARTZ_PILLAR);
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.WHITE_MARBLE_BLOCK);
+                
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_1_1);
+                
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_1_2);
+                
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_1_3);
+                
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_1_4);
+                
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return 0xFFFFDAB9; // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_1_5);
+                
         //::new block here
 
         //initialize the stuffs

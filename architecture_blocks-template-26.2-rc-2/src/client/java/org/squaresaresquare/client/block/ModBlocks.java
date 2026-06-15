@@ -51,5 +51,53 @@ public class ModBlocks {
             true
     );
 
+ 
+        public static final Block WHITE_MARBLE_BLOCK = register(
+            "white_marble_block",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
+ 
+        public static final Block QUAD_WINDOW_1_1 = register(
+            "quad_window_1_1",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
+ 
+        public static final Block QUAD_WINDOW_1_2 = register(
+            "quad_window_1_2",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
+ 
+        public static final Block QUAD_WINDOW_1_3 = register(
+            "quad_window_1_3",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
+ 
+        public static final Block QUAD_WINDOW_1_4 = register(
+            "quad_window_1_4",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
+ 
+        public static final Block QUAD_WINDOW_1_5 = register(
+            "quad_window_1_5",
+            Block::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+            true
+    );
+        
     //::new block here
 }
