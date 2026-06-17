@@ -1,0 +1,15 @@
+{
+  "block.architecture_blocks.white_marble_block": "White Marble Block",
+  "block.architecture_blocks.quad_window_1_1": "Arched window with 4 windows row 1 column 1",
+  "block.architecture_blocks.marble_pillar": "Marble Pillar",
+  "block.architecture_blocks.marble_pillar_base": "Marble Pillar Base",
+  "block.architecture_blocks.quad_window_0_1": "4 arch window bottom row first block",
+  "block.architecture_blocks.quad_window_0_2": "4 arch window bottom row second block",
+  "block.architecture_blocks.quad_window_0_3": "4 arch window bottom row third block",
+  "block.architecture_blocks.quad_window_0_4": "4 arch window bottom row fourth block",
+  "block.architecture_blocks.quad_window_1_1": "4 arch window first row first block",
+  "block.architecture_blocks.quad_window_1_2": "4 arch window first row second block",
+  "block.architecture_blocks.quad_window_1_3": "4 arch window first row third block",
+  "block.architecture_blocks.quad_window_1_4": "4 arch window first row fourth block",
+"  block.architecture_blocks.quad_window_2_1": "<built-in method capitalize of str object at 0x1101e82b0>","  block.architecture_blocks.quad_window_1_4": "<built-in method capitalize of str object at 0x10e8522b0>","  block.architecture_blocks.quad_window_1_1": "<built-in method capitalize of str object at 0x1056bc2b0>","  block.architecture_blocks.quad_window_1_2": "<built-in method capitalize of str object at 0x1068492b0>","  block.architecture_blocks.quad_window_1_3": "<built-in method capitalize of str object at 0x1016462b0>","  block.architecture_blocks.quad_window_1_1": "<built-in method capitalize of str object at 0x1080b12b0>","  block.architecture_blocks.quad_window_1_1": "<built-in method capitalize of str object at 0x1083092b0>","  block.architecture_blocks.quad_window_1_1": "<built-in method capitalize of str object at 0x1019bd2b0>",  "stub": "stub"
+}

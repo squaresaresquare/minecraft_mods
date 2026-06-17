@@ -22,7 +22,8 @@ class addBlock:
         self.uppercaseName = str()
         self.recipe = str()
         self.debug  = debug
-        self.custom_blocks = ["WHITE_MARBLE_BLOCK", "QUARTZ_PILLAR", "QUARTZ_PILLAR_BASE"]
+        self.custom_blocks = ["WHITE_MARBLE_BLOCK", "QUARTZ_PILLAR", "QUARTZ_PILLAR_BASE","MARBLE_PILLAR"]
+        self.creative_mode_tab = "architecture_tab"
 
         self.logger = logging.getLogger(__name__)
         if Path(self.mod_path).is_dir():
@@ -46,7 +47,8 @@ class addBlock:
                     backup_files = self.backup_files,
                     overwrite_files = self.overwrite_files,
                     verbose = self.verbose,
-                    recipe = self.recipe_block
+                    recipe = self.recipe_block,
+                    creative_mode_tab = self.creative_mode_tab
                     )
         return return_dir
 
@@ -73,12 +75,25 @@ class addBlock:
 
     def update_file(self,file_path: str,update_string: str,pattern: str = '::new block here'):
         if Path(file_path).is_file():
+            # check if it's alread updated
+            try:
+                with open(file_path, "r") as file:
+                    try:
+                        file_contents = file.read()
+                        if update_string in file_contents:
+                            return
+                    except Exception as e:
+                        sys.stderr.write(str(e.args[0]) + '\n')
+            except Exception as e:
+                sys.stderr.write(str(e.args[0]) + '\n')
+
             backupfile = f"{file_path}.bak"
             self.backup_files.append(backupfile)
             try:
                 shutil.copy2(file_path, backupfile)
             except Exception as e:
                 sys.stderr.write(str(e.args[0]) + '\n')
+
         if self.verbose:
             sys.stdout.write(f"update file {file_path}\n")
         if self.debug:
@@ -96,7 +111,7 @@ class addBlock:
                for line in lines:
                     if pattern in line:
                         try:
-                            file.write(update_string + '\n')
+                            file.write(update_string)
                         except Exception as e:
                             sys.stderr.write(str(e.args[0]) + '\n')
                     try:
@@ -133,7 +148,7 @@ class addBlock:
             raise FileNotFoundError
 
     #Add block
-    def add_block(self, recipe: dict, block_name: str, recipe_result_block_count: int = 1) -> bool:
+    def add_block(self, recipe: dict, block_name: str, recipe_result_block_count: int = 1, creative_mode_tab: str = "architecture_block") -> bool:
         #validate_name
         if not self.block_name:
             self.block_name = block_name
@@ -166,10 +181,9 @@ class addBlock:
                 self.recipe_block += f"                        .define('{index}', Blocks.{ing})\n"
         print(recipe["patterns"])
         for pattern in recipe["patterns"]:
-            print(f"pattern: {pattern}")
             pattern.replace("'", " ")
             self.recipe_block += f"                        .pattern(\"{pattern}\")\n"
-        junk = input("check output and hit enter")
+
         for ingredient in recipe['ingredients']:
             lowercase_ingredient = ingredient.lower()
             uppercase_ingredient = ingredient.upper()
@@ -198,6 +212,8 @@ class addBlock:
         self.create_item_json()
         self.update_en_us()
         self.create_blockstate_json()
+        self.update_block_model()
+        self.update_ModCreativeModeTabs()
         if self.verbose:
             sys.stdout.write("remove backup files\n")
         for backupfile in self.backup_files:
@@ -277,11 +293,11 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
                 if (stateBelow.is(Blocks.GRASS_BLOCK)) {{
                     return 0xFF98FB98; // Color code in hex format
                 }}
-                return 0xFFFFDAB9; // Color code in hex format
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
             }}
             @Override
             public int color(BlockState state) {{
-                return 0xFFFFDAB9; // Color code in hex format
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
             }}
         }}), ModBlocks.{self.uppercaseName});
                 """)
@@ -303,6 +319,11 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
             update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});")
                 
+    def update_block_model(self):
+        self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json",
+            pattern='texture_size',
+            update_string=f'    "force_translucent": true,')
+
     def update_ModBlocks(self):
         new_block = self.CapitalizedName
         try:
@@ -319,7 +340,10 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
     public static final Block {self.uppercaseName} = register(
         "{self.block_name}",
         {new_block}::new,
-        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE).noOcclusion(),
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {{return false;}}),
         true
     );
         """)
@@ -330,13 +354,13 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 
     def create_item_model(self):
         self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
-        contents='''
-{
+        contents=f'''
+{{
   "parent": "architecture_blocks:block/{self.block_name}",
-  "textures": {
+  "textures": {{
     "layer0": "item/{self.block_name}"
-  },
-}
+  }}
+}}
         ''')
 
     def create_custom_block_entity_file(self):
@@ -488,11 +512,15 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
             contents=f'''{{
   "model": {{
     "type": "minecraft:model",
-    "model": "architecture_blocks:block/{self.block_name}"
+    "model": "architecture_blocks:item/{self.block_name}"
   }}
 }}
             ''')
-
+    def update_ModCreativeModeTabs(self):
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
+            update_string=f"output.accept(ModBlocks.{self.uppercaseName});",
+            pattern=f"::new {self.creative_mode_tab}"
+        )
 
 def roll_back(self) -> bool:
     for backupfile in self.backup_files:
@@ -531,6 +559,7 @@ def main():
     parser.add_argument("-i", "--ingredients", type=str, help="Comma separated list of minecraft ingredients in upercase. For exampe \"STICK,COBBLESTONE\"")
     parser.add_argument("-r", "--recipe", type=str, help="A comma separated list of up to 3 rows of ingredients as they would be used with a crafting table. For example, if ingredients are \"STICK,COBBLESTONE\" a pickaxe recipe would be: \"'111',' 0 ',' 0 '")
     parser.add_argument("-c", "--recipe_result_count", type=int, default=1, help="A comma separated list of up to 3 rows of ingredients as they would be used with a crafting table. For example, if ingredients are \"STICK,COBBLESTONE\" a pickaxe recipe would be: \"'111',' 0 ',' 0 '")
+    parser.add_argument("-t", "--creative_mode_tab", type=str, default="architecture_block", help="The creative mode tab to add the block to")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
     args = parser.parse_args()
@@ -541,6 +570,6 @@ def main():
     
     recipe = dict(ingredients=ingredients, patterns=crafting_table_patterns)
     ab = addBlock(mod_path=args.mod_path,verbose=args.verbose,debug=args.debug)
-    ab.add_block(recipe, block_name, int(args.recipe_result_count))
+    ab.add_block(recipe, block_name, int(args.recipe_result_count),str(args.creative_mode_tab))
 if __name__ == "__main__":
         main()
