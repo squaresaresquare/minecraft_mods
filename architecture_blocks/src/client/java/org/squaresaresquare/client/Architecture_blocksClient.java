@@ -221,7 +221,52 @@ public class Architecture_blocksClient implements ClientModInitializer {
                 return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
             }
         }), ModBlocks.QUAD_WINDOW_2_1);
-                                                                                                        //::new block here
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_2_2);
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_2_4);
+
+        BlockColorRegistry.register(List.of(new BlockTintSource() {
+            @Override
+            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                BlockState stateBelow = level.getBlockState(pos.below());
+                if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                    return 0xFF98FB98; // Color code in hex format
+                }
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+            @Override
+            public int color(BlockState state) {
+                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
+            }
+        }), ModBlocks.QUAD_WINDOW_2_3);
+                                                                                                                                                                        //::new block here
         //initialize the stuffs
         ModBlocks.initialize();
         ModCreativeModeTabs.registerModCreativeModeTabs();

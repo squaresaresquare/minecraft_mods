@@ -23,7 +23,8 @@ import org.squaresaresquare.client.block.custom.MarblePlinthBlock;
 import org.squaresaresquare.client.block.custom.WhiteMarbleBlockBlock;
 import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;
 import org.squaresaresquare.client.block.custom.QuadWindow01Block;
-import org.squaresaresquare.client.block.custom.QuadWindow21Block;import org.squaresaresquare.client.block.custom.QuadWindow14Block;import org.squaresaresquare.client.block.custom.QuadWindow12Block;import org.squaresaresquare.client.block.custom.QuadWindow13Block;import org.squaresaresquare.client.block.custom.QuadWindow11Block;import org.squaresaresquare.client.block.custom.QuadWindow02Block;import org.squaresaresquare.client.block.custom.QuadWindow03Block;import org.squaresaresquare.client.block.custom.QuadWindow04Block;//::new import here
+import org.squaresaresquare.client.block.custom.QuadWindow24Block;
+import org.squaresaresquare.client.block.custom.QuadWindow23Block;import org.squaresaresquare.client.block.custom.QuadWindow22Block;import org.squaresaresquare.client.block.custom.QuadWindow21Block;import org.squaresaresquare.client.block.custom.QuadWindow14Block;import org.squaresaresquare.client.block.custom.QuadWindow12Block;import org.squaresaresquare.client.block.custom.QuadWindow13Block;import org.squaresaresquare.client.block.custom.QuadWindow11Block;import org.squaresaresquare.client.block.custom.QuadWindow02Block;import org.squaresaresquare.client.block.custom.QuadWindow03Block;import org.squaresaresquare.client.block.custom.QuadWindow04Block;//::new import here
 
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
@@ -184,7 +185,37 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
         true
     );
-                                                                            //::new block here
+ 
+    public static final Block QUAD_WINDOW_2_2 = register(
+        "quad_window_2_2",
+        QuadWindow22Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+    public static final Block QUAD_WINDOW_2_4 = register(
+        "quad_window_2_4",
+        QuadWindow24Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_2_3 = register(
+        "quad_window_2_3",
+        QuadWindow23Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+                                                                                                            //::new block here
     public static void initialize() {
 
     }

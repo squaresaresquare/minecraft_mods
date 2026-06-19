@@ -24,6 +24,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     dropSelf(ModBlocks.QUAD_WINDOW_1_2);
     dropSelf(ModBlocks.QUAD_WINDOW_1_3);
     dropSelf(ModBlocks.QUAD_WINDOW_1_1);
-    dropSelf(ModBlocks.QUAD_WINDOW_2_1);    //::new block here
+    dropSelf(ModBlocks.QUAD_WINDOW_2_2);
+    dropSelf(ModBlocks.QUAD_WINDOW_2_4);
+    dropSelf(ModBlocks.QUAD_WINDOW_2_3);
+    //::new block here
     }
 }

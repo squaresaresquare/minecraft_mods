@@ -10,6 +10,7 @@ import re
 import argparse
 from pprint import pprint
 from pathlib import Path
+import subprocess
 
 class addBlock:
     def __init__(self,mod_path: str = "{self.mod_path}", overwrite_files: bool = True, verbose: bool = False, debug: bool = False):
@@ -210,6 +211,7 @@ class addBlock:
         self.update_Architecture_blocksClient()
         self.create_item_model()
         self.create_item_json()
+        self.update_block_json()
         self.update_en_us()
         self.create_blockstate_json()
         self.update_block_model()
@@ -522,19 +524,59 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
             pattern=f"::new {self.creative_mode_tab}"
         )
 
-def roll_back(self) -> bool:
-    for backupfile in self.backup_files:
-        local_file = backupfile.replace('.bak' '')
-        try:
-            shutil.rename(backupfile, local_file)
-        except:
-            return False
-        else:
-            return True
+    def update_block_json(self):
+        self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json",
+        update_string=f'''	"ambientocclusion": false,
+    "force_translucent": true,
+        ''',
+        pattern='''	\"texture\s"\: \{'''
+        )
 
-def clean_up_on_success(self):
-    for backupfile in self.backup_files:
-        os.remove(backupfile)
+
+    def roll_back(self) -> bool:
+        for backupfile in self.backup_files:
+           local_file = backupfile.replace('.bak' '')
+           try:
+              shutil.rename(backupfile, local_file)
+           except:
+              return False
+           else:
+              return True
+
+    def clean_up_on_success(self):
+        for backupfile in self.backup_files:
+            os.remove(backupfile)
+        # Specify the directory path
+        dir_path = Path('/path/to/directory')
+
+        # Use rglob("*") to recursively find all entries and filter for files
+        files = [str(p) for p in dir_path.rglob('*') if p.is_file()]
+        for file in files:
+            if self.verbose or self.debug:
+                sys.stdout.write(f"Check file for double newlines: {str(file.Path())}")
+            try: 
+                with open(file.Path(), "r") as file:
+                    try:
+                        content = file.read()
+                    except Exception as q:
+                        sys.stderr.write(str(q.args[0]) + '\n')
+            except Exception as e:
+                sys.stderr.write(str(e.args[0]) + '\n\n')
+            result = re.sub(r'\n\n', '\n', content)
+            try:
+                with open(str(file.Path()), "w") as file:
+                    for line in lines:
+                        if pattern in line:
+                            try:
+                                file.write(update_string)
+                            except Exception as e:
+                                sys.stderr.write(str(e.args[0]) + '\n')
+                        try:
+                            file.write(line)
+                        except Exception as e:
+                            sys.stderr.write(str(e.args[0]) + '\n')
+            except Exception as e:
+                sys.stderr.write("failed to open " + str(file.Path()) + " for writing " + str(e.args[0]) + '\n')
 
 def signal_handler(sig: int, frame, obj: object):
     sys.stderr.write("Aborting block add. Rolling back\n")
@@ -553,6 +595,7 @@ def main():
     #handle SIGINT (ctrl c)
     signal.signal(signal.SIGINT, signal_handler)
     #Command line options
+    subprocess.run(["find","./","-name" "'.DS_Store'", "-exec", "rm", "{}","\;"])
     parser = argparse.ArgumentParser( description="A script to add a block to my minecraft mod")
     parser.add_argument("-m", "--mod_path", type=str, default="", help="Path to the minecraft mod project directory")
     parser.add_argument("-b", "--block_name", type=str, help="Block name, must match the model file name without extention")

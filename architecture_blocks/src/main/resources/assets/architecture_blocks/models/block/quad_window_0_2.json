@@ -5,7 +5,8 @@
 	"textures": {
 		"1": "architecture_blocks:block/quad_window_0_2/tinted_glass",
 		"3": "architecture_blocks:block/quad_window_0_2/white_marble",
-		"4": "architecture_blocks:block/quad_window_0_2/polished_andesite"
+		"4": "architecture_blocks:block/quad_window_0_2/polished_andesite",
+		"particle": "architecture_blocks:block/quad_window_0_2/white_marble"
 	},
 	"elements": [
 		{
@@ -207,6 +208,9 @@
 		}
 	],
 	"groups": [
+		0,
+		1,
+		2,
 		{
 			"name": "left",
 			"origin": [8, 8, 8],
