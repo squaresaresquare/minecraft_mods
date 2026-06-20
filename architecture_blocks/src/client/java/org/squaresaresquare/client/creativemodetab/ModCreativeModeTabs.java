@@ -37,9 +37,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.QUAD_WINDOW_1_3);
                         output.accept(ModBlocks.QUAD_WINDOW_1_4);
                         output.accept(ModBlocks.QUAD_WINDOW_2_1);
+                        output.accept(ModBlocks.QUAD_WINDOW_2_0);
                         output.accept(ModBlocks.QUAD_WINDOW_2_2);
                         output.accept(ModBlocks.QUAD_WINDOW_2_3);
                         output.accept(ModBlocks.QUAD_WINDOW_2_4);
+                        output.accept(ModBlocks.QUAD_WINDOW_3_0);
+                        output.accept(ModBlocks.QUAD_WINDOW_3_1);
+                        output.accept(ModBlocks.QUAD_WINDOW_3_2);
+                        output.accept(ModBlocks.QUAD_WINDOW_4_0);
+                        output.accept(ModBlocks.QUAD_WINDOW_4_1);
+                        output.accept(ModBlocks.QUAD_WINDOW_4_2);
                         //::new quad_window
                     }).build());
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(

@@ -18,7 +18,7 @@ import org.squaresaresquare.client.block.entity.custom.QuadWindow11BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow02BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow03BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.QuadWindow04BlockEntity;
-//::new import here
+import org.squaresaresquare.client.block.entity.custom.QuadWindow42BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow41BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow40BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow32BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow31BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow30BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow20BlockEntity;//::new import here
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -77,7 +77,28 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<QuadWindow23BlockEntity> QUAD_WINDOW_2_3_BLOCK_ENTITY =
         register("quad_window_2_3", QuadWindow23BlockEntity::new, ModBlocks.QUAD_WINDOW_2_3);
-                                                                                                            //::new block here
+
+    public static final BlockEntityType<QuadWindow20BlockEntity> QUAD_WINDOW_2_0_BLOCK_ENTITY =
+        register("quad_window_2_0", QuadWindow20BlockEntity::new, ModBlocks.QUAD_WINDOW_2_0);
+
+    public static final BlockEntityType<QuadWindow30BlockEntity> QUAD_WINDOW_3_0_BLOCK_ENTITY =
+        register("quad_window_3_0", QuadWindow30BlockEntity::new, ModBlocks.QUAD_WINDOW_3_0);
+
+    public static final BlockEntityType<QuadWindow31BlockEntity> QUAD_WINDOW_3_1_BLOCK_ENTITY =
+        register("quad_window_3_1", QuadWindow31BlockEntity::new, ModBlocks.QUAD_WINDOW_3_1);
+
+    public static final BlockEntityType<QuadWindow32BlockEntity> QUAD_WINDOW_3_2_BLOCK_ENTITY =
+        register("quad_window_3_2", QuadWindow32BlockEntity::new, ModBlocks.QUAD_WINDOW_3_2);
+
+    public static final BlockEntityType<QuadWindow40BlockEntity> QUAD_WINDOW_4_0_BLOCK_ENTITY =
+        register("quad_window_4_0", QuadWindow40BlockEntity::new, ModBlocks.QUAD_WINDOW_4_0);
+
+    public static final BlockEntityType<QuadWindow41BlockEntity> QUAD_WINDOW_4_1_BLOCK_ENTITY =
+        register("quad_window_4_1", QuadWindow41BlockEntity::new, ModBlocks.QUAD_WINDOW_4_1);
+
+    public static final BlockEntityType<QuadWindow42BlockEntity> QUAD_WINDOW_4_2_BLOCK_ENTITY =
+        register("quad_window_4_2", QuadWindow42BlockEntity::new, ModBlocks.QUAD_WINDOW_4_2);
+                                                                                                                                                                    //::new block here
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
             FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory,

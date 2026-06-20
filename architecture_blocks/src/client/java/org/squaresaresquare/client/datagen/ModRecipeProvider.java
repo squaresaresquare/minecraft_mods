@@ -179,6 +179,55 @@ public class ModRecipeProvider {
                         .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
                         .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
                         .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_2_0, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .pattern("' 0 '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_3_0, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'   '")
+                        .pattern("' 0 '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_3_1, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'00  '")
+                        .pattern("' 0 '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_3_2, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'00 '")
+                        .pattern("' 0 '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_4_0, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("' 0 '")
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_4_1, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'00 '")
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUAD_WINDOW_4_2, 2)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("' 00'")
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
                 //::new block here
             }
         };

@@ -24,7 +24,7 @@ import org.squaresaresquare.client.block.custom.WhiteMarbleBlockBlock;
 import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;
 import org.squaresaresquare.client.block.custom.QuadWindow01Block;
 import org.squaresaresquare.client.block.custom.QuadWindow24Block;
-import org.squaresaresquare.client.block.custom.QuadWindow23Block;import org.squaresaresquare.client.block.custom.QuadWindow22Block;import org.squaresaresquare.client.block.custom.QuadWindow21Block;import org.squaresaresquare.client.block.custom.QuadWindow14Block;import org.squaresaresquare.client.block.custom.QuadWindow12Block;import org.squaresaresquare.client.block.custom.QuadWindow13Block;import org.squaresaresquare.client.block.custom.QuadWindow11Block;import org.squaresaresquare.client.block.custom.QuadWindow02Block;import org.squaresaresquare.client.block.custom.QuadWindow03Block;import org.squaresaresquare.client.block.custom.QuadWindow04Block;//::new import here
+import org.squaresaresquare.client.block.custom.QuadWindow42Block;import org.squaresaresquare.client.block.custom.QuadWindow41Block;import org.squaresaresquare.client.block.custom.QuadWindow40Block;import org.squaresaresquare.client.block.custom.QuadWindow32Block;import org.squaresaresquare.client.block.custom.QuadWindow31Block;import org.squaresaresquare.client.block.custom.QuadWindow30Block;import org.squaresaresquare.client.block.custom.QuadWindow20Block;import org.squaresaresquare.client.block.custom.QuadWindow23Block;import org.squaresaresquare.client.block.custom.QuadWindow22Block;import org.squaresaresquare.client.block.custom.QuadWindow21Block;import org.squaresaresquare.client.block.custom.QuadWindow14Block;import org.squaresaresquare.client.block.custom.QuadWindow12Block;import org.squaresaresquare.client.block.custom.QuadWindow13Block;import org.squaresaresquare.client.block.custom.QuadWindow11Block;import org.squaresaresquare.client.block.custom.QuadWindow02Block;import org.squaresaresquare.client.block.custom.QuadWindow03Block;import org.squaresaresquare.client.block.custom.QuadWindow04Block;//::new import here
 
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
@@ -215,7 +215,77 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
         true
     );
-                                                                                                            //::new block here
+ 
+    public static final Block QUAD_WINDOW_2_0 = register(
+        "quad_window_2_0",
+        QuadWindow20Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_3_0 = register(
+        "quad_window_3_0",
+        QuadWindow30Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_3_1 = register(
+        "quad_window_3_1",
+        QuadWindow31Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_3_2 = register(
+        "quad_window_3_2",
+        QuadWindow32Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_4_0 = register(
+        "quad_window_4_0",
+        QuadWindow40Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_4_1 = register(
+        "quad_window_4_1",
+        QuadWindow41Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+ 
+    public static final Block QUAD_WINDOW_4_2 = register(
+        "quad_window_4_2",
+        QuadWindow42Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+                                                                                                                                                                    //::new block here
     public static void initialize() {
 
     }
