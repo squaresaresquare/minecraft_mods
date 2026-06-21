@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "architecture_blocks:block/marble_plinth_block/white_marble",
-		"particle": "architecture_blocks:block/marble_plinth_block/white_marble"
+		"0": "architecture_blocks:block/marble_plinth_block/marble",
+		"particle": "architecture_blocks:block/marble_plinth_block/marble"
 	},
 	"elements": [
 		{

@@ -2,6 +2,7 @@ package org.squaresaresquare.client.creativemodetab;
 
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.Architecture_blocks;
 import net.minecraft.core.Registry;
@@ -18,36 +19,58 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.architecture_blocks.marble_plinth_block"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.MARBLE_PLINTH_BLOCK);
-                        output.accept(ModBlocks.WHITE_MARBLE_BLOCK);
+                        output.accept(ModBlocks.MARBLE_BLOCK);
                         output.accept(ModBlocks.MARBLE_PILLAR);
                         output.accept(ModBlocks.MARBLE_PILLAR_BASE);
+                        output.accept(ModBlocks.PILLAR_CAP);
+                        output.accept(Blocks.QUARTZ_BRICKS);
                         //::new architecture_block here
                     }).build());
-    public static final CreativeModeTab QUAD_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "quad_window"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.QUAD_WINDOW_0_1))
-                    .title(Component.translatable("creativemodetab.architecture_blocks.quad_window_0_1"))
+    public static final CreativeModeTab TRIPLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "triple_window"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TRIPLE_WIND0W_COMPLETE))
+                    .title(Component.translatable("creativemodetab.architecture_blocks.triple_window_complete"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModBlocks.QUAD_WINDOW_0_1);
-                        output.accept(ModBlocks.QUAD_WINDOW_0_2);
-                        output.accept(ModBlocks.QUAD_WINDOW_0_3);
-                        output.accept(ModBlocks.QUAD_WINDOW_0_4);
-                        output.accept(ModBlocks.QUAD_WINDOW_1_1);
-                        output.accept(ModBlocks.QUAD_WINDOW_1_2);
-                        output.accept(ModBlocks.QUAD_WINDOW_1_3);
-                        output.accept(ModBlocks.QUAD_WINDOW_1_4);
-                        output.accept(ModBlocks.QUAD_WINDOW_2_1);
-                        output.accept(ModBlocks.QUAD_WINDOW_2_0);
-                        output.accept(ModBlocks.QUAD_WINDOW_2_2);
-                        output.accept(ModBlocks.QUAD_WINDOW_2_3);
-                        output.accept(ModBlocks.QUAD_WINDOW_2_4);
-                        output.accept(ModBlocks.QUAD_WINDOW_3_0);
-                        output.accept(ModBlocks.QUAD_WINDOW_3_1);
-                        output.accept(ModBlocks.QUAD_WINDOW_3_2);
-                        output.accept(ModBlocks.QUAD_WINDOW_4_0);
-                        output.accept(ModBlocks.QUAD_WINDOW_4_1);
-                        output.accept(ModBlocks.QUAD_WINDOW_4_2);
-                        //::new quad_window
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_0_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_0_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_0_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_0_4);
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_1_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_1_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_1_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_1_4);
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_0);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_4);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_2_5);
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_0);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_4);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_3_5);
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_0);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_4);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_4_5);
+
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_0);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_1);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_2);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_3);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_4);
+                        output.accept(ModBlocks.TRIPLE_WINDOW_5_5);
+
+                        //::new triple_window
                     }).build());
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "creative_tab")

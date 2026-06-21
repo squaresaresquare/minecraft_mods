@@ -1,8 +1,0 @@
-
-{
-  "parent": "architecture_blocks:block/quad_window_2_3",
-  "textures": {
-    "layer0": "item/quad_window_2_3"
-  }
-}
-        

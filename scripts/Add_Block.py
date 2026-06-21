@@ -112,7 +112,7 @@ class addBlock:
                for line in lines:
                     if pattern in line:
                         try:
-                            file.write(update_string)
+                            file.write('\n' + update_string)
                         except Exception as e:
                             sys.stderr.write(str(e.args[0]) + '\n')
                     try:
@@ -360,7 +360,7 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 {{
   "parent": "architecture_blocks:block/{self.block_name}",
   "textures": {{
-    "layer0": "item/{self.block_name}"
+    "layer0": "architecture_blocks:item/{self.block_name}"
   }}
 }}
         ''')
@@ -595,7 +595,7 @@ def main():
     #handle SIGINT (ctrl c)
     signal.signal(signal.SIGINT, signal_handler)
     #Command line options
-    subprocess.run(["find","./","-name" "'.DS_Store'", "-exec", "rm", "{}","\;"])
+    subprocess.run("/usr/bin/find ./ -name '.DS_Store' -exec rm {} \;", shell=True, text=True, check=True)
     parser = argparse.ArgumentParser( description="A script to add a block to my minecraft mod")
     parser.add_argument("-m", "--mod_path", type=str, default="", help="Path to the minecraft mod project directory")
     parser.add_argument("-b", "--block_name", type=str, help="Block name, must match the model file name without extention")
@@ -607,6 +607,8 @@ def main():
     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
     args = parser.parse_args()
     #instantiate object
+    print(args.ingredients)
+    print(args.recipe)
     ingredients = re.split(r"[,]", args.ingredients) 
     crafting_table_patterns = re.split(r"[,]", args.recipe) 
     block_name = args.block_name

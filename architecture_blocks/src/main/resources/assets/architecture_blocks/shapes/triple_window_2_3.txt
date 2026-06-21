@@ -1,0 +1,20 @@
+architecture_blocks:block/triple_window_2_3
+architecture_blocks:block/triple_window_2_2
+
+
+architecture_blocks/src/main/resources/assets/architecture_blocks/models/block/triple_window_2_2.json
+architecture_blocks/src/main/resources/assets/architecture_blocks/models/block/triple_window_2_3.json
+
+
+
+
+
+
+terraform destroy, terraform init, terraform plan
+
+
+resource, data 
+assert
+
+terraform test
+

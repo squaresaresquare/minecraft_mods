@@ -2,11 +2,11 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/cube_all",
 	"ambientocclusion": false,
-	"texture_size": [128, 128],
+    "force_translucent": true,	"texture_size": [128, 128],
 	"textures": {
 		"1": "architecture_blocks:block/marble_pillar_base/quartz_pillar_base2",
-		"2": "architecture_blocks:block/marble_pillar_base/white_marble",
-		"particle": "architecture_blocks:block/marble_pillar_base/white_marble"
+		"2": "architecture_blocks:block/marble_pillar_base/marble",
+		"particle": "architecture_blocks:block/marble_pillar_base/marble"
 	},
 	"elements": [
 		{

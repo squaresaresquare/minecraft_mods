@@ -1,6 +1,6 @@
 
 {
-  "parent": "minecraft:item/generated",
+  "parent": "architecture_blocks:block/marble_pillar_base",
   "textures": {
     "layer0": "architecture_blocks:item/marble_pillar_base"
   }

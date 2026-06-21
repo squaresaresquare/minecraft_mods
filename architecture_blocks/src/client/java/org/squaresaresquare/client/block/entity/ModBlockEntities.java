@@ -3,22 +3,43 @@ import org.squaresaresquare.Architecture_blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.MarblePlinthBlockEntity;
 
-import org.squaresaresquare.client.block.entity.custom.WhiteMarbleBlockBlockEntity;
+import org.squaresaresquare.client.block.entity.custom.MarbleBlockBlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow01BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow24BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow23BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow22BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow21BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow14BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow12BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow13BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow11BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow02BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow03BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow04BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow52BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow51BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow50BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow42BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow41BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow40BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow32BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow31BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow30BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow20BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow55BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow54BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow53BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow35BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow34BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow33BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow25BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow43BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow45BlockEntity;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow44BlockEntity;
 import org.squaresaresquare.client.block.entity.custom.MarblePillarBlockEntity;
-import org.squaresaresquare.client.block.entity.custom.MarblePillarBaseBlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow01BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow24BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow23BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow22BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow21BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow14BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow12BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow13BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow11BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow02BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow03BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow04BlockEntity;
-import org.squaresaresquare.client.block.entity.custom.QuadWindow42BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow41BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow40BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow32BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow31BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow30BlockEntity;import org.squaresaresquare.client.block.entity.custom.QuadWindow20BlockEntity;//::new import here
+
+
+import org.squaresaresquare.client.block.entity.custom.PillarCapBlockEntity;import org.squaresaresquare.client.block.entity.custom.MarblePillarBaseBlockEntity;//::new import here
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -33,72 +54,117 @@ public class ModBlockEntities {
     public static final BlockEntityType<MarblePlinthBlockEntity> MARBLE_PLINTH_BLOCK_ENTITY =
             register("quartz_pillar", MarblePlinthBlockEntity::new, ModBlocks.MARBLE_PLINTH_BLOCK);
 
-    public static final BlockEntityType<WhiteMarbleBlockBlockEntity> WHITE_MARBLE_BLOCK_BLOCK_ENTITY =
-        register("white_marble_block", WhiteMarbleBlockBlockEntity::new, ModBlocks.WHITE_MARBLE_BLOCK);
+    public static final BlockEntityType<MarbleBlockBlockEntity> MARBLE_BLOCK_BLOCK_ENTITY =
+        register("marble_block", MarbleBlockBlockEntity::new, ModBlocks.MARBLE_BLOCK);
 
-    public static final BlockEntityType<MarblePillarBlockEntity> MARBLE_PILLAR_BLOCK_ENTITY =
-        register("marble_pillar", MarblePillarBlockEntity::new, ModBlocks.MARBLE_PILLAR);
+    public static final BlockEntityType<TripleWindow01BlockEntity> TRIPLE_WINDOW_0_1_BLOCK_ENTITY =
+        register("triple_window_0_1", TripleWindow01BlockEntity::new, ModBlocks.TRIPLE_WINDOW_0_1);
+
+    public static final BlockEntityType<TripleWindow02BlockEntity> TRIPLE_WINDOW_0_2_BLOCK_ENTITY =
+            register("triple_window_0_2", TripleWindow02BlockEntity::new, ModBlocks.TRIPLE_WINDOW_0_2);
+
+    public static final BlockEntityType<TripleWindow03BlockEntity> TRIPLE_WINDOW_0_3_BLOCK_ENTITY =
+            register("triple_window_0_3", TripleWindow03BlockEntity::new, ModBlocks.TRIPLE_WINDOW_0_3);
+
+    public static final BlockEntityType<TripleWindow04BlockEntity> TRIPLE_WINDOW_0_4_BLOCK_ENTITY =
+        register("triple_window_0_4", TripleWindow04BlockEntity::new, ModBlocks.TRIPLE_WINDOW_0_4);
+
+    public static final BlockEntityType<TripleWindow11BlockEntity> TRIPLE_WINDOW_1_1_BLOCK_ENTITY =
+            register("triple_window_1_1", TripleWindow11BlockEntity::new, ModBlocks.TRIPLE_WINDOW_1_1);
+
+    public static final BlockEntityType<TripleWindow12BlockEntity> TRIPLE_WINDOW_1_2_BLOCK_ENTITY =
+            register("triple_window_1_2", TripleWindow12BlockEntity::new, ModBlocks.TRIPLE_WINDOW_1_2);
+
+    public static final BlockEntityType<TripleWindow13BlockEntity> TRIPLE_WINDOW_1_3_BLOCK_ENTITY =
+        register("triple_window_1_3", TripleWindow13BlockEntity::new, ModBlocks.TRIPLE_WINDOW_1_3);
+
+    public static final BlockEntityType<TripleWindow14BlockEntity> TRIPLE_WINDOW_1_4_BLOCK_ENTITY =
+            register("triple_window_1_4", TripleWindow14BlockEntity::new, ModBlocks.TRIPLE_WINDOW_1_4);
+
+    public static final BlockEntityType<TripleWindow20BlockEntity> TRIPLE_WINDOW_2_0_BLOCK_ENTITY =
+            register("triple_window_2_0", TripleWindow20BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_0);
+
+    public static final BlockEntityType<TripleWindow21BlockEntity> TRIPLE_WINDOW_2_1_BLOCK_ENTITY =
+        register("triple_window_2_1", TripleWindow21BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_1);
+
+    public static final BlockEntityType<TripleWindow22BlockEntity> TRIPLE_WINDOW_2_2_BLOCK_ENTITY =
+        register("triple_window_2_2", TripleWindow22BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_2);
+
+    public static final BlockEntityType<TripleWindow23BlockEntity> TRIPLE_WINDOW_2_3_BLOCK_ENTITY =
+        register("triple_window_2_3", TripleWindow23BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_3);
+
+    public static final BlockEntityType<TripleWindow24BlockEntity> TRIPLE_WINDOW_2_4_BLOCK_ENTITY =
+            register("triple_window_2_4", TripleWindow24BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_4);
+
+    public static final BlockEntityType<TripleWindow25BlockEntity> TRIPLE_WINDOW_2_5_BLOCK_ENTITY =
+            register("triple_window_2_5", TripleWindow25BlockEntity::new, ModBlocks.TRIPLE_WINDOW_2_5);
+
+    public static final BlockEntityType<TripleWindow30BlockEntity> TRIPLE_WINDOW_3_0_BLOCK_ENTITY =
+        register("triple_window_3_0", TripleWindow30BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_0);
+
+    public static final BlockEntityType<TripleWindow31BlockEntity> TRIPLE_WINDOW_3_1_BLOCK_ENTITY =
+        register("triple_window_3_1", TripleWindow31BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_1);
+
+    public static final BlockEntityType<TripleWindow32BlockEntity> TRIPLE_WINDOW_3_2_BLOCK_ENTITY =
+        register("triple_window_3_2", TripleWindow32BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_2);
+
+    public static final BlockEntityType<TripleWindow33BlockEntity> TRIPLE_WINDOW_3_3_BLOCK_ENTITY =
+            register("triple_window_3_3", TripleWindow33BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_3);
+
+    public static final BlockEntityType<TripleWindow34BlockEntity> TRIPLE_WINDOW_3_4_BLOCK_ENTITY =
+            register("triple_window_3_4", TripleWindow34BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_4);
+
+    public static final BlockEntityType<TripleWindow35BlockEntity> TRIPLE_WINDOW_3_5_BLOCK_ENTITY =
+            register("triple_window_3_5", TripleWindow35BlockEntity::new, ModBlocks.TRIPLE_WINDOW_3_5);
+
+    public static final BlockEntityType<TripleWindow40BlockEntity> TRIPLE_WINDOW_4_0_BLOCK_ENTITY =
+        register("triple_window_4_0", TripleWindow40BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_0);
+
+    public static final BlockEntityType<TripleWindow41BlockEntity> TRIPLE_WINDOW_4_1_BLOCK_ENTITY =
+        register("triple_window_4_1", TripleWindow41BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_1);
+
+    public static final BlockEntityType<TripleWindow42BlockEntity> TRIPLE_WINDOW_4_2_BLOCK_ENTITY =
+        register("triple_window_4_2", TripleWindow42BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_2);
+
+    public static final BlockEntityType<TripleWindow43BlockEntity> TRIPLE_WINDOW_4_3_BLOCK_ENTITY =
+            register("triple_window_4_3", TripleWindow43BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_3);
+
+    public static final BlockEntityType<TripleWindow44BlockEntity> TRIPLE_WINDOW_4_4_BLOCK_ENTITY =
+            register("triple_window_4_4", TripleWindow44BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_4);
+
+    public static final BlockEntityType<TripleWindow45BlockEntity> TRIPLE_WINDOW_4_5_BLOCK_ENTITY =
+            register("triple_window_4_5", TripleWindow45BlockEntity::new, ModBlocks.TRIPLE_WINDOW_4_5);
+
+    public static final BlockEntityType<TripleWindow50BlockEntity> TRIPLE_WINDOW_5_0_BLOCK_ENTITY =
+        register("triple_window_5_0", TripleWindow50BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_0);
+
+    public static final BlockEntityType<TripleWindow51BlockEntity> TRIPLE_WINDOW_5_1_BLOCK_ENTITY =
+        register("triple_window_5_1", TripleWindow51BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_1);
+
+    public static final BlockEntityType<TripleWindow52BlockEntity> TRIPLE_WINDOW_5_2_BLOCK_ENTITY =
+        register("triple_window_5_2", TripleWindow52BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_2);
+
+    public static final BlockEntityType<TripleWindow53BlockEntity> TRIPLE_WINDOW_5_3_BLOCK_ENTITY =
+            register("triple_window_5_3", TripleWindow53BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_3);
+
+    public static final BlockEntityType<TripleWindow54BlockEntity> TRIPLE_WINDOW_5_4_BLOCK_ENTITY =
+            register("triple_window_5_4", TripleWindow54BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_4);
+
+    public static final BlockEntityType<TripleWindow55BlockEntity> TRIPLE_WINDOW_5_5_BLOCK_ENTITY =
+            register("triple_window_5_5", TripleWindow55BlockEntity::new, ModBlocks.TRIPLE_WINDOW_5_5);
+
 
     public static final BlockEntityType<MarblePillarBaseBlockEntity> MARBLE_PILLAR_BASE_BLOCK_ENTITY =
         register("marble_pillar_base", MarblePillarBaseBlockEntity::new, ModBlocks.MARBLE_PILLAR_BASE);
 
-    public static final BlockEntityType<QuadWindow01BlockEntity> QUAD_WINDOW_0_1_BLOCK_ENTITY =
-        register("quad_window_0_1", QuadWindow01BlockEntity::new, ModBlocks.QUAD_WINDOW_0_1);
 
-    public static final BlockEntityType<QuadWindow04BlockEntity> QUAD_WINDOW_0_4_BLOCK_ENTITY =
-        register("quad_window_0_4", QuadWindow04BlockEntity::new, ModBlocks.QUAD_WINDOW_0_4);
+    public static final BlockEntityType<PillarCapBlockEntity> PILLAR_CAP_BLOCK_ENTITY =
+        register("pillar_cap", PillarCapBlockEntity::new, ModBlocks.PILLAR_CAP);
+                    //::new block here
 
-    public static final BlockEntityType<QuadWindow03BlockEntity> QUAD_WINDOW_0_3_BLOCK_ENTITY =
-        register("quad_window_0_3", QuadWindow03BlockEntity::new, ModBlocks.QUAD_WINDOW_0_3);
+    public static final BlockEntityType<MarblePillarBlockEntity> MARBLE_PILLAR_BLOCK_ENTITY =
+        register("marble_pillar", MarblePillarBlockEntity::new, ModBlocks.MARBLE_PILLAR);
 
-    public static final BlockEntityType<QuadWindow02BlockEntity> QUAD_WINDOW_0_2_BLOCK_ENTITY =
-        register("quad_window_0_2", QuadWindow02BlockEntity::new, ModBlocks.QUAD_WINDOW_0_2);
-
-    public static final BlockEntityType<QuadWindow13BlockEntity> QUAD_WINDOW_1_3_BLOCK_ENTITY =
-        register("quad_window_1_3", QuadWindow13BlockEntity::new, ModBlocks.QUAD_WINDOW_1_3);
-
-    public static final BlockEntityType<QuadWindow12BlockEntity> QUAD_WINDOW_1_2_BLOCK_ENTITY =
-        register("quad_window_1_2", QuadWindow12BlockEntity::new, ModBlocks.QUAD_WINDOW_1_2);
-
-    public static final BlockEntityType<QuadWindow11BlockEntity> QUAD_WINDOW_1_1_BLOCK_ENTITY =
-        register("quad_window_1_1", QuadWindow11BlockEntity::new, ModBlocks.QUAD_WINDOW_1_1);
-
-    public static final BlockEntityType<QuadWindow14BlockEntity> QUAD_WINDOW_1_4_BLOCK_ENTITY =
-        register("quad_window_1_4", QuadWindow14BlockEntity::new, ModBlocks.QUAD_WINDOW_1_4);
-
-    public static final BlockEntityType<QuadWindow21BlockEntity> QUAD_WINDOW_2_1_BLOCK_ENTITY =
-        register("quad_window_2_1", QuadWindow21BlockEntity::new, ModBlocks.QUAD_WINDOW_2_1);
-
-    public static final BlockEntityType<QuadWindow22BlockEntity> QUAD_WINDOW_2_2_BLOCK_ENTITY =
-        register("quad_window_2_2", QuadWindow22BlockEntity::new, ModBlocks.QUAD_WINDOW_2_2);
-
-    public static final BlockEntityType<QuadWindow24BlockEntity> QUAD_WINDOW_2_4_BLOCK_ENTITY =
-        register("quad_window_2_4", QuadWindow24BlockEntity::new, ModBlocks.QUAD_WINDOW_2_4);
-
-    public static final BlockEntityType<QuadWindow23BlockEntity> QUAD_WINDOW_2_3_BLOCK_ENTITY =
-        register("quad_window_2_3", QuadWindow23BlockEntity::new, ModBlocks.QUAD_WINDOW_2_3);
-
-    public static final BlockEntityType<QuadWindow20BlockEntity> QUAD_WINDOW_2_0_BLOCK_ENTITY =
-        register("quad_window_2_0", QuadWindow20BlockEntity::new, ModBlocks.QUAD_WINDOW_2_0);
-
-    public static final BlockEntityType<QuadWindow30BlockEntity> QUAD_WINDOW_3_0_BLOCK_ENTITY =
-        register("quad_window_3_0", QuadWindow30BlockEntity::new, ModBlocks.QUAD_WINDOW_3_0);
-
-    public static final BlockEntityType<QuadWindow31BlockEntity> QUAD_WINDOW_3_1_BLOCK_ENTITY =
-        register("quad_window_3_1", QuadWindow31BlockEntity::new, ModBlocks.QUAD_WINDOW_3_1);
-
-    public static final BlockEntityType<QuadWindow32BlockEntity> QUAD_WINDOW_3_2_BLOCK_ENTITY =
-        register("quad_window_3_2", QuadWindow32BlockEntity::new, ModBlocks.QUAD_WINDOW_3_2);
-
-    public static final BlockEntityType<QuadWindow40BlockEntity> QUAD_WINDOW_4_0_BLOCK_ENTITY =
-        register("quad_window_4_0", QuadWindow40BlockEntity::new, ModBlocks.QUAD_WINDOW_4_0);
-
-    public static final BlockEntityType<QuadWindow41BlockEntity> QUAD_WINDOW_4_1_BLOCK_ENTITY =
-        register("quad_window_4_1", QuadWindow41BlockEntity::new, ModBlocks.QUAD_WINDOW_4_1);
-
-    public static final BlockEntityType<QuadWindow42BlockEntity> QUAD_WINDOW_4_2_BLOCK_ENTITY =
-        register("quad_window_4_2", QuadWindow42BlockEntity::new, ModBlocks.QUAD_WINDOW_4_2);
-                                                                                                                                                                    //::new block here
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,
             FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory,
