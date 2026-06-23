@@ -345,6 +345,104 @@ public class ModRecipeProvider {
                         .pattern("'   '")
                         .unlockedBy("has_glazed_terracotta", this.has(Items.GLAZED_TERRACOTTA.lightBlue()))
                         .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE, 3)
+                        .define('0', Blocks.POLISHED_DIORITE)
+                        .define('1', Blocks.TINTED_GLASS)
+                        .define('2', ModBlocks.MARBLE_PILLAR)
+                        .pattern("' 12'")
+                        .pattern("' 12'")
+                        .pattern("'000'")
+                        .unlockedBy("has_polished_diorite", this.has(Blocks.POLISHED_DIORITE))
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE, 3)
+                        .define('0', Blocks.POLISHED_DIORITE)
+                        .define('1', Blocks.TINTED_GLASS)
+                        .define('2', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'21 '")
+                        .pattern("'21 '")
+                        .pattern("'000'")
+                        .unlockedBy("has_polished_diorite", this.has(Blocks.POLISHED_DIORITE))
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'001'")
+                        .pattern("'001'")
+                        .pattern("'   '")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'100'")
+                        .pattern("'100'")
+                        .pattern("'   '")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'001'")
+                        .pattern("'001'")
+                        .pattern("'   '")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'001'")
+                        .pattern("'001'")
+                        .pattern("'   '")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_MIDDLE_BASE, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_BLOCK)
+                        .define('2', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'020'")
+                        .pattern("' 1 '")
+                        .pattern("'111'")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble", this.has(ModBlocks.MARBLE_BLOCK))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN, 3)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'010'")
+                        .pattern("'010'")
+                        .pattern("'010'")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ARCHED_WINDOW_MIDDLE_CAP, 2)
+                        .define('0', Blocks.TINTED_GLASS)
+                        .define('1', Blocks.QUARTZ_BRICKS)
+                        .define('2', ModBlocks.MARBLE_PILLAR)
+                        .pattern("'111'")
+                        .pattern("'010'")
+                        .pattern("'020'")
+                        .unlockedBy("has_tinted_glass", this.has(Blocks.TINTED_GLASS))
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
+                        .save(this.output);
                 //::new block here
             }
         };

@@ -1,14 +1,17 @@
 package org.squaresaresquare.client.block;
 
+import java.util.List;
 import java.util.function.Function;
 
+import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
+import net.minecraft.client.color.block.BlockTintSource;
+import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -47,6 +50,7 @@ import org.squaresaresquare.client.block.custom.TripleWindow43Block;
 import org.squaresaresquare.client.block.custom.TripleWindow45Block;
 import org.squaresaresquare.client.block.custom.TripleWindow44Block;
 import org.squaresaresquare.client.block.custom.MarblePillarBlock;
+import org.squaresaresquare.client.block.custom.OakLogBlock;
 import org.squaresaresquare.client.block.custom.TripleWindow55Block;
 import org.squaresaresquare.client.block.custom.TripleWindow54Block;
 import org.squaresaresquare.client.block.custom.TripleWindow53Block;
@@ -55,9 +59,8 @@ import org.squaresaresquare.client.block.custom.TripleWindow34Block;
 import org.squaresaresquare.client.block.custom.TripleWindow33Block;
 import org.squaresaresquare.client.block.custom.TripleWindow25Block;
 import org.squaresaresquare.client.block.custom.TripleWindowComplete;
-
-
-import org.squaresaresquare.client.block.custom.PillarCapBlock;import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;//::new import here
+import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnCapBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowMiddleCapBlock;import org.squaresaresquare.client.block.custom.ArchedWindowMiddleColumnBlock;import org.squaresaresquare.client.block.custom.ArchedWindowMiddleBaseBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnCapBlock;import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnMiddleBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnMiddleBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnBaseBlock;import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnBaseBlock;import org.squaresaresquare.client.block.custom.PillarCapBlock;import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;//::new import here
 
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
@@ -66,7 +69,7 @@ public class ModBlocks {
         ResourceKey<@NotNull Block> blockKey = keyOfBlock(name);
         // Create the block instance
         Block block = blockFactory.apply(settings.setId(blockKey));
-
+        Block CUSTOM_BLOCK = Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
         // Sometimes, you may not want to register an item for the block.
         // Eg: if it's a technical block like `minecraft:moving_piston` or `minecraft:end_gateway`
         if (shouldRegisterItem) {
@@ -76,8 +79,23 @@ public class ModBlocks {
 
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
+
+            BlockColorRegistry.register(List.of(new BlockTintSource() {
+                @Override
+                public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
+                    BlockState stateBelow = level.getBlockState(pos.below());
+                    if (stateBelow.is(Blocks.GRASS_BLOCK)) {
+                        return 0xFF98FB98; // Color code in hex format
+                    }
+                    return 0xFFFFDAB9; // Color code in hex format
+                }
+                @Override
+                public int color(BlockState state) {
+                    return 0xFFFFDAB9; // Color code in hex format
+                }
+            }), CUSTOM_BLOCK );
         }
-        return Registry.register(BuiltInRegistries.BLOCK, blockKey, block);
+        return CUSTOM_BLOCK;
     }
     private static ResourceKey<@NotNull Block> keyOfBlock(String name) {
         return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, name));
@@ -121,6 +139,16 @@ public class ModBlocks {
             "marble_pillar",
             MarblePillarBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+            true
+    );
+
+    public static final Block OAK_LOG = register(
+            "oak_log",
+            OakLogBlock::new,
+            BlockBehaviour.Properties.of().sound(SoundType.WOOD)
                     .noOcclusion()
                     .strength(1,1)
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
@@ -468,7 +496,113 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
         true
     );
-                    //::new block here                                                                                                                                                                                                                    //::new block here
+
+ 
+    public static final Block ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE = register(
+        "arched_window_left_half_column_base",
+        ArchedWindowLeftHalfColumnBaseBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE = register(
+        "arched_window_right_half_column_base",
+        ArchedWindowRightHalfColumnBaseBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE = register(
+        "arched_window_right_half_column_middle",
+        ArchedWindowRightHalfColumnMiddleBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE = register(
+        "arched_window_left_half_column_middle",
+        ArchedWindowLeftHalfColumnMiddleBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP = register(
+        "arched_window_right_half_column_cap",
+        ArchedWindowRightHalfColumnCapBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP = register(
+        "arched_window_left_half_column_cap",
+        ArchedWindowLeftHalfColumnCapBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_MIDDLE_BASE = register(
+        "arched_window_middle_base",
+        ArchedWindowMiddleBaseBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_MIDDLE_COLUMN = register(
+        "arched_window_middle_column",
+        ArchedWindowMiddleColumnBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block ARCHED_WINDOW_MIDDLE_CAP = register(
+        "arched_window_middle_cap",
+        ArchedWindowMiddleCapBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+    public static final Block INVISIBLE = register(
+            "invisible",
+            MarblePillarBlock::new,
+            BlockBehaviour.Properties.of().sound(SoundType.GLASS),
+            true
+    );
+
+    //::new block here                                                                                                                                                                                                                    //::new block here
     public static void initialize() {
 
     }

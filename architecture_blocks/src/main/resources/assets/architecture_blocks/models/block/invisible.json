@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "architecture_blocks:block/invisible",
+    "down": "architecture_blocks:block/invisible",
+    "up": "architecture_blocks:block/invisible",
+    "north": "architecture_blocks:block/invisible",
+    "south": "architecture_blocks:block/invisible",
+    "west": "architecture_blocks:block/invisible",
+    "east": "architecture_blocks:block/invisible"
+  }
+}

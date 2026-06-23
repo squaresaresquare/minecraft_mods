@@ -15,15 +15,25 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
-	mods {
-		"architecture_blocks" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
+    splitEnvironmentSourceSets()
+    runs {
+        client {
+            programArg "--username"
+            programArg "SeanPaul50"
+            programArg "--uuid"
+            programArg "ca07a77a-c262-4191-a7cc-9278d9efdc58"
+            programArg "--accessToken"
+            programArg "eyJraWQiOiIwNDkxODEiLCJhbGciOiJSUzI1NiJ9.eyJ4dWlkIjoiMjUzNTQxMzI2NDE1MDA2MCIsImFnZyI6IkFkdWx0Iiwic3ViIjoiMGVmMGJkZjEtMmQ4MS00NDFmLTk0ZWMtNmYyYzM5ZTdmNDQ3IiwiYXV0aCI6IlhCT1giLCJwZmlkIjoiRTVEREIyMEQ5NDI2QUVDNSIsIm5zIjoiZGVmYXVsdCIsInJvbGVzIjpbXSwiaXNzIjoiYXV0aGVudGljYXRpb24iLCJmbGFncyI6WyJtdWx0aXBsYXllciJdLCJwcm9maWxlcyI6eyJtYyI6ImNhMDdhNzdhLWMyNjItNDE5MS1hN2NjLTkyNzhkOWVmZGM1OCJ9LCJtaWQiOiJFNUREQjIwRDk0MjZBRUM1IiwicG1pZCI6IjNlMWVlOGY0LTIxYzctNTkzOC05YmNiLTBkNmRlZWNkMWU5YyIsInBsYXRmb3JtIjoiUENfTEFVTkNIRVIiLCJ0aWQiOiJFOTlCMCIsInBmZCI6W3sidHlwZSI6Im1jIiwiaWQiOiJjYTA3YTc3YS1jMjYyLTQxOTEtYTdjYy05Mjc4ZDllZmRjNTgiLCJuYW1lIjoiU2VhblBhdWw1MCJ9XSwieGlkIjoiMjUzNTQxMzI2NDE1MDA2MCIsIm5iZiI6MTc4MjIwMzQwNSwiZXhwIjoxNzgyMjg5ODA1LCJpYXQiOjE3ODIyMDM0MDUsImFpZCI6IjQ5OTU0NmQ5LWJiZmUtNGI5Yi1hMDg2LWViM2Q3NWFmYjc4ZiJ9.SdqyWuiIKT_iLR0GsXLv4pb2YdLHMQEmGBPAsYLBtzJJVI_AS72-t_erYpPsJ9ngz3OA75ODnuFYD6x0_pmQx9hpa_b2HPjGpJFCV73KFYEz7mmsY1_KSmIfrw05zt1hM3ia_JkeTK1s_jOpr8YnWQWwJp45rpV_iB5FayxtVRyJYn43xkLOanWDh6hwlCA8ktUx_iY3AeefZpxneDq2vuiH1QohcjL49ttFDlIbX65xmiROHfd8bAv0II4pI2s2taD1_JkWqfkMrH1_MatD6FGKHZNobYG_FWzfWewhCABp-cBYdKUTTuhsoJANCTCHJbHSsc__Icog080POPiWIA"
+            programArg "--userType"
+            programArg "msa"
+        }
+    }
+    mods {
+        "architecture_blocks" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
 }
 
 dependencies {

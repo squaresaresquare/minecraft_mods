@@ -39,15 +39,24 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     dropSelf(ModBlocks.TRIPLE_WINDOW_5_1);
     dropSelf(ModBlocks.TRIPLE_WINDOW_5_2);
     dropSelf(ModBlocks.MARBLE_PILLAR);
-
-
-
-
-
-
-
-
-
-    dropSelf(ModBlocks.PILLAR_CAP);    dropSelf(ModBlocks.MARBLE_PILLAR_BASE);    dropSelf(ModBlocks.TRIPLE_WINDOW_5_5);    dropSelf(ModBlocks.TRIPLE_WINDOW_5_4);    dropSelf(ModBlocks.TRIPLE_WINDOW_5_3);    dropSelf(ModBlocks.TRIPLE_WINDOW_3_5);    dropSelf(ModBlocks.TRIPLE_WINDOW_3_4);    dropSelf(ModBlocks.TRIPLE_WINDOW_3_3);    dropSelf(ModBlocks.TRIPLE_WINDOW_2_5);    //::new block here
+        dropSelf(ModBlocks.OAK_LOG);
+    dropSelf(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE);
+    dropSelf(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE);
+    dropSelf(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE);
+    dropSelf(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE);
+    dropSelf(ModBlocks.PILLAR_CAP);
+    dropSelf(ModBlocks.MARBLE_PILLAR_BASE);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_5_5);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_5_4);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_5_3);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_3_5);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_3_4);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_3_3);
+    dropSelf(ModBlocks.TRIPLE_WINDOW_2_5);
+    dropSelf(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP);
+    dropSelf(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP);
+    dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
+    dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
+    dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);    //::new block here
     }
 }

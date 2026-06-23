@@ -1,8 +1,9 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/cube_all",
+	"parent": "architecture_blocks:block/cube_all",
 	"ambientocclusion": false,
-    "force_translucent": true,	"texture_size": [128, 128],
+    "force_translucent": true,
+  "texture_size": [128, 128],
 	"textures": {
 		"1": "architecture_blocks:block/marble_pillar/marble",
         "particle": "architecture_blocks:block/marble_pillar/marble"

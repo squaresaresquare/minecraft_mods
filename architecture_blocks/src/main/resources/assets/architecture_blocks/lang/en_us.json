@@ -136,6 +136,13 @@
   "block.architecture_blocks.triple_window_5_4": "triple window sixth row fifth block",
   "block.architecture_blocks.triple_window_5_5": "triple window sixth row sixth block",
 
+  "block.architecture_blocks.arched_window_left_half_column_base": "Arched Window Left half column base",
+  "block.architecture_blocks.arched_window_right_half_column_cap": "Arched window right half column cap",
+  "block.architecture_blocks.arched_window_left_half_column_middle": "Arched window left half column middle",
+  "block.architecture_blocks.arched_window_right_half_column_middle": "Arched window right half column middle",
 
-"  block.architecture_blocks.pillar_cap": "<built-in method capitalize of str object at 0x1043142b0>","  block.architecture_blocks.marble_pillar_base": "<built-in method capitalize of str object at 0x10ca2dd00>",  "stub": "stub"
+  "block.architecture_blocks.arched_window_middle_cap": "Arched window middle cap",
+  "block.architecture_blocks.arched_window_middle_column": "Arched window middle column",
+  "block.architecture_blocks.arched_window_middle_base": "Arched window middle base",
+  "stub": "stub"
 }

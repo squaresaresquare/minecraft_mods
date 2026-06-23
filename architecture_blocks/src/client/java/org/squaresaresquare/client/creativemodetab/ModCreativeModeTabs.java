@@ -19,13 +19,16 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativemodetab.architecture_blocks.marble_plinth_block"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.MARBLE_PLINTH_BLOCK);
+                        output.accept(ModBlocks.INVISIBLE);
                         output.accept(ModBlocks.MARBLE_BLOCK);
                         output.accept(ModBlocks.MARBLE_PILLAR);
+                        output.accept(ModBlocks.OAK_LOG);
                         output.accept(ModBlocks.MARBLE_PILLAR_BASE);
                         output.accept(ModBlocks.PILLAR_CAP);
                         output.accept(Blocks.QUARTZ_BRICKS);
                         //::new architecture_block here
                     }).build());
+
     public static final CreativeModeTab TRIPLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "triple_window"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TRIPLE_WIND0W_COMPLETE))
@@ -70,8 +73,40 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TRIPLE_WINDOW_5_4);
                         output.accept(ModBlocks.TRIPLE_WINDOW_5_5);
 
+                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE);
+                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE);
+                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE);
+                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE);
+                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP);
+                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP);
+                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);
+                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
+                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
+
                         //::new triple_window
                     }).build());
+    /*
+    public static final CreativeModeTab DOUBLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "double_window"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DOUBLE_WIND0W_COMPLETE))
+                    .title(Component.translatable("creativemodetab.architecture_blocks.triple_window_complete"))
+                    .displayItems((parameters, output) -> {
+                    output.accept(ModBlocks.TRIPLE_WINDOW_0_1);
+
+                        //::new double_window
+                    }).build());
+
+    public static final CreativeModeTab DOUBLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "four_windows"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DOUBLE_WIND0W_COMPLETE))
+                    .title(Component.translatable("creativemodetab.architecture_blocks.triple_window_complete"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.TRIPLE_WINDOW_0_1);
+
+                        //::new double_window
+                    }).build());
+    */
+
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "creative_tab")
     );

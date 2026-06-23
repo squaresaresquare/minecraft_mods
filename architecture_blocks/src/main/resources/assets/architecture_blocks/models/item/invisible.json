@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/glass",
+  "textures": {
+    "layer0": "architecture_blocks:item/invisible"
+  }
+}

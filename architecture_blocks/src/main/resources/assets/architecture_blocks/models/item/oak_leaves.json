@@ -1,0 +1,6 @@
+{
+  "parent": "architecture_blocks:block/oak_leaves",
+  "textures": {
+    "layer0": "architecture_blocks:item/oak_leaves"
+  }
+}

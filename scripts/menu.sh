@@ -80,9 +80,9 @@ echo
 
 if [[ ${ANS} == "" ]]
 then
-  command="./Add_Block.py -m \"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture_blocks\" -b ${NAME} -i \"${INGREDIENT_STRING}\" -r \"${RECIPE}\" -t building_blocks"
+  command="./Add_Block.py -m \"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture_blocks\" -b ${NAME} -i \"${INGREDIENT_STRING}\" -r \"${RECIPE}\" -t building_blocks -c $NUM"
 else
-  command="./Add_Block.py -m \"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture_blocks\" -b ${NAME} -i \"${INGREDIENT_STRING}\" -r \"${RECIPE}\" -t ${TAB[$ANS]}"
+  command="./Add_Block.py -m \"/Users/seanpaulbobadilla/Documents/GitRepos/minecraft_mods/architecture_blocks\" -b ${NAME} -i \"${INGREDIENT_STRING}\" -r \"${RECIPE}\" -t ${TAB[$ANS]} -c $NUM"
 fi
 echo "$command"
 read -p 'Run the above command (y/n) [n]: ' TMP

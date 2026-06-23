@@ -75,6 +75,7 @@ class addBlock:
             sys.stderr.write(f"failed to open {file_path} for writing\n" + str(e.args[0]) + "\n")
 
     def update_file(self,file_path: str,update_string: str,pattern: str = '::new block here'):
+        lines = list()
         if Path(file_path).is_file():
             # check if it's alread updated
             try:
@@ -102,6 +103,8 @@ class addBlock:
         try:
             with open(file_path, "r") as file:
                 try:
+                    if self.verbose or self.debug:
+                        sys.stdout.write("read file into list of lines")
                     lines = file.readlines()
                 except Exception as q:
                     sys.stderr.write(str(q.args[0]) + '\n')
@@ -112,9 +115,9 @@ class addBlock:
                for line in lines:
                     if pattern in line:
                         try:
-                            file.write('\n' + update_string)
+                            file.write(f"\n{update_string}".replace('\n\n', '\n'))
                         except Exception as e:
-                            sys.stderr.write(str(e.args[0]) + '\n')
+                            sys.stderr.write(f"\n{str(e.args[0])}")
                     try:
                         file.write(line)
                     except Exception as e:
@@ -215,7 +218,6 @@ class addBlock:
         self.update_en_us()
         self.create_blockstate_json()
         self.update_block_model()
-        self.update_ModCreativeModeTabs()
         if self.verbose:
             sys.stdout.write("remove backup files\n")
         for backupfile in self.backup_files:
@@ -287,22 +289,8 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         """)
 
     def update_Architecture_blocksClient(self):
-        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/Architecture_blocksClient.java", update_string=f"""
-        BlockColorRegistry.register(List.of(new BlockTintSource() {{
-            @Override
-            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {{
-                BlockState stateBelow = level.getBlockState(pos.below());
-                if (stateBelow.is(Blocks.GRASS_BLOCK)) {{
-                    return 0xFF98FB98; // Color code in hex format
-                }}
-                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
-            }}
-            @Override
-            public int color(BlockState state) {{
-                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
-            }}
-        }}), ModBlocks.{self.uppercaseName});
-                """)
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/Architecture_blocksClient.java", 
+        update_string=f"registerBlockColor(ModBlocks.{self.uppercaseName});")
 
 
     def update_ModItems(self):
@@ -316,10 +304,6 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
     def update_ModBlockLootTableProvider(self):
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/datagen/ModBlockLootTableProvider.java",
             update_string=f"    dropSelf(ModBlocks.{self.uppercaseName});")
-
-    def update_ModCreativeModeTabs(self):
-        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
-            update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});")
                 
     def update_block_model(self):
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json",
@@ -358,7 +342,7 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
         contents=f'''
 {{
-  "parent": "architecture_blocks:block/{self.block_name}",
+  "parent": "minecraft:item/generated",
   "textures": {{
     "layer0": "architecture_blocks:item/{self.block_name}"
   }}
@@ -394,10 +378,12 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
             update_string=f"import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;")
 
     def update_en_us(self):
-        description = str(str(str(self.block_name).capitalize).replace('_', ' '))
+
+        description = str(self.block_name).capitalize().replace('_', ' ')
+
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/lang/en_us.json",
             pattern="stub",
-            update_string=f'''"  block.architecture_blocks.{self.block_name}": "{description}",''')
+            update_string=f'''  "block.architecture_blocks.{self.block_name}": "{description}",''')
     
     def create_custom_block_file(self):
         shapedir = "/src/main/resources/assets/architecture_blocks/shapes/"
@@ -520,7 +506,7 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
             ''')
     def update_ModCreativeModeTabs(self):
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
-            update_string=f"output.accept(ModBlocks.{self.uppercaseName});",
+            update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});",
             pattern=f"::new {self.creative_mode_tab}"
         )
 
