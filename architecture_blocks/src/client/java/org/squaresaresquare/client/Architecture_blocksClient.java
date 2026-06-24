@@ -2,24 +2,15 @@ package org.squaresaresquare.client;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.util.ARGB;
 import net.minecraft.world.level.block.Block;
 import org.squaresaresquare.Architecture_blocks;
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.squaresaresquare.client.block.ModBlocks;
-import java.util.List;
-import net.minecraft.client.color.block.BlockTintSource;
-import net.minecraft.client.renderer.block.BlockAndTintGetter;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Blocks.*;
-import net.minecraft.world.level.block.state.BlockState;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
 import org.squaresaresquare.client.block.entity.ModBlockEntities;
 import org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs;
-
 import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB;
 import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB_KEY;
 

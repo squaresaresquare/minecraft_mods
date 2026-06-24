@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.squaresaresquare.Architecture_blocks;
+
 import org.squaresaresquare.client.block.custom.MarblePlinthBlock;
 import org.squaresaresquare.client.block.custom.MarbleBlockBlock;
 import org.squaresaresquare.client.block.custom.TripleWindow01Block;
@@ -60,7 +61,17 @@ import org.squaresaresquare.client.block.custom.TripleWindow33Block;
 import org.squaresaresquare.client.block.custom.TripleWindow25Block;
 import org.squaresaresquare.client.block.custom.TripleWindowComplete;
 import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnCapBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowMiddleCapBlock;import org.squaresaresquare.client.block.custom.ArchedWindowMiddleColumnBlock;import org.squaresaresquare.client.block.custom.ArchedWindowMiddleBaseBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnCapBlock;import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnMiddleBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnMiddleBlock;import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnBaseBlock;import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnBaseBlock;import org.squaresaresquare.client.block.custom.PillarCapBlock;import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;//::new import here
+import org.squaresaresquare.client.block.custom.ArchedWindowMiddleCapBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowMiddleColumnBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowMiddleBaseBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnCapBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnMiddleBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnMiddleBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnBaseBlock;
+import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnBaseBlock;
+import org.squaresaresquare.client.block.custom.PillarCapBlock;
+import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;
+//::new import here
 
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
@@ -80,7 +91,7 @@ public class ModBlocks {
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
 
-            BlockColorRegistry.register(List.of(new BlockTintSource() {
+            /*BlockColorRegistry.register(List.of(new BlockTintSource() {
                 @Override
                 public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
                     BlockState stateBelow = level.getBlockState(pos.below());
@@ -93,7 +104,7 @@ public class ModBlocks {
                 public int color(BlockState state) {
                     return 0xFFFFDAB9; // Color code in hex format
                 }
-            }), CUSTOM_BLOCK );
+            }), CUSTOM_BLOCK );*/
         }
         return CUSTOM_BLOCK;
     }
@@ -145,10 +156,10 @@ public class ModBlocks {
             true
     );
 
-    public static final Block OAK_LOG = register(
+    public static final Block OAK_LOG_BLOCK = register(
             "oak_log",
             OakLogBlock::new,
-            BlockBehaviour.Properties.of().sound(SoundType.WOOD)
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
                     .noOcclusion()
                     .strength(1,1)
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
@@ -597,7 +608,7 @@ public class ModBlocks {
     );
     public static final Block INVISIBLE = register(
             "invisible",
-            MarblePillarBlock::new,
+            Block::new,
             BlockBehaviour.Properties.of().sound(SoundType.GLASS),
             true
     );

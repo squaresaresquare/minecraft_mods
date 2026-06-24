@@ -1,4 +1,4 @@
-package org.squaresaresquare.client.rendering.blockentity;
+package net.minecraft.rendering.blockentity;
 
 import net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState;
 import net.minecraft.core.BlockPos;

@@ -118,7 +118,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.INVISIBLE);
                         output.accept(ModBlocks.MARBLE_BLOCK);
                         output.accept(ModBlocks.MARBLE_PILLAR);
-                        output.accept(ModBlocks.OAK_LOG);
+                        output.accept(ModBlocks.OAK_LOG_BLOCK);
                         output.accept(ModBlocks.MARBLE_PILLAR_BASE);
                         output.accept(ModBlocks.PILLAR_CAP);
                         output.accept(Blocks.QUARTZ_BRICKS);

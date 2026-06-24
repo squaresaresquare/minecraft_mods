@@ -1,5 +1,5 @@
 
-package org.squaresaresquare.client.rendering.blockentity;
+package net.minecraft.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
-import org.squaresaresquare.client.block.entity.custom.OakLogBlockEntity;
+import net.minecraft.block.entity.custom.OakLogBlockEntity;
 
 public class OakLogBlockEntityRenderer implements BlockEntityRenderer<OakLogBlockEntity, OakLogBlockEntityRenderState> {
     private final Font font;

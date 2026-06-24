@@ -1,5 +1,5 @@
 
-package org.squaresaresquare.client.block.custom;
+package net.minecraft.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -17,8 +17,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import org.squaresaresquare.client.block.ModBlocks;
-import org.squaresaresquare.client.block.entity.custom.OakLogBlockEntity;
+import net.minecraft.block.ModBlocks;
+import net.minecraft.block.entity.custom.OakLogBlockEntity;
 
 import javax.swing.text.html.BlockView;
 
