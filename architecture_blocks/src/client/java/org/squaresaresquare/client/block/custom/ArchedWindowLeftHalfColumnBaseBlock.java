@@ -6,6 +6,8 @@ import java.util.List;
 import javax.swing.text.html.BlockView;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -24,6 +26,9 @@ import org.jetbrains.annotations.Nullable;
 import org.squaresaresquare.Architecture_blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.ArchedWindowLeftHalfColumnBaseBlockEntity;
+
+import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB;
+import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB_KEY;
 
 public class ArchedWindowLeftHalfColumnBaseBlock extends BaseEntityBlock {
         public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -85,6 +90,7 @@ public class ArchedWindowLeftHalfColumnBaseBlock extends BaseEntityBlock {
 
     public void onInitialize() {
         ModBlocks.initialize();
+
     }
 }
         
