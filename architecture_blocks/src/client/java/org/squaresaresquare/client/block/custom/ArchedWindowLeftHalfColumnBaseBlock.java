@@ -2,12 +2,9 @@
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import java.util.List;
 import javax.swing.text.html.BlockView;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -17,26 +14,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import org.squaresaresquare.Architecture_blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.ArchedWindowLeftHalfColumnBaseBlockEntity;
-
-import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB;
-import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB_KEY;
 
 public class ArchedWindowLeftHalfColumnBaseBlock extends BaseEntityBlock {
         public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public ArchedWindowLeftHalfColumnBaseBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        // stateDefinition.any() returns a random BlockState from an internal set,
-        // we don't care because we're setting all values ourselves anyway
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)
         );

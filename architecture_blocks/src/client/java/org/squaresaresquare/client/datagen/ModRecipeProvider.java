@@ -443,6 +443,14 @@ public class ModRecipeProvider {
                         .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
                         .unlockedBy("has_marble_pillar", this.has(ModBlocks.MARBLE_PILLAR))
                         .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THATCH, 3)
+                        .define('0', Blocks.HAY_BLOCK)
+                        .pattern("'0  '")
+                        .pattern("'00 '")
+                        .pattern("'000'")
+                        .unlockedBy("has_hay_block", this.has(Blocks.HAY_BLOCK))
+                        .save(this.output);
                 //::new block here
             }
         };

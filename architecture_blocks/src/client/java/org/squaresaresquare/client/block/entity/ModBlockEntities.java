@@ -49,7 +49,8 @@ import org.squaresaresquare.client.block.entity.custom.ArchedWindowRightHalfColu
 import org.squaresaresquare.client.block.entity.custom.ArchedWindowLeftHalfColumnBaseBlockEntity;
 import org.squaresaresquare.client.block.entity.custom.PillarCapBlockEntity;
 import org.squaresaresquare.client.block.entity.custom.MarblePillarBaseBlockEntity;
-//::new import here
+
+import org.squaresaresquare.client.block.entity.custom.ThatchBlockEntity;//::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -107,7 +108,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<ArchedWindowMiddleColumnBlockEntity> ARCHED_WINDOW_MIDDLE_COLUMN_BLOCK_ENTITY = register("arched_window_middle_column", ArchedWindowMiddleColumnBlockEntity::new, ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
     public static final BlockEntityType<ArchedWindowMiddleCapBlockEntity> ARCHED_WINDOW_MIDDLE_CAP_BLOCK_ENTITY = register("arched_window_middle_cap", ArchedWindowMiddleCapBlockEntity::new, ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
 
-    //::new block here
+
+    public static final BlockEntityType<ThatchBlockEntity> THATCH_BLOCK_ENTITY =
+        register("thatch", ThatchBlockEntity::new, ModBlocks.THATCH);
+            //::new block here
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,

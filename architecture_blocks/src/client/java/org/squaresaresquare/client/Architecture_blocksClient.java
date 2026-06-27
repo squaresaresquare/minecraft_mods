@@ -13,6 +13,8 @@ import org.squaresaresquare.client.block.entity.ModBlockEntities;
 import org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs;
 import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB;
 import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.TRIPLE_WINDOWS_TAB_KEY;
+import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.FOUR_ARCHED_WINDOW;
+import static org.squaresaresquare.client.creativemodetab.ModCreativeModeTabs.FOUR_ARCHED_WINDOW_TAB_KEY;
 
 public class Architecture_blocksClient implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(Architecture_blocks.MOD_ID);
@@ -24,6 +26,11 @@ public class Architecture_blocksClient implements ClientModInitializer {
                TRIPLE_WINDOWS_TAB_KEY,
                TRIPLE_WINDOWS_TAB
        );
+        Registry.register(
+                BuiltInRegistries.CREATIVE_MODE_TAB,
+                FOUR_ARCHED_WINDOW_TAB_KEY,
+                FOUR_ARCHED_WINDOW
+        );
 
         //initialize the stuffs
         ModBlocks.initialize();

@@ -22,56 +22,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 import org.squaresaresquare.Architecture_blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 
-import org.squaresaresquare.client.block.custom.MarblePlinthBlock;
-import org.squaresaresquare.client.block.custom.MarbleBlockBlock;
-import org.squaresaresquare.client.block.custom.TripleWindow01Block;
-import org.squaresaresquare.client.block.custom.TripleWindow24Block;
-import org.squaresaresquare.client.block.custom.TripleWindow52Block;
-import org.squaresaresquare.client.block.custom.TripleWindow51Block;
-import org.squaresaresquare.client.block.custom.TripleWindow50Block;
-import org.squaresaresquare.client.block.custom.TripleWindow42Block;
-import org.squaresaresquare.client.block.custom.TripleWindow41Block;
-import org.squaresaresquare.client.block.custom.TripleWindow40Block;
-import org.squaresaresquare.client.block.custom.TripleWindow32Block;
-import org.squaresaresquare.client.block.custom.TripleWindow31Block;
-import org.squaresaresquare.client.block.custom.TripleWindow30Block;
-import org.squaresaresquare.client.block.custom.TripleWindow20Block;
-import org.squaresaresquare.client.block.custom.TripleWindow23Block;
-import org.squaresaresquare.client.block.custom.TripleWindow22Block;
-import org.squaresaresquare.client.block.custom.TripleWindow21Block;
-import org.squaresaresquare.client.block.custom.TripleWindow14Block;
-import org.squaresaresquare.client.block.custom.TripleWindow12Block;
-import org.squaresaresquare.client.block.custom.TripleWindow13Block;
-import org.squaresaresquare.client.block.custom.TripleWindow11Block;
-import org.squaresaresquare.client.block.custom.TripleWindow02Block;
-import org.squaresaresquare.client.block.custom.TripleWindow03Block;
-import org.squaresaresquare.client.block.custom.TripleWindow04Block;
-import org.squaresaresquare.client.block.custom.TripleWindow43Block;
-import org.squaresaresquare.client.block.custom.TripleWindow45Block;
-import org.squaresaresquare.client.block.custom.TripleWindow44Block;
-import org.squaresaresquare.client.block.custom.MarblePillarBlock;
-import org.squaresaresquare.client.block.custom.OakLogBlock;
-import org.squaresaresquare.client.block.custom.TripleWindow55Block;
-import org.squaresaresquare.client.block.custom.TripleWindow54Block;
-import org.squaresaresquare.client.block.custom.TripleWindow53Block;
-import org.squaresaresquare.client.block.custom.TripleWindow35Block;
-import org.squaresaresquare.client.block.custom.TripleWindow34Block;
-import org.squaresaresquare.client.block.custom.TripleWindow33Block;
-import org.squaresaresquare.client.block.custom.TripleWindow25Block;
-import org.squaresaresquare.client.block.custom.TripleWindowComplete;
-import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnCapBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowMiddleCapBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowMiddleColumnBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowMiddleBaseBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnCapBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnMiddleBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnMiddleBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowRightHalfColumnBaseBlock;
-import org.squaresaresquare.client.block.custom.ArchedWindowLeftHalfColumnBaseBlock;
-import org.squaresaresquare.client.block.custom.PillarCapBlock;
-import org.squaresaresquare.client.block.custom.MarblePillarBaseBlock;
-//::new import here
+import org.squaresaresquare.client.block.custom.*;
 
 public class ModBlocks {
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
@@ -126,6 +79,15 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
             true
     );
+    public static final Block FOUR_ARCHED_WINDOW_COMPLETE = register(
+            "four_arched_window_complete",
+            FourArchedWindowComplete::new,
+            BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+            true
+    );
     public static final Block MARBLE_PLINTH_BLOCK = register(
             "marble_plinth_block",
             MarblePlinthBlock::new,
@@ -158,7 +120,7 @@ public class ModBlocks {
 
     public static final Block OAK_LOG_BLOCK = register(
             "oak_log",
-            OakLogBlock::new,
+            RotatedPillarBlock::new,
             BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
                     .noOcclusion()
                     .strength(1,1)
@@ -613,7 +575,18 @@ public class ModBlocks {
             true
     );
 
-    //::new block here                                                                                                                                                                                                                    //::new block here
+
+ 
+    public static final Block THATCH = register(
+        "thatch",
+        ThatchBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+            //::new block here                                                                                                                                                                                                                    //::new block here
     public static void initialize() {
 
     }

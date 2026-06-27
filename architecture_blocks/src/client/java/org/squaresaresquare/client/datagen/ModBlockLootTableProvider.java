@@ -56,6 +56,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     dropSelf(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP);
     dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
     dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
-    dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);    //::new block here
+
+    dropSelf(ModBlocks.THATCH);    dropSelf(ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);    //::new block here
     }
 }

@@ -38,6 +38,11 @@ public class ModCreativeModeTabs {
             Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "triple_windows_tab")
     );
 
+    public static final ResourceKey<CreativeModeTab> FOUR_ARCHED_WINDOW_TAB_KEY = ResourceKey.create(
+            Registries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "four_arched_windows_tab")
+    );
+
     public static final CreativeModeTab TRIPLE_WINDOWS_TAB = CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .title(Component.translatable("itemGroup.four_arched_windows_tab"))
             .icon(() -> new ItemStack(ModBlocks.TRIPLE_WIND0W_COMPLETE))
@@ -86,11 +91,7 @@ public class ModCreativeModeTabs {
                 TabLayout.put(50, ModBlocks.TRIPLE_WINDOW_0_3);
                 TabLayout.put(51, ModBlocks.TRIPLE_WINDOW_0_4);
                 TabLayout.put(52, Blocks.QUARTZ_BRICKS);
-                //row 6 (54-62)
-                //row 6 (63-71)
-                //row 7 (72-80)
-                //row 8 (81-89)
-                //row 9 (90 - 98)
+
                 // 2. Find the highest slot index used to determine where to stop the loop
                 int maxSlot = TabLayout.keySet().stream().max(Integer::compare).orElse(0);
                 for (int slotIndex = 0; slotIndex <= maxSlot; slotIndex++) {
@@ -113,7 +114,6 @@ public class ModCreativeModeTabs {
                              .title(Component.translatable("itemGroup." + Architecture_blocks.MOD_ID + ".ARCHITECTURE_BLOCK_TAB"))
                              .displayItems((parameters, output) -> {})
                     .displayItems((parameters, output) -> {
-
                         output.accept(ModBlocks.MARBLE_PLINTH_BLOCK);
                         output.accept(ModBlocks.INVISIBLE);
                         output.accept(ModBlocks.MARBLE_BLOCK);
@@ -121,26 +121,42 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.OAK_LOG_BLOCK);
                         output.accept(ModBlocks.MARBLE_PILLAR_BASE);
                         output.accept(ModBlocks.PILLAR_CAP);
+                        output.accept(ModBlocks.THATCH);
                         output.accept(Blocks.QUARTZ_BRICKS);
                         //::new architecture_block here
                     }).build());
 
-    public static final CreativeModeTab FOUR_ARCHED_WINDOWS = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-             Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "marble_pillar"),
-             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MARBLE_PILLAR))
-                     .title(Component.translatable("creativemodetab.architecture_blocks.marble_pillar"))
-                     .displayItems((parameters, output) -> {
-                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE);
-                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE);
-                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE);
-                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE);
-                        output.accept(ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP);
-                        output.accept(ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP);
-                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);
-                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
-                        output.accept(ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
-                        //::new triple_window
-    }).build());
+
+    public static final CreativeModeTab FOUR_ARCHED_WINDOW = CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+            .title(Component.translatable("itemGroup.four_arched_windows_tab"))
+            .icon(() -> new ItemStack(ModBlocks.FOUR_ARCHED_WINDOW_COMPLETE))
+            .displayItems((displayContext, entries) -> {
+                // create a grid of where I want to put items
+                Map<Integer, Block> TabLayout = new HashMap<>();
+                // create a grid of where I want to put items
+                TabLayout.put(1, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_BASE);
+                TabLayout.put(2, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_BASE);
+                TabLayout.put(3, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_MIDDLE);
+                TabLayout.put(4, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_MIDDLE);
+                TabLayout.put(5, ModBlocks.ARCHED_WINDOW_LEFT_HALF_COLUMN_CAP);
+                TabLayout.put(6, ModBlocks.ARCHED_WINDOW_RIGHT_HALF_COLUMN_CAP);
+                TabLayout.put(7, ModBlocks.ARCHED_WINDOW_MIDDLE_BASE);
+                TabLayout.put(8, ModBlocks.ARCHED_WINDOW_MIDDLE_COLUMN);
+                TabLayout.put(9, ModBlocks.ARCHED_WINDOW_MIDDLE_CAP);
+
+
+
+                int maxSlot = TabLayout.keySet().stream().max(Integer::compare).orElse(0);
+                for (int slotIndex = 0; slotIndex <= maxSlot; slotIndex++) {
+                    ItemStack stack = TabLayout.containsKey(slotIndex)
+                            ? new ItemStack(TabLayout.get(slotIndex))
+                            : new ItemStack(ModBlocks.INVISIBLE);
+
+                    stack.set(MY_INT_COMPONENT, slotIndex);
+                    entries.accept(stack);
+                }
+            }).build();
+
     /*
     public static final CreativeModeTab DOUBLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "double_window"),

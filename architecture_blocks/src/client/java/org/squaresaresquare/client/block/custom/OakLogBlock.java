@@ -1,12 +1,16 @@
 
 package org.squaresaresquare.client.block.custom;
 
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import java.util.function.Function;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -20,24 +24,14 @@ import org.jetbrains.annotations.Nullable;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.OakLogBlockEntity;
 
+import javax.swing.text.StringContent;
 import javax.swing.text.html.BlockView;
 
-public class OakLogBlock extends BaseEntityBlock {
-        public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+public class OakLogBlock extends RotatedPillarBlock {
+    public static final MapCodec<RotatedPillarBlock> CODEC = simpleCodec(RotatedPillarBlock::new);
 
     public OakLogBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any()
-                .setValue(FACING, Direction.NORTH)
-        );
-    }
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
-    @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     public VoxelShape makeShape(){
@@ -67,14 +61,11 @@ public class OakLogBlock extends BaseEntityBlock {
         return this.makeShape();
     }
 
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return simpleCodec(OakLogBlock::new);
+    protected MapCodec<? extends RotatedPillarBlock> getCodec() {
+        return CODEC;
     }
 
     @Nullable
-    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new OakLogBlockEntity(pos, state);
     }

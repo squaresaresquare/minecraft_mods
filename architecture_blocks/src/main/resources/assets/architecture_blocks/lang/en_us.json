@@ -144,5 +144,6 @@
   "block.architecture_blocks.arched_window_middle_cap": "Arched window middle cap",
   "block.architecture_blocks.arched_window_middle_column": "Arched window middle column",
   "block.architecture_blocks.arched_window_middle_base": "Arched window middle base",
-  "stub": "stub"
+
+  "block.architecture_blocks.thatch": "Thatch",  "stub": "stub"
 }
