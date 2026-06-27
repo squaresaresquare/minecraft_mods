@@ -50,7 +50,9 @@ import org.squaresaresquare.client.block.entity.custom.ArchedWindowLeftHalfColum
 import org.squaresaresquare.client.block.entity.custom.PillarCapBlockEntity;
 import org.squaresaresquare.client.block.entity.custom.MarblePillarBaseBlockEntity;
 
-import org.squaresaresquare.client.block.entity.custom.ThatchBlockEntity;//::new import here
+
+
+import org.squaresaresquare.client.block.entity.custom.HayBlockBlockEntity;import org.squaresaresquare.client.block.entity.custom.ThatchPeakBlockEntity;import org.squaresaresquare.client.block.entity.custom.ThatchBlockEntity;//::new import here
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
@@ -111,7 +113,13 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<ThatchBlockEntity> THATCH_BLOCK_ENTITY =
         register("thatch", ThatchBlockEntity::new, ModBlocks.THATCH);
-            //::new block here
+
+    public static final BlockEntityType<ThatchPeakBlockEntity> THATCH_PEAK_BLOCK_ENTITY =
+        register("thatch_peak", ThatchPeakBlockEntity::new, ModBlocks.THATCH_PEAK);
+
+    public static final BlockEntityType<HayBlockBlockEntity> HAY_BLOCK_BLOCK_ENTITY =
+        register("hay_block", HayBlockBlockEntity::new, ModBlocks.HAY_BLOCK);
+                            //::new block here
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,

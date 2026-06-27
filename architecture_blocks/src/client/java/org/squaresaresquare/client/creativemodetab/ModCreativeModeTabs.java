@@ -4,10 +4,7 @@ import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-
-
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
-
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -18,8 +15,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-
-import javax.sql.RowSet;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -122,6 +117,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARBLE_PILLAR_BASE);
                         output.accept(ModBlocks.PILLAR_CAP);
                         output.accept(ModBlocks.THATCH);
+                        output.accept(ModBlocks.THATCH_PEAK);
+                        output.accept(ModBlocks.HAY_BLOCK);
                         output.accept(Blocks.QUARTZ_BRICKS);
                         //::new architecture_block here
                     }).build());
@@ -157,27 +154,6 @@ public class ModCreativeModeTabs {
                 }
             }).build();
 
-    /*
-    public static final CreativeModeTab DOUBLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "double_window"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DOUBLE_WIND0W_COMPLETE))
-                    .title(Component.translatable("creativemodetab.architecture_blocks.triple_window_complete"))
-                    .displayItems((parameters, output) -> {
-                    output.accept(ModBlocks.TRIPLE_WINDOW_0_1);
-
-                        //::new double_window
-                    }).build());
-
-    public static final CreativeModeTab DOUBLE_WINDOW = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "four_windows"),
-            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.DOUBLE_WIND0W_COMPLETE))
-                    .title(Component.translatable("creativemodetab.architecture_blocks.triple_window_complete"))
-                    .displayItems((parameters, output) -> {
-                        output.accept(ModBlocks.TRIPLE_WINDOW_0_1);
-
-                        //::new double_window
-                    }).build());
-    */
 
     public static final ResourceKey<CreativeModeTab> CUSTOM_CREATIVE_TAB_KEY = ResourceKey.create(
             BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Architecture_blocks.MOD_ID, "creative_tab")

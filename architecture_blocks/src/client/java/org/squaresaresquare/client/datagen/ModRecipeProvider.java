@@ -451,6 +451,22 @@ public class ModRecipeProvider {
                         .pattern("'000'")
                         .unlockedBy("has_hay_block", this.has(Blocks.HAY_BLOCK))
                         .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THATCH_PEAK, 4)
+                        .define('0', Blocks.HAY_BLOCK)
+                        .pattern("' 0 '")
+                        .pattern("'000'")
+                        .pattern("'   '")
+                        .unlockedBy("has_hay_block", this.has(Blocks.HAY_BLOCK))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAY_BLOCK, 1)
+                        .define('0', Blocks.WHEAT)
+                        .pattern("'000'")
+                        .pattern("'000'")
+                        .pattern("'000'")
+                        .unlockedBy("has_wheat", this.has(Blocks.WHEAT))
+                        .save(this.output);
                 //::new block here
             }
         };

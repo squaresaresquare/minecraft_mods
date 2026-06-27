@@ -1,11 +1,6 @@
 package org.squaresaresquare.client.block;
 
-import java.util.List;
 import java.util.function.Function;
-
-import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
-import net.minecraft.client.color.block.BlockTintSource;
-import net.minecraft.client.renderer.block.BlockAndTintGetter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -43,21 +38,6 @@ public class ModBlocks {
 
             BlockItem blockItem = new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix());
             Registry.register(BuiltInRegistries.ITEM, itemKey, blockItem);
-
-            /*BlockColorRegistry.register(List.of(new BlockTintSource() {
-                @Override
-                public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {
-                    BlockState stateBelow = level.getBlockState(pos.below());
-                    if (stateBelow.is(Blocks.GRASS_BLOCK)) {
-                        return 0xFF98FB98; // Color code in hex format
-                    }
-                    return 0xFFFFDAB9; // Color code in hex format
-                }
-                @Override
-                public int color(BlockState state) {
-                    return 0xFFFFDAB9; // Color code in hex format
-                }
-            }), CUSTOM_BLOCK );*/
         }
         return CUSTOM_BLOCK;
     }
@@ -586,7 +566,29 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
         true
     );
-            //::new block here                                                                                                                                                                                                                    //::new block here
+
+ 
+    public static final Block THATCH_PEAK = register(
+        "thatch_peak",
+        ThatchPeakBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block HAY_BLOCK = register(
+        "hay_block",
+        HayBlock::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+                            //::new block here                                                                                                                                                                                                                    //::new block here
     public static void initialize() {
 
     }
