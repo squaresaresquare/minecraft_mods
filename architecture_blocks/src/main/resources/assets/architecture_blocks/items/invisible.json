@@ -1,6 +1,6 @@
 {
-    "model": {
-      "type": "minecraft:model",
-      "model": "architecture_blocks:block/invisible"
-    }
+  "model": {
+    "type": "minecraft:model",
+    "model": "architecture_blocks:block/invisible"
   }
+}

@@ -1,4 +1,3 @@
-
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;

@@ -1,5 +1,5 @@
-
 package org.squaresaresquare.client.block.custom;
+
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,6 +23,8 @@ public class ThatchBlock extends DirectionalBlock {
     public static final EnumProperty<@NotNull Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final EnumProperty<@NotNull DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     //get cardinal directions
+    public final VoxelShape BOTTOM_SHAPE = this.makeShape();
+    public final VoxelShape TOP_SHAPE = this.makeupsidedownShape();
 
     public ThatchBlock(Properties properties) {
         super(properties);
@@ -60,20 +62,21 @@ public class ThatchBlock extends DirectionalBlock {
         return state;
     }
 
-    public VoxelShape makeShape(){
-    	VoxelShape shape = Shapes.empty();
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 1, 0.125), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.125, 1, 0.875, 0.25), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.875, 1, 0.125, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.75, 1, 0.25, 0.875), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.625, 1, 0.375, 0.75), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.5, 1, 0.5, 0.625), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.375, 1, 0.625, 0.5), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.25, 1, 0.75, 0.375), BooleanOp.OR);
+    public VoxelShape makeShape() {
+        VoxelShape shape = Shapes.empty();
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 1, 0.125), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.125, 1, 0.875, 0.25), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.875, 1, 0.125, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.75, 1, 0.25, 0.875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.625, 1, 0.375, 0.75), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.5, 1, 0.5, 0.625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.375, 1, 0.625, 0.5), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.25, 1, 0.75, 0.375), BooleanOp.OR);
 
-    	return shape;
+        return shape;
     }
-    public VoxelShape makeupsidedownShape(){
+
+    public VoxelShape makeupsidedownShape() {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 1, 0.125), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0, 0.125, 0.125, 1, 1, 0.25), BooleanOp.OR);
@@ -87,13 +90,9 @@ public class ThatchBlock extends DirectionalBlock {
         return shape;
     }
 
-    public final VoxelShape BOTTOM_SHAPE = this.makeShape();
-    public final VoxelShape TOP_SHAPE = this.makeupsidedownShape();
-
     @Override
     @SuppressWarnings("deprecation")
     public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        // Fix: Use correct method name mapping (getShape replaces getOutlineShape)
         return state.getValue(HALF) == DoubleBlockHalf.LOWER ? BOTTOM_SHAPE : TOP_SHAPE;
     }
 

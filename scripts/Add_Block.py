@@ -312,15 +312,11 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 
     def update_ModBlocks(self):
         new_block = self.CapitalizedName
-        try:
-            if self.CapitalizedName.rindex("Block") == len(self.CapitalizedName) - 5:
-                if self.verbose or self.debug:
-                    sys.stdout.write("no changes to block name\n")
-        except ValueError as e:
-            sys.stdout.write("Block suffix not found, append it\n")
+        if self.CapitalizedName.endswith("Block"):
+            new_block = self.CapitalizedName
+        else:
             new_block = f"{self.CapitalizedName}Block"
-            pass
-    
+        
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
         update_string=f""" 
     public static final Block {self.uppercaseName} = register(

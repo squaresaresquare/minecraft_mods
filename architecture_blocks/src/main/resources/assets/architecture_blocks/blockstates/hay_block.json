@@ -1,21 +1,13 @@
-
 {
   "variants": {
-    "facing=north": {
-      "model": "architecture_blocks:block/hay_block",
-      "y": 180
-    },
-    "facing=east": {
-      "model": "architecture_blocks:block/hay_block",
-      "y": -90
-    },
-    "facing=south": {
+    "axis=x": {
       "model": "architecture_blocks:block/hay_block"
     },
-    "facing=west": {
-      "model": "architecture_blocks:block/hay_block",
-      "y": 90
+    "axis=y": {
+      "model": "architecture_blocks:block/hay_block"
+    },
+    "axis=z": {
+      "model": "architecture_blocks:block/hay_block"
     }
   }
 }
-        

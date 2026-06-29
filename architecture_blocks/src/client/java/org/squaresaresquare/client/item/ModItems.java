@@ -1,12 +1,13 @@
 package org.squaresaresquare.client.item;
 
-import org.squaresaresquare.Architecture_blocks;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import org.squaresaresquare.Architecture_blocks;
+
 import java.util.function.Function;
 
 public class ModItems {

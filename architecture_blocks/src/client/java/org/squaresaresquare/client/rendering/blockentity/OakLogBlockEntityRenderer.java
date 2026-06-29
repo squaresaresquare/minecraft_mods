@@ -1,4 +1,3 @@
-
 package org.squaresaresquare.client.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;

@@ -1,0 +1,21 @@
+
+{
+  "variants": {
+    "facing=north": {
+      "model": "architecture_blocks:block/six_block_arch_4_7",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "architecture_blocks:block/six_block_arch_4_7",
+      "y": -90
+    },
+    "facing=south": {
+      "model": "architecture_blocks:block/six_block_arch_4_7"
+    },
+    "facing=west": {
+      "model": "architecture_blocks:block/six_block_arch_4_7",
+      "y": 90
+    }
+  }
+}
+        

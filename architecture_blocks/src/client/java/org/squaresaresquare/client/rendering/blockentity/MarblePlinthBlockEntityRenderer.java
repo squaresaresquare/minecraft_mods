@@ -2,7 +2,6 @@ package org.squaresaresquare.client.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import org.squaresaresquare.client.block.entity.custom.MarblePlinthBlockEntity;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -12,6 +11,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
+import org.squaresaresquare.client.block.entity.custom.MarblePlinthBlockEntity;
 
 public class MarblePlinthBlockEntityRenderer implements BlockEntityRenderer<MarblePlinthBlockEntity, MarblePlinthBlockEntityRenderState> {
     private final Font font;

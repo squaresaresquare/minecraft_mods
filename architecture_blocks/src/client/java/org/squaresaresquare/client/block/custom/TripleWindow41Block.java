@@ -1,9 +1,6 @@
-
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import java.util.List;
-import javax.swing.text.html.BlockView;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -15,18 +12,18 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import org.squaresaresquare.Architecture_blocks;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.TripleWindow41BlockEntity;
 
+import javax.swing.text.html.BlockView;
+
 public class TripleWindow41Block extends BaseEntityBlock {
-        public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public TripleWindow41Block(BlockBehaviour.Properties properties) {
         super(properties);
@@ -36,29 +33,31 @@ public class TripleWindow41Block extends BaseEntityBlock {
                 .setValue(FACING, Direction.NORTH)
         );
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    public VoxelShape makeShape(){
-    	VoxelShape shape = Shapes.empty();
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 1, 0.75), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.875, 0.5, 0.75, 1, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0.75, 0.375, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.4375, 0.125, 0.75, 0.5, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.375, 0.0625, 0.75, 0.4375, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.5, 0.1875, 0.75, 0.5625, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.5625, 0.25, 0.75, 0.625, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.625, 0.3125, 0.75, 0.6875, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.6875, 0.375, 0.75, 0.75, 1, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.75, 0.4375, 0.75, 0.875, 1, 1), BooleanOp.OR);
-    
-    	return shape;
+    public VoxelShape makeShape() {
+        VoxelShape shape = Shapes.empty();
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 1, 0.75), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.875, 0.5, 0.75, 1, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0.75, 0.375, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.4375, 0.125, 0.75, 0.5, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.375, 0.0625, 0.75, 0.4375, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.5, 0.1875, 0.75, 0.5625, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.5625, 0.25, 0.75, 0.625, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.625, 0.3125, 0.75, 0.6875, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.6875, 0.375, 0.75, 0.75, 1, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.75, 0.4375, 0.75, 0.875, 1, 1), BooleanOp.OR);
+
+        return shape;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, CollisionContext context) {

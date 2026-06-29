@@ -1,8 +1,6 @@
-
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import javax.swing.text.html.BlockView;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -22,8 +20,10 @@ import org.jetbrains.annotations.Nullable;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.ArchedWindowLeftHalfColumnBaseBlockEntity;
 
+import javax.swing.text.html.BlockView;
+
 public class ArchedWindowLeftHalfColumnBaseBlock extends BaseEntityBlock {
-        public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public ArchedWindowLeftHalfColumnBaseBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -31,31 +31,33 @@ public class ArchedWindowLeftHalfColumnBaseBlock extends BaseEntityBlock {
                 .setValue(FACING, Direction.NORTH)
         );
     }
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-    public VoxelShape makeShape(){
-    	VoxelShape shape = Shapes.empty();
-    	shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 0.0625, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0.0625, 0, 1, 0.1875, 0.9375), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0.1875, 0, 1, 0.25, 1), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.9375, 0.5625, 0.375, 1, 1, 0.625), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.875, 0.5625, 0.4375, 0.9375, 1, 0.5625), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.875, 0.25, 0.25, 1, 0.4375, 0.75), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.75, 0.25, 0.375, 0.875, 0.4375, 0.625), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.8125, 0.25, 0.3125, 0.875, 0.4375, 0.375), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.8125, 0.25, 0.625, 0.875, 0.4375, 0.6875), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.875, 0.4375, 0.3125, 1, 0.5625, 0.6875), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0.8125, 0.4375, 0.375, 0.875, 0.5625, 0.625), BooleanOp.OR);
-    	shape = Shapes.join(shape, Shapes.box(0, 0.25, 0.125, 1, 1, 0.25), BooleanOp.OR);
-    
-    	return shape;
+    public VoxelShape makeShape() {
+        VoxelShape shape = Shapes.empty();
+        shape = Shapes.join(shape, Shapes.box(0, 0, 0, 1, 0.0625, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0.0625, 0, 1, 0.1875, 0.9375), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0.1875, 0, 1, 0.25, 1), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.9375, 0.5625, 0.375, 1, 1, 0.625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.875, 0.5625, 0.4375, 0.9375, 1, 0.5625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.875, 0.25, 0.25, 1, 0.4375, 0.75), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.75, 0.25, 0.375, 0.875, 0.4375, 0.625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.8125, 0.25, 0.3125, 0.875, 0.4375, 0.375), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.8125, 0.25, 0.625, 0.875, 0.4375, 0.6875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.875, 0.4375, 0.3125, 1, 0.5625, 0.6875), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0.8125, 0.4375, 0.375, 0.875, 0.5625, 0.625), BooleanOp.OR);
+        shape = Shapes.join(shape, Shapes.box(0, 0.25, 0.125, 1, 1, 0.25), BooleanOp.OR);
+
+        return shape;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, CollisionContext context) {

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "architecture_blocks:block/quartz_bricks",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "architecture_blocks:block/quartz_bricks",
+      "y": -90
+    },
+    "facing=south": {
+      "model": "architecture_blocks:block/quartz_bricks"
+    },
+    "facing=west": {
+      "model": "architecture_blocks:block/quartz_bricks",
+      "y": 90
+    }
+  }
+}
+        

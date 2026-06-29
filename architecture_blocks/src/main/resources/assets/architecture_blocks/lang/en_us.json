@@ -3,43 +3,36 @@
   "block.architecture_blocks.marble_pillar": "Marble Pillar",
   "block.architecture_blocks.marble_pillar_base": "Marble Pillar Base",
   "block.architecture_blocks.pillar_cap": "generic pillar cap",
-
   "block.architecture_blocks.double_window_0_0": "double window first row first block",
   "block.architecture_blocks.double_window_0_1": "double window first row second block",
   "block.architecture_blocks.double_window_0_2": "double window first row third block",
   "block.architecture_blocks.double_window_0_3": "double window first row fourth block",
   "block.architecture_blocks.double_window_0_4": "double window first row fifth block",
-
   "block.architecture_blocks.double_window_1_0": "double window second row first block",
   "block.architecture_blocks.double_window_1_1": "double window second row second block",
   "block.architecture_blocks.double_window_1_2": "double window second row third block",
   "block.architecture_blocks.double_window_1_3": "double window second row fourth block",
   "block.architecture_blocks.double_window_1_4": "double window second row fifth block",
-
   "block.architecture_blocks.double_window_2_0": "double window third row first block",
   "block.architecture_blocks.double_window_2_1": "double window third row second block",
   "block.architecture_blocks.double_window_2_2": "double window third row third block",
   "block.architecture_blocks.double_window_2_3": "double window third row fourth block",
   "block.architecture_blocks.double_window_2_4": "double window third row fifth block",
-
   "block.architecture_blocks.double_window_3_0": "double window fourth row first block",
   "block.architecture_blocks.double_window_3_1": "double window fourth row second block",
   "block.architecture_blocks.double_window_3_2": "double window fourth row third block",
   "block.architecture_blocks.double_window_3_3": "double window fourth row fourth block",
   "block.architecture_blocks.double_window_3_4": "double window fourth row fifth block",
-
   "block.architecture_blocks.double_window_4_0": "double window fifth row first block",
   "block.architecture_blocks.double_window_4_1": "double window fifth row second block",
   "block.architecture_blocks.double_window_4_2": "double window fifth row third block",
   "block.architecture_blocks.double_window_4_3": "double window fifth row fourth block",
   "block.architecture_blocks.double_window_4_4": "double window fifth row fifth block",
-
   "block.architecture_blocks.double_window_5_0": "double window sixth row first block",
   "block.architecture_blocks.double_window_5_1": "double window sixth row second block",
   "block.architecture_blocks.double_window_5_2": "double window sixth row third block",
   "block.architecture_blocks.double_window_5_3": "double window sixth row fourth block",
   "block.architecture_blocks.double_window_5_4": "double window sixth row fifth block",
-
   "block.architecture_blocks.quad_window_0_0": "quad window first row first block",
   "block.architecture_blocks.quad_window_0_1": "quad window first row second block",
   "block.architecture_blocks.quad_window_0_2": "quad window first row third block",
@@ -48,7 +41,6 @@
   "block.architecture_blocks.quad_window_0_5": "quad window first row sixth block",
   "block.architecture_blocks.quad_window_0_6": "quad window first row seventh block",
   "block.architecture_blocks.quad_window_0_7": "quad window first row eighth block",
-
   "block.architecture_blocks.quad_window_1_0": "quad window second row first block",
   "block.architecture_blocks.quad_window_1_1": "quad window second row second block",
   "block.architecture_blocks.quad_window_1_2": "quad window second row third block",
@@ -57,7 +49,6 @@
   "block.architecture_blocks.quad_window_1_5": "quad window second row sixth block",
   "block.architecture_blocks.quad_window_1_6": "quad window second row seventh block",
   "block.architecture_blocks.quad_window_1_7": "quad window second row eigthth block",
-
   "block.architecture_blocks.quad_window_2_0": "quad window third row first block",
   "block.architecture_blocks.quad_window_2_1": "quad window third row second block",
   "block.architecture_blocks.quad_window_2_2": "quad window third row third block",
@@ -66,7 +57,6 @@
   "block.architecture_blocks.quad_window_2_5": "quad window third row sixth block",
   "block.architecture_blocks.quad_window_2_6": "quad window third row seventh block",
   "block.architecture_blocks.quad_window_2_7": "quad window third row eigthth block",
-
   "block.architecture_blocks.quad_window_3_0": "quad window fourth row first block",
   "block.architecture_blocks.quad_window_3_1": "quad window fourth row second block",
   "block.architecture_blocks.quad_window_3_2": "quad window fourth row third block",
@@ -75,7 +65,6 @@
   "block.architecture_blocks.quad_window_3_5": "quad window fourth row sixth block",
   "block.architecture_blocks.quad_window_3_6": "quad window fourth row seventh block",
   "block.architecture_blocks.quad_window_3_7": "quad window fourth row eigthth block",
-
   "block.architecture_blocks.quad_window_4_0": "quad window fifth row first block",
   "block.architecture_blocks.quad_window_4_1": "quad window fifth row second block",
   "block.architecture_blocks.quad_window_4_2": "quad window fifth row third block",
@@ -84,7 +73,6 @@
   "block.architecture_blocks.quad_window_4_5": "quad window fifth row sixth block",
   "block.architecture_blocks.quad_window_4_6": "quad window fifth row seventh block",
   "block.architecture_blocks.quad_window_4_7": "quad window fifth row eigthth block",
-
   "block.architecture_blocks.quad_window_5_0": "quad window sixth row first block",
   "block.architecture_blocks.quad_window_5_1": "quad window sixth row second block",
   "block.architecture_blocks.quad_window_5_2": "quad window sixth row third block",
@@ -93,59 +81,62 @@
   "block.architecture_blocks.quad_window_5_5": "quad window sixth row sixth block",
   "block.architecture_blocks.quad_window_5_6": "quad window sixth row seventh block",
   "block.architecture_blocks.quad_window_5_7": "quad window sixth row eigthth block",
-
   "block.architecture_blocks.triple_window_0_0": "triple window first row first block",
   "block.architecture_blocks.triple_window_0_1": "triple window first row second block",
   "block.architecture_blocks.triple_window_0_2": "triple window first row third block",
   "block.architecture_blocks.triple_window_0_3": "triple window first row fourth block",
   "block.architecture_blocks.triple_window_0_4": "triple window first row fifth block",
   "block.architecture_blocks.triple_window_0_5": "triple window first row sixth block",
-
   "block.architecture_blocks.triple_window_1_0": "triple window second row first block",
   "block.architecture_blocks.triple_window_1_1": "triple window second row second block",
   "block.architecture_blocks.triple_window_1_2": "triple window second row third block",
   "block.architecture_blocks.triple_window_1_3": "triple window second row fourth block",
   "block.architecture_blocks.triple_window_1_4": "triple window second row fifth block",
   "block.architecture_blocks.triple_window_1_5": "triple window second row sixth block",
-
   "block.architecture_blocks.triple_window_2_0": "triple window third row first block",
   "block.architecture_blocks.triple_window_2_1": "triple window third row second block",
   "block.architecture_blocks.triple_window_2_2": "triple window third row third block",
   "block.architecture_blocks.triple_window_2_3": "triple window third row fourth block",
   "block.architecture_blocks.triple_window_2_4": "triple window third row fifth block",
   "block.architecture_blocks.triple_window_2_5": "triple window third row sixth block",
-
   "block.architecture_blocks.triple_window_3_0": "triple window fourth row first block",
   "block.architecture_blocks.triple_window_3_1": "triple window fourth row second block",
   "block.architecture_blocks.triple_window_3_2": "triple window fourth row third block",
   "block.architecture_blocks.triple_window_3_3": "triple window fourth row fourth block",
   "block.architecture_blocks.triple_window_3_4": "triple window fourth row fifth block",
   "block.architecture_blocks.triple_window_3_5": "triple window fourth row sixth block",
-
   "block.architecture_blocks.triple_window_4_0": "triple window fifth row first block",
   "block.architecture_blocks.triple_window_4_1": "triple window fifth row second block",
   "block.architecture_blocks.triple_window_4_2": "triple window fifth row third block",
   "block.architecture_blocks.triple_window_4_3": "triple window fifth row fourth block",
   "block.architecture_blocks.triple_window_4_4": "triple window fifth row fifth block",
   "block.architecture_blocks.triple_window_4_5": "triple window fifth row sixth block",
-
   "block.architecture_blocks.triple_window_5_0": "triple window sixth row first block",
   "block.architecture_blocks.triple_window_5_1": "triple window sixth row second block",
   "block.architecture_blocks.triple_window_5_2": "triple window sixth row third block",
   "block.architecture_blocks.triple_window_5_3": "triple window sixth row fourth block",
   "block.architecture_blocks.triple_window_5_4": "triple window sixth row fifth block",
   "block.architecture_blocks.triple_window_5_5": "triple window sixth row sixth block",
-
   "block.architecture_blocks.arched_window_left_half_column_base": "Arched Window Left half column base",
   "block.architecture_blocks.arched_window_right_half_column_cap": "Arched window right half column cap",
   "block.architecture_blocks.arched_window_left_half_column_middle": "Arched window left half column middle",
   "block.architecture_blocks.arched_window_right_half_column_middle": "Arched window right half column middle",
-
   "block.architecture_blocks.arched_window_middle_cap": "Arched window middle cap",
   "block.architecture_blocks.arched_window_middle_column": "Arched window middle column",
   "block.architecture_blocks.arched_window_middle_base": "Arched window middle base",
-
-
-
-  "block.architecture_blocks.hay_block": "Hay block",  "block.architecture_blocks.thatch_peak": "Thatch peak",  "block.architecture_blocks.thatch": "Thatch",  "stub": "stub"
+  "block.architecture_blocks.six_block_arch_2_7": "Six block arch 2 7",
+  "block.architecture_blocks.six_block_arch_2_2": "Six block arch 2 2",
+  "block.architecture_blocks.six_block_inner_arch": "Six block inner arch",
+  "block.architecture_blocks.six_block_arch_2_8": "Six block arch 2 8",
+  "block.architecture_blocks.six_block_arch_2_1": "Six block arch 2 1",
+  "block.architecture_blocks.six_block_arch_1_8": "Six block arch 1 8",
+  "block.architecture_blocks.six_block_arch_1_1": "six block arch 1 1",
+  "block.architecture_blocks.quartz_bricks": "Quartz bricks",
+  "block.architecture_blocks.hay_block": "Hay block",
+  "block.architecture_blocks.thatch_peak": "Thatch peak",
+  "block.architecture_blocks.thatch": "Thatch",
+  "itemGroup.architecture_blocks.architecture_block_tab": "Architecture Blocks",
+  "itemGroup.architecture_blocks.double_arched_window_blocks_tab": "Blocks for a double arched window",
+  "itemGroup.architecture_blocks.triple_arched_window_blocks_tab": "Blocks for a triple arched window",
+  "itemGroup.architecture_blocks.four_arched_window_blocks_tab": "Blocks for a four arched window"
 }

@@ -1,10 +1,9 @@
-
 package net.minecraft.block.entity.custom;
 
+import net.minecraft.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.block.entity.ModBlockEntities;
 
 public class OakLogBlockEntity extends BlockEntity {
     public OakLogBlockEntity(BlockPos pos, BlockState state) {

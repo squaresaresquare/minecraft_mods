@@ -1,4 +1,3 @@
-
 {
   "variants": {
     "facing=north,half=lower": {
@@ -17,22 +16,6 @@
       "model": "architecture_blocks:block/thatch",
       "y": -90
     },
-    "facing=north,facing=down": {
-      "model": "architecture_blocks:block/thatch",
-      "y": 0
-    },
-    "facing=east,facing=down": {
-      "model": "architecture_blocks:block/thatch",
-      "y": -90
-    },
-    "facing=south,facing=down": {
-      "model": "architecture_blocks:block/thatch",
-      "y": -180
-    },
-    "facing=west,facing=down": {
-      "model": "architecture_blocks:block/thatch",
-      "y": 90
-    },
     "facing=north,half=upper": {
       "model": "architecture_blocks:block/thatch_upside_down",
       "y": 0
@@ -40,7 +23,6 @@
     "facing=east,half=upper": {
       "model": "architecture_blocks:block/thatch_upside_down",
       "y": 90
-
     },
     "facing=south,half=upper": {
       "model": "architecture_blocks:block/thatch_upside_down",
@@ -52,4 +34,3 @@
     }
   }
 }
-        

@@ -1,8 +1,9 @@
-
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,16 +14,21 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.OakLogBlockEntity;
+
 import javax.swing.text.html.BlockView;
 
 public class OakLogBlock extends RotatedPillarBlock {
-    public static final MapCodec<RotatedPillarBlock> CODEC = simpleCodec(RotatedPillarBlock::new);
+    public static final MapCodec<OakLogBlock> CODEC = simpleCodec(OakLogBlock::new);
 
     public OakLogBlock(Properties properties) {
         super(properties);
     }
 
-    public VoxelShape makeShape(){
+    protected MapCodec<? extends RotatedPillarBlock> getCodec() {
+        return CODEC;
+    }
+
+    public VoxelShape makeShape() {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0.125, 0, 0.125, 0.875, 0.0625, 0.875), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0.1875, 0.0625, 0.1875, 0.8125, 0.1875, 0.8125), BooleanOp.OR);
@@ -41,16 +47,22 @@ public class OakLogBlock extends RotatedPillarBlock {
         return shape;
     }
 
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter blockView, BlockPos pos, CollisionContext context) {
+        return this.makeShape();
+    }
+
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, CollisionContext context) {
         return this.makeShape();
     }
 
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, CollisionContext context) {
         return this.makeShape();
-    }
-
-    protected MapCodec<? extends RotatedPillarBlock> getCodec() {
-        return CODEC;
     }
 
     @Nullable

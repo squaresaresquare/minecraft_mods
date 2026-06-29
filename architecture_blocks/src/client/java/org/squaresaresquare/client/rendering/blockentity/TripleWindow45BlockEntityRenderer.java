@@ -1,9 +1,7 @@
-
 package org.squaresaresquare.client.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import org.squaresaresquare.client.block.entity.custom.TripleWindow45BlockEntity;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -13,6 +11,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
+import org.squaresaresquare.client.block.entity.custom.TripleWindow45BlockEntity;
 
 public class TripleWindow45BlockEntityRenderer implements BlockEntityRenderer<TripleWindow45BlockEntity, TripleWindow45BlockEntityRenderState> {
     private final Font font;

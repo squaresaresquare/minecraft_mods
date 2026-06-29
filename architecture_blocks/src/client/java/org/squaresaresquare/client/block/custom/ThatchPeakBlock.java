@@ -1,8 +1,6 @@
-
 package org.squaresaresquare.client.block.custom;
 
 import com.mojang.serialization.MapCodec;
-import javax.swing.text.html.BlockView;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -15,6 +13,8 @@ import org.jetbrains.annotations.Nullable;
 import org.squaresaresquare.client.block.ModBlocks;
 import org.squaresaresquare.client.block.entity.custom.ThatchPeakBlockEntity;
 
+import javax.swing.text.html.BlockView;
+
 public class ThatchPeakBlock extends RotatedPillarBlock {
     public static final MapCodec<RotatedPillarBlock> CODEC = simpleCodec(RotatedPillarBlock::new);
 
@@ -22,7 +22,7 @@ public class ThatchPeakBlock extends RotatedPillarBlock {
         super(properties);
     }
 
-    public VoxelShape makeShape(){
+    public VoxelShape makeShape() {
         VoxelShape shape = Shapes.empty();
         shape = Shapes.join(shape, Shapes.box(0.375, 0, 0, 0.625, 0.5625, 1), BooleanOp.OR);
         shape = Shapes.join(shape, Shapes.box(0, 0, 0, 0.125, 0.125, 1), BooleanOp.OR);

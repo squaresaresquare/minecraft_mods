@@ -1,8 +1,8 @@
-
 package net.minecraft.rendering.blockentity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import net.minecraft.block.entity.custom.OakLogBlockEntity;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -12,7 +12,6 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
-import net.minecraft.block.entity.custom.OakLogBlockEntity;
 
 public class OakLogBlockEntityRenderer implements BlockEntityRenderer<OakLogBlockEntity, OakLogBlockEntityRenderState> {
     private final Font font;
