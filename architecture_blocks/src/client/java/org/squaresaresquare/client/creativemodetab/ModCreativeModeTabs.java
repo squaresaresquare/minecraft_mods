@@ -90,6 +90,13 @@ public class ModCreativeModeTabs {
                 TabLayout.put(15, ModBlocks.FIVE_BLOCK_ARCH_2_4);
                 TabLayout.put(16, ModBlocks.FIVE_BLOCK_ARCH_2_5);
 
+                //row3
+                TabLayout.put(21, ModBlocks.QUARTZ_BRICKS);
+                TabLayout.put(20, ModBlocks.FIVE_BLOCK_ARCH_3_2);
+                TabLayout.put(21, ModBlocks.QUARTZ_BRICKS);
+                TabLayout.put(20, ModBlocks.DOUBLE_ARCHED_WINDOW_6_4);
+                TabLayout.put(21, ModBlocks.QUARTZ_BRICKS);
+
 
                 int maxSlot = TabLayout.keySet().stream().max(Integer::compare).orElse(0);
                 for (int slotIndex = 0; slotIndex <= maxSlot; slotIndex++) {

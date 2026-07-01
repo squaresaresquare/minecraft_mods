@@ -708,6 +708,22 @@ public class ModRecipeProvider {
                         .pattern("'   '")
                         .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
                         .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIVE_BLOCK_ARCH_3_2, 1)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'0  '")
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
+
+                this.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DOUBLE_ARCHED_WINDOW_6_4, 1)
+                        .define('0', Blocks.QUARTZ_BRICKS)
+                        .pattern("'0  '")
+                        .pattern("'   '")
+                        .pattern("'   '")
+                        .unlockedBy("has_quartz_bricks", this.has(Blocks.QUARTZ_BRICKS))
+                        .save(this.output);
                 //::new block here
             }
         };

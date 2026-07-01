@@ -166,7 +166,13 @@ public class ModBlockEntities {
 
     public static final BlockEntityType<FiveBlockArch25BlockEntity> FIVE_BLOCK_ARCH_2_5_BLOCK_ENTITY =
         register("five_block_arch_2_5", FiveBlockArch25BlockEntity::new, ModBlocks.FIVE_BLOCK_ARCH_2_5);
-                                                                                                                                                                            //::new block here
+
+    public static final BlockEntityType<FiveBlockArch32BlockEntity> FIVE_BLOCK_ARCH_3_2_BLOCK_ENTITY =
+        register("five_block_arch_3_2", FiveBlockArch32BlockEntity::new, ModBlocks.FIVE_BLOCK_ARCH_3_2);
+
+    public static final BlockEntityType<DoubleArchedWindow64BlockEntity> DOUBLE_ARCHED_WINDOW_6_4_BLOCK_ENTITY =
+        register("double_arched_window_6_4", DoubleArchedWindow64BlockEntity::new, ModBlocks.DOUBLE_ARCHED_WINDOW_6_4);
+                                                                                                                                                                                            //::new block here
 
 
 

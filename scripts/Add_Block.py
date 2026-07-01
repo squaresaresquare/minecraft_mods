@@ -573,10 +573,7 @@ def signal_handler(sig: int, frame, obj: object):
         sys.exit(255)
 
 
-def main():
-    #handle SIGINT (ctrl c)
-    signal.signal(signal.SIGINT, signal_handler)
-    #Command line options
+c
     subprocess.run("/usr/bin/find ./ -name '.DS_Store' -exec rm {} \;", shell=True, text=True, check=True)
     parser = argparse.ArgumentParser( description="A script to add a block to my minecraft mod")
     parser.add_argument("-m", "--mod_path", type=str, default="", help="Path to the minecraft mod project directory")

@@ -974,7 +974,29 @@ public class ModBlocks {
                     .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
         true
     );
-                                                                                                                                                                            //::new block here                                                                                                                                                                                                                    //::new block here
+
+ 
+    public static final Block FIVE_BLOCK_ARCH_3_2 = register(
+        "five_block_arch_3_2",
+        FiveBlockArch32Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+
+ 
+    public static final Block DOUBLE_ARCHED_WINDOW_6_4 = register(
+        "double_arched_window_6_4",
+        DoubleArchedWindow64Block::new,
+        BlockBehaviour.Properties.of().sound(SoundType.DEEPSLATE)
+                    .noOcclusion()
+                    .strength(1,1)
+                    .isValidSpawn((state, blockGetter, pos, entityType) -> {return false;}),
+        true
+    );
+                                                                                                                                                                                            //::new block here                                                                                                                                                                                                                    //::new block here
     public static void initialize() {
 
     }
