@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "architecture_blocks:block/thatch_peak",
+      "x": 180
+    },
+    "axis=y": {
+      "model": "architecture_blocks:block/thatch_peak"
+    },
+    "axis=z": {
+      "model": "architecture_blocks:block/thatch_peak",
+      "y": 90,
+      "x": 180
+    }
+  }
+}

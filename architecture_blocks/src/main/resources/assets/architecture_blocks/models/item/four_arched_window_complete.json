@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "architecture_blocks:item/four_arched_window_complete"
+  }
+}

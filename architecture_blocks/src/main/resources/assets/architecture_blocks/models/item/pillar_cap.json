@@ -1,0 +1,7 @@
+{
+  "parent": "architecture_blocks:block/pillar_cap",
+  "textures": {
+    "layer0": "architecture_blocks:item/pillar_cap"
+  }
+}
+        

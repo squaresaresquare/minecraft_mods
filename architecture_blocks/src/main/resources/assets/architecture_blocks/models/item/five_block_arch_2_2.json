@@ -1,0 +1,8 @@
+
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "architecture_blocks:item/five_block_arch_2_2"
+  }
+}
+        

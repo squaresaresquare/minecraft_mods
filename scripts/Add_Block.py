@@ -10,6 +10,7 @@ import re
 import argparse
 from pprint import pprint
 from pathlib import Path
+import subprocess
 
 class addBlock:
     def __init__(self,mod_path: str = "{self.mod_path}", overwrite_files: bool = True, verbose: bool = False, debug: bool = False):
@@ -74,6 +75,7 @@ class addBlock:
             sys.stderr.write(f"failed to open {file_path} for writing\n" + str(e.args[0]) + "\n")
 
     def update_file(self,file_path: str,update_string: str,pattern: str = '::new block here'):
+        lines = list()
         if Path(file_path).is_file():
             # check if it's alread updated
             try:
@@ -101,6 +103,8 @@ class addBlock:
         try:
             with open(file_path, "r") as file:
                 try:
+                    if self.verbose or self.debug:
+                        sys.stdout.write("read file into list of lines")
                     lines = file.readlines()
                 except Exception as q:
                     sys.stderr.write(str(q.args[0]) + '\n')
@@ -111,9 +115,9 @@ class addBlock:
                for line in lines:
                     if pattern in line:
                         try:
-                            file.write(update_string)
+                            file.write(f"\n{update_string}".replace('\n\n', '\n'))
                         except Exception as e:
-                            sys.stderr.write(str(e.args[0]) + '\n')
+                            sys.stderr.write(f"\n{str(e.args[0])}")
                     try:
                         file.write(line)
                     except Exception as e:
@@ -210,10 +214,10 @@ class addBlock:
         self.update_Architecture_blocksClient()
         self.create_item_model()
         self.create_item_json()
+        self.update_block_json()
         self.update_en_us()
         self.create_blockstate_json()
         self.update_block_model()
-        self.update_ModCreativeModeTabs()
         if self.verbose:
             sys.stdout.write("remove backup files\n")
         for backupfile in self.backup_files:
@@ -285,22 +289,8 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         """)
 
     def update_Architecture_blocksClient(self):
-        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/Architecture_blocksClient.java", update_string=f"""
-        BlockColorRegistry.register(List.of(new BlockTintSource() {{
-            @Override
-            public int colorInWorld(BlockState state, BlockAndTintGetter level, BlockPos pos) {{
-                BlockState stateBelow = level.getBlockState(pos.below());
-                if (stateBelow.is(Blocks.GRASS_BLOCK)) {{
-                    return 0xFF98FB98; // Color code in hex format
-                }}
-                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
-            }}
-            @Override
-            public int color(BlockState state) {{
-                return ARGB.transparent(0xFFFFDAB9); // Color code in hex format
-            }}
-        }}), ModBlocks.{self.uppercaseName});
-                """)
+        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/Architecture_blocksClient.java", 
+        update_string=f"registerBlockColor(ModBlocks.{self.uppercaseName});")
 
 
     def update_ModItems(self):
@@ -314,10 +304,6 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
     def update_ModBlockLootTableProvider(self):
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/datagen/ModBlockLootTableProvider.java",
             update_string=f"    dropSelf(ModBlocks.{self.uppercaseName});")
-
-    def update_ModCreativeModeTabs(self):
-        self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
-            update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});")
                 
     def update_block_model(self):
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json",
@@ -326,15 +312,11 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
 
     def update_ModBlocks(self):
         new_block = self.CapitalizedName
-        try:
-            if self.CapitalizedName.rindex("Block") == len(self.CapitalizedName) - 5:
-                if self.verbose or self.debug:
-                    sys.stdout.write("no changes to block name\n")
-        except ValueError as e:
-            sys.stdout.write("Block suffix not found, append it\n")
+        if self.CapitalizedName.endswith("Block"):
+            new_block = self.CapitalizedName
+        else:
             new_block = f"{self.CapitalizedName}Block"
-            pass
-    
+        
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/block/ModBlocks.java",
         update_string=f""" 
     public static final Block {self.uppercaseName} = register(
@@ -356,9 +338,9 @@ public class {self.CapitalizedName}BlockEntityRenderState extends BlockEntityRen
         self.create_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/item/{self.block_name}.json",
         contents=f'''
 {{
-  "parent": "architecture_blocks:block/{self.block_name}",
+  "parent": "minecraft:item/generated",
   "textures": {{
-    "layer0": "item/{self.block_name}"
+    "layer0": "architecture_blocks:item/{self.block_name}"
   }}
 }}
         ''')
@@ -392,10 +374,12 @@ public class {self.CapitalizedName}BlockEntity extends BlockEntity {{
             update_string=f"import org.squaresaresquare.client.block.entity.custom.{self.CapitalizedName}BlockEntity;")
 
     def update_en_us(self):
-        description = str(str(str(self.block_name).capitalize).replace('_', ' '))
+
+        description = str(self.block_name).capitalize().replace('_', ' ')
+
         self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/lang/en_us.json",
             pattern="stub",
-            update_string=f'''"  block.architecture_blocks.{self.block_name}": "{description}",''')
+            update_string=f'''  "block.architecture_blocks.{self.block_name}": "{description}",''')
     
     def create_custom_block_file(self):
         shapedir = "/src/main/resources/assets/architecture_blocks/shapes/"
@@ -518,23 +502,63 @@ public class {self.CapitalizedName}Block extends BaseEntityBlock {{
             ''')
     def update_ModCreativeModeTabs(self):
         self.update_file(file_path=f"{self.mod_path}/src/client/java/org/squaresaresquare/client/creativemodetab/ModCreativeModeTabs.java",
-            update_string=f"output.accept(ModBlocks.{self.uppercaseName});",
+            update_string=f"                        output.accept(ModBlocks.{self.uppercaseName});",
             pattern=f"::new {self.creative_mode_tab}"
         )
 
-def roll_back(self) -> bool:
-    for backupfile in self.backup_files:
-        local_file = backupfile.replace('.bak' '')
-        try:
-            shutil.rename(backupfile, local_file)
-        except:
-            return False
-        else:
-            return True
+    def update_block_json(self):
+        self.update_file(file_path=f"{self.mod_path}/src/main/resources/assets/architecture_blocks/models/block/{self.block_name}.json",
+        update_string=f'''	"ambientocclusion": false,
+    "force_translucent": true,
+        ''',
+        pattern='''	\"texture\s"\: \{'''
+        )
 
-def clean_up_on_success(self):
-    for backupfile in self.backup_files:
-        os.remove(backupfile)
+
+    def roll_back(self) -> bool:
+        for backupfile in self.backup_files:
+           local_file = backupfile.replace('.bak' '')
+           try:
+              shutil.rename(backupfile, local_file)
+           except:
+              return False
+           else:
+              return True
+
+    def clean_up_on_success(self):
+        for backupfile in self.backup_files:
+            os.remove(backupfile)
+        # Specify the directory path
+        dir_path = Path('/path/to/directory')
+
+        # Use rglob("*") to recursively find all entries and filter for files
+        files = [str(p) for p in dir_path.rglob('*') if p.is_file()]
+        for file in files:
+            if self.verbose or self.debug:
+                sys.stdout.write(f"Check file for double newlines: {str(file.Path())}")
+            try: 
+                with open(file.Path(), "r") as file:
+                    try:
+                        content = file.read()
+                    except Exception as q:
+                        sys.stderr.write(str(q.args[0]) + '\n')
+            except Exception as e:
+                sys.stderr.write(str(e.args[0]) + '\n\n')
+            result = re.sub(r'\n\n', '\n', content)
+            try:
+                with open(str(file.Path()), "w") as file:
+                    for line in lines:
+                        if pattern in line:
+                            try:
+                                file.write(update_string)
+                            except Exception as e:
+                                sys.stderr.write(str(e.args[0]) + '\n')
+                        try:
+                            file.write(line)
+                        except Exception as e:
+                            sys.stderr.write(str(e.args[0]) + '\n')
+            except Exception as e:
+                sys.stderr.write("failed to open " + str(file.Path()) + " for writing " + str(e.args[0]) + '\n')
 
 def signal_handler(sig: int, frame, obj: object):
     sys.stderr.write("Aborting block add. Rolling back\n")
@@ -549,10 +573,8 @@ def signal_handler(sig: int, frame, obj: object):
         sys.exit(255)
 
 
-def main():
-    #handle SIGINT (ctrl c)
-    signal.signal(signal.SIGINT, signal_handler)
-    #Command line options
+c
+    subprocess.run("/usr/bin/find ./ -name '.DS_Store' -exec rm {} \;", shell=True, text=True, check=True)
     parser = argparse.ArgumentParser( description="A script to add a block to my minecraft mod")
     parser.add_argument("-m", "--mod_path", type=str, default="", help="Path to the minecraft mod project directory")
     parser.add_argument("-b", "--block_name", type=str, help="Block name, must match the model file name without extention")
@@ -564,6 +586,8 @@ def main():
     parser.add_argument("-d", "--debug", action="store_true", help="Enable debug mode")
     args = parser.parse_args()
     #instantiate object
+    print(args.ingredients)
+    print(args.recipe)
     ingredients = re.split(r"[,]", args.ingredients) 
     crafting_table_patterns = re.split(r"[,]", args.recipe) 
     block_name = args.block_name

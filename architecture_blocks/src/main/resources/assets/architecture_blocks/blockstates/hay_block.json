@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "architecture_blocks:block/hay_block"
+    },
+    "axis=y": {
+      "model": "architecture_blocks:block/hay_block"
+    },
+    "axis=z": {
+      "model": "architecture_blocks:block/hay_block"
+    }
+  }
+}

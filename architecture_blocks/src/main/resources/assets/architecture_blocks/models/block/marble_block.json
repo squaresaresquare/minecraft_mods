@@ -1,0 +1,82 @@
+{
+  "credit": "Made with Blockbench",
+  "force_translucent": true,
+  "texture_size": [
+    864,
+    864
+  ],
+  "textures": {
+    "0": "architecture_blocks:block/marble_block/marble",
+    "particle": "architecture_blocks:block/marble_block/marble"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            10.31481,
+            5.48148,
+            15.64815,
+            10.48148
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            2.74074,
+            5.2963,
+            8.07407,
+            10.2963
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0.01852,
+            0.01852,
+            5.35185,
+            5.01852
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            5.66667,
+            10.88889,
+            11,
+            15.88889
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            10.44444,
+            0.07407,
+            15.77778,
+            5.07407
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            0.12963,
+            10.85185,
+            5.46296,
+            15.85185
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ]
+}

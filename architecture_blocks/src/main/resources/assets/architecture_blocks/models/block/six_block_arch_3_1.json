@@ -1,0 +1,26 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube_all",
+	"ambientocclusion": false,
+
+    "force_translucent": true,	"texture_size": [96, 96],
+	"textures": {
+		"0": "architecture_blocks:block/six_block_arch_3_1/quartz_bricks",
+		"1": "architecture_blocks:block/six_block_arch_3_1/six_block_arch_3_1",
+		"particle": "architecture_blocks:block/six_block_arch_3_1/quartz_bricks"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	]
+}

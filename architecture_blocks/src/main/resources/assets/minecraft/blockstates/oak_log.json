@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "minecraft:block/oak_log",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "minecraft:block/oak_log",
+      "y": -90
+    },
+    "facing=south": {
+      "model": "minecraft:block/oak_log"
+    },
+    "facing=west": {
+      "model": "minecraft:block/oak_log",
+      "y": 90
+    }
+  }
+}
+        

@@ -1,0 +1,80 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "architecture_blocks:block/cube_all",
+  "textures": {
+    "0": "architecture_blocks:block/triple_window_5_3/triple_window_5_3",
+    "1": "architecture_blocks:block/quartz_bricks",
+    "all": "architecture_blocks:block/quartz_bricks",
+    "particle": "architecture_blocks:block/triple_window_5_3/triple_window_5_3"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        }
+      }
+    }
+  ]
+}
